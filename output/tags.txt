@@ -1,10 +1,7 @@
-export
-cloudflare
-tunnel
-outbox
-nostr
-relay
-import
-citrine
-blogging
-nak
+guerrasdelfuturo
+#wikileaks #julianassange #cypherpunk #nostr #descentralizacióndigital #soberaníadigital
+noticias
+espionajemasivo
+blogindex
+inteligenciartificial
+documentales

@@ -22,10 +22,7 @@ func FetchEvents(
 	var mu sync.Mutex
 	eventIDToNaddr := make(map[string]string)
 
-	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
-	defer cancel()
-
-	pool := nostr.NewSimplePool(ctx)
+	pool := nostr.NewSimplePool(context.Background())
 
 	// Process each naddr
 	for _, naddr := range naddrs {
@@ -61,6 +58,8 @@ func FetchEvents(
 
 		allRelays := append(relays, addr.Relays...)
 
+		ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+
 		// Fetch replaceable event from all relays
 		eventMap := pool.FetchManyReplaceable(ctx, allRelays, filter)
 
@@ -90,6 +89,8 @@ func FetchEvents(
 
 			return true
 		})
+
+		cancel()
 	}
 
 	sort.Slice(events, func(i, j int) bool {

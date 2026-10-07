@@ -2,9 +2,9 @@ layout:
   color: dark  # Options: light, dark
   logo: logo.png  # Logo image file name
   favicondir: favicon
-  title: "Nostr Articles"  # Site title
+  title: "Nostr Libre"  # Site title
 
-blog_url: https://blog.nostrize.me
+blog_url: https://archivaldo66.github.io/nostr-static
 
 relays:
   - wss://relay.damus.io
@@ -12,11 +12,24 @@ relays:
   - wss://relay.nostr.band
   - wss://nos.lol
   - wss://relay.primal.net
+  - wss://nostr-01.yakihonne.com
+  - wss://nostr-02.yakihonne.com
+  - wss://purplepag.es
+  - wss://nostr.mom
+  - wss://relay.0xchat.com
+  - wss://relay.gitcitadel.eu
+  - wss://relay.damus.io
+  - wss://relay.snort.social
+  - wss://offchain.pub
+  - wss://relay.nostr.wirednet.jp
+  - wss://wot.nostr.party
+  - wss://wot.utxo.one
+  - wss://lang.relays.land/es
 
 features:
   comments: true
   nostr_links: njump.me
-  tag_discovery: true
+  tag_discovery: false
 
 # todo: implement settings
 settings:
@@ -25,12 +38,30 @@ settings:
     popular_articles_count: 10    # max number of articles to display in tag discovery
 
 articles:
-  - naddr1qvzqqqr4gupzqmnyhq7p7e60kq997xvpds5hkeq5hanlq9vffczd6nr9062pqthgqq25x6r2d90hzaj529f9gur2x9h4yt2gfy69qm05rzu
-  - naddr1qvzqqqr4gupzqmnyhq7p7e60kq997xvpds5hkeq5hanlq9vffczd6nr9062pqthgqq2j6ezsgu69j7n92cmxxmfsgyeyyvjtxfuk7lwjq6s
-  - naddr1qvzqqqr4gupzqmnyhq7p7e60kq997xvpds5hkeq5hanlq9vffczd6nr9062pqthgqq24wmjfwp6rv6t8v935ujfhv4yr2wzzdfz5gl5quve
-  - naddr1qvzqqqr4gupzqwlsccluhy6xxsr6l9a9uhhxf75g85g8a709tprjcn4e42h053vaqqyrzwrxvc6ngvfkxty9t8
-  - naddr1qq2k2vph23v9y7rcvf8n27292avhv6rrve54sqgkwaehxw309aex2mrp0yhxummnw3ezucnpdejqz8rhwden5te0dehhxarj9e3xjarrda5kuetj9eek7cmfv9kqzrmhwden5te0dehhxarj9ekk7mgzyphxfwpuran5lvq2tuvczmpf0djpf0m87q2cjnsym4xx2l55zqhwsqcyqqq823cwq3384
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qgawaehxw309ahx7um5wgknqv3w09skk6tgdahxuefwvdhk6tcqz4g5uanvveskwsmwxsmkgujnfeyhja2zffhql9hgcu
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4xfrk63rywfyx7knjwdz5uwtfdy6ksez4ws59dwnk
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy88wumn8ghj7mn0wvhxcmmv9uqp2vmhfejxztt9xae9js2h2ayks6jgf4p8gjsxlpjez
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4gfrrgemkde3nqjz2v9u526nnfetryn228ynp03c0
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4dev5jaf489dx6stpwsm575zw2fhkx4jnvcef3eq0
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4de4ry6jzd3shwat9wgcrz52h94hxjv2cvs5ym8ke
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4xvu92sj4ve94ssjrtfk82wzktqe5gs2tfqqvd4ty
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy88wumn8ghj7mn0wvhxcmmv9uqp2k238ptrqktgxgm4gvnj0945g4zsdar5z6c8wyp40
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy88wumn8ghj7mn0wvhxcmmv9uqp2ae4xf99s7nev3rk6cm2tge5z7zrfdphgjqs4c6qs
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqywhwumn8ghj7mn0wd68ytfsxyh8jcttd95x7mnwv5hxxmmd9uqp26j3wadxx3pedfk5k5jwfp6kckz809pz6ncz7dv89
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq429kns52t0pv8saeef9kkk629vgknqktjxurrmqjc
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4vae4ghm0ga25yut88qu4jjmedd4rxk24wgm8hdvy
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4x93xykjdwek5v7j82a29snth0f4h24ryv5uds8p0
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4wfg5umpkxscnsc6x2ep8jwz5f9yxc5zr8qvu5uqj
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4xgk5wd2kddny53jjvdfk26n8fph4z46gtgze94kz
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4g9d95cmp0f2kvjtv2a95c6zhgaf953tzxy7suzpm
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4d5u5zutcg4q4vet2wfxkcajf89xj65rrfgdk6jdk
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4f5e5j5rf23n45s3e2az8sntkvdzxsk2kxv7e2gtx
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4xvuy6kjzw3yhy4mzwak57mphf9e8qttn2uh3mw5q
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4g3pyct2sgerywd2tweck2dtp0ptxukzjfq256vxg
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy88wumn8ghj7mn0wvhxcmmv9uqpqcnp8yekvwpsxcukvdeexqunvvc0t4r2c
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy88wumn8ghj7mn0wvhxcmmv9uqpqcejv3jx2wr9vccnvcnzx3snvvgj28hkn
+  - naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy88wumn8ghj7mn0wvhxcmmv9uqpqcf4xumkzvnyxp3xxcfjvfjnseqjfl609
 
 profiles: # add nprofiles here
-  - nprofile1qqsrhuxx8l9ex335q7he0f09aej04zpazpl0ne2cgukyawd24mayt8gpp4mhxue69uhkummn9ekx7mqprhgw8
-  - nprofile1qqsxue9c8s0kwnaspf03nqtv99akg99lvlcptz2wqnw5cet7jsgza6qpp4mhxue69uhkummn9ekx7mq8k7c9l
+  - nprofile1qqsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5spz3mhxue69uhhyetvv9ujuerpd46hxtnfduq32amnwvaz7tmjv4kxz7fwd4hhxarj9ec82cslh9s0q
+  

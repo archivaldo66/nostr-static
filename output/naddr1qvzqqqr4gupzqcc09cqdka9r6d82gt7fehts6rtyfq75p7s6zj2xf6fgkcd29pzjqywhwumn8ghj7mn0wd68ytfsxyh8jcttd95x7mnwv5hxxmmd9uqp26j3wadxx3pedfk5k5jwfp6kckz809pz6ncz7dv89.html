@@ -1,0 +1,816 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="icon" href="favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg&#43;xml">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="La Inteligencia Artificial del Fin de Los Tiempos.">
+    <meta property="og:description" content="La inteligencia artificial como arma de vigilancia masiva en la guerra moderna.">
+    <meta property="og:url" content="https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqywhwumn8ghj7mn0wd68ytfsxyh8jcttd95x7mnwv5hxxmmd9uqp26j3wadxx3pedfk5k5jwfp6kckz809pz6ncz7dv89">
+    <meta property="og:image" content="https://image.nostr.build/ea7d710f79dc9cd3caaf904ae0109242e81b76abd138c88212a89d81e37e72bd.jpg">
+    <title>
+      La Inteligencia Artificial del Fin de Los Tiempos.
+    </title>
+    <style>
+       
+      body {
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+          line-height: 1.6;
+          max-width: 800px;
+      	margin: 0 auto;
+      	padding: 20px;
+      	font-size: 16px;
+          color: #333;
+          background-color: #fff;
+      }
+      
+       
+      body.light {
+          background-color: #ffffff;
+          color: #333333;
+      }
+      
+      body.dark {
+          background-color: #1a1a1a;
+          color: #e0e0e0;
+      }
+      
+       
+      .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+      }
+      
+       
+      a {
+          color: #0066cc;
+          text-decoration: none;
+      }
+      
+      body.light a {
+          color: #0066cc;
+      }
+      
+      body.dark a {
+          color: #4a9eff;
+      }
+      
+      a:hover {
+          text-decoration: underline;
+      }
+      
+       
+      ul, ol {
+          padding-left: 2em;
+      }
+      
+       
+      pre {
+          background-color: #f5f5f5;
+          padding: 1em;
+          border-radius: 4px;
+          overflow-x: auto;
+      }
+      
+      body.dark pre {
+          background-color: #2d2d2d;
+      }
+      
+      code {
+          font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+          font-size: 0.9em;
+      }
+      
+       
+      blockquote {
+          margin: 1em 0;
+          padding: 0.5em 1em;
+          border-left: 4px solid #ddd;
+          background-color: #f9f9f9;
+      }
+      
+      body.dark blockquote {
+          border-left-color: #404040;
+          background-color: #2d2d2d;
+      }
+      
+       
+      table {
+          border-collapse: collapse;
+          width: 100%;
+          margin: 1em 0;
+      }
+      
+      th, td {
+          padding: 0.5em;
+          border: 1px solid #ddd;
+      }
+      
+      body.dark th, body.dark td {
+          border-color: #404040;
+      }
+      
+      th {
+          background-color: #f5f5f5;
+      }
+      
+      body.dark th {
+          background-color: #2d2d2d;
+      }
+      
+       
+      hr {
+          border: none;
+          border-top: 1px solid #ddd;
+          margin: 2em 0;
+      }
+      
+      body.dark hr {
+          border-top-color: #404040;
+      }
+      
+       
+      .theme-toggle {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          padding: 8px 16px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 14px;
+          transition: background-color 0.3s;
+      }
+      
+      body.light .theme-toggle {
+          background-color: #f0f0f0;
+          color: #333;
+      }
+      
+      body.dark .theme-toggle {
+          background-color: #404040;
+          color: #fff;
+      }
+      
+      .theme-toggle:hover {
+          opacity: 0.9;
+      }
+      
+       
+      @media (max-width: 600px) {
+          .container {
+              padding: 10px;
+          }
+          
+          .theme-toggle {
+              top: 10px;
+              right: 10px;
+          }
+      }
+      
+      body.article .logo-container {
+      	margin-top: 0;
+      }
+      
+      body.article .page-container {
+      	display: flex;
+      	align-items: flex-start;
+      	max-width: 1200px;
+      	margin: 0 auto;
+      }
+      
+      body.article .main-content {
+      	flex: 1;
+      	max-width: 800px;
+      }
+      
+      body.article img {
+      	max-width: 100%;
+      	height: auto;
+      }
+      
+      body.article pre {
+      	background-color: #f5f5f5;
+      	padding: 15px;
+      	border-radius: 5px;
+      	overflow-x: auto;
+      }
+      
+      body.article code {
+      	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      }
+      
+      body.article .article-header {
+      	margin-bottom: 2em;
+      }
+      
+      body.article .article-header h1 {
+      	margin-bottom: 0.5em;
+      }
+      
+      body.article article {
+      	word-wrap: break-word;
+      	overflow-wrap: break-word;
+      	hyphens: auto;
+      }
+      
+      body.article article p {
+      	max-width: 100%;
+      	overflow-wrap: break-word;
+      	word-wrap: break-word;
+      	word-break: break-word;
+      }
+      
+      .page-container {
+      	display: flex;
+      	align-items: flex-start;
+      	max-width: 1200px;
+      	margin: 0 auto;
+      }
+      
+      .main-content {
+      	flex: 1;
+      	max-width: 800px;
+      }
+      
+      img {
+      	max-width: 100%;
+      	height: auto;
+      }
+      
+      pre {
+      	background-color: #f5f5f5;
+      	padding: 15px;
+      	border-radius: 5px;
+      	overflow-x: auto;
+      }
+      code {
+      	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      }
+      
+      .article-header {
+      	margin-bottom: 2em;
+      }
+      
+      .article-header h1 {
+      	margin-bottom: 0.5em;
+      }
+      
+      article {
+      	word-wrap: break-word;
+      	overflow-wrap: break-word;
+      	hyphens: auto;
+      }
+      
+      article p {
+      	max-width: 100%;
+      	overflow-wrap: break-word;
+      	word-wrap: break-word;
+      	word-break: break-word;
+      }
+      
+      .tags {
+      	margin-bottom: 1em;
+      }
+      		
+      @media (max-width: 768px) {
+      	.article-header {
+      		display: flex;
+      		flex-direction: column;
+      		align-items: baseline;
+      		margin-top: 15px;
+      	}
+      }
+      
+      .article-header-top {
+      	display: flex;
+      	justify-content: space-between;
+      	align-items: center;
+      	margin-bottom: 1em;
+      }
+      
+      .recommended-articles-title {
+          font-size: 1.5em;
+          font-weight: 600;
+      		margin-top: 1em;
+          margin-bottom: 1em;
+          color: #c99;
+      }
+      
+      .tag-discovery-items {
+          display: flex;
+          overflow-x: auto;
+          gap: 2em;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: thin;
+          scrollbar-color: #666 #f0f0f0;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar {
+          height: 8px;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar-track {
+          background: #f0f0f0;
+          border-radius: 4px;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar-thumb {
+          background: #666;
+          border-radius: 4px;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar-thumb:hover {
+          background: #888;
+      }
+      
+      .tag-discovery-item {
+          flex: 0 0 300px;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5em;
+      }
+      
+      .tag-image-link {
+          display: block;
+          text-decoration: none;
+          width: 100%;
+          height: 200px;
+          overflow: hidden;
+          border-radius: 4px;
+      }
+      
+      .tag-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+      
+      .tag-image-placeholder {
+          width: 100%;
+          height: 100%;
+          background-color: #f0f0f0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #999;
+          font-size: 0.9em;
+      }
+      
+      .tag-author-section {
+          display: flex;
+          align-items: center;
+          gap: 0.5em;
+      }
+      
+      .tag-author-picture {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          object-fit: cover;
+      }
+      
+      .tag-author {
+          font-size: 0.85em;
+          color: #666;
+          text-decoration: none;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+      }
+      
+      .tag-author:hover {
+          color: #333;
+      }
+      
+      .tag-title {
+          font-size: 1.2em;
+          font-weight: 600;
+          color: #333;
+          text-decoration: none;
+          display: block;
+          line-height: 1.3;
+      }
+      
+      .tag-title:hover {
+          color: #666;
+      }
+      
+      .tag-summary {
+          font-size: 0.9em;
+          color: #666;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          line-height: 1.4;
+      }
+      
+      @media (max-width: 768px) {
+          .tag-discovery-item {
+              flex: 0 0 260px;
+          }
+          
+          .tag-image-link {
+              height: 180px;
+          }
+          
+          .tag-author-picture {
+              width: 20px;
+              height: 20px;
+          }
+          
+          .tag-author {
+              font-size: 0.8em;
+          }
+      }
+      
+          @media (max-width: 768px) {
+              body {
+                  font-size: 18px;
+                  padding: 15px;
+              }
+      
+              .page-container {
+                  flex-direction: column;
+              }
+      
+              .main-content {
+                  width: 100%;
+              }
+      
+              .article-card {
+                  padding: 15px;
+              }
+          }
+      
+      .dropdown {
+      	position: relative;
+      	display: inline-block;
+      }
+      
+      .dropdown-button {
+      	background-color: #f0f0f0;
+      	border: none;
+      	border-radius: 50%;
+      	width: 20px;
+      	height: 20px;
+      	margin-left: 10px;
+      	display: flex;
+      	align-items: center;
+      	justify-content: center;
+      	font-size: 0.8em;
+      	cursor: pointer;
+      	color: #666;
+      	transition: background-color 0.2s;
+      }
+      
+      .dropdown-button:hover {
+      	background-color: #e0e0e0;
+      }
+      
+      .dropdown-content {
+      	display: none;
+      	position: absolute;
+      	right: -10px;
+      	top: 100%;
+      	background-color: white;
+      	min-width: 180px;
+      	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+      	z-index: 1;
+      	border-radius: 8px;
+      	margin-top: 8px;
+      	border: 1px solid #eee;
+      }
+      
+      .dropdown.show .dropdown-content {
+      	display: block;
+      }
+      
+      .dropdown-content a {
+      	font-size: 0.8em;
+      	color: #333;
+      	padding: 12px 16px;
+      	text-decoration: none;
+      	display: block;
+      	transition: background-color 0.2s;
+      	border-bottom: 1px solid #eee;
+      	border-radius: 8px;
+      }
+      
+      .dropdown-content a:last-child {
+      	border-bottom: none;
+      }
+      
+      .dropdown-content a:hover {
+      	background-color: #f5f5f5;
+      }
+      
+      .logo {
+          text-align: center;
+      }
+      
+      .logo img {
+          max-height: 100px;
+          width: auto;
+      }
+      
+      .logo-container {
+          margin-top: 20px;
+          margin-right: 20px;
+      }
+      
+      .logo-container img {
+          max-height: 50px;
+          width: auto;
+      }
+      
+      .compact-profile {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+      }
+      
+      .compact-profile-link {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: inherit;
+          gap: 8px;
+      }
+      
+      .compact-profile-ago {
+          margin-bottom: 1px;
+          font-size: 0.8em;
+      }
+      
+      .compact-profile-picture {
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          object-fit: cover;
+      }
+      
+      .compact-profile-name {
+          font-size: 0.9em;
+          font-weight: 500;
+      }
+      
+       
+      body.light .compact-profile-link {
+          color: #000000;
+      }
+      
+      body.light .compact-profile-link:hover {
+          color: #0066cc;
+      }
+      
+      body.dark .compact-profile-link {
+          color: #e0e0e0;
+      }
+      
+      body.dark .compact-profile-link:hover {
+          color: #4a9eff;
+      }
+      
+      .time-ago {
+          display: inline-block;
+          min-width: 70px;
+      }
+      
+      .feed-links {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5em;
+          padding: 1em;
+      }
+      
+      .feed-icon {
+          width: 16px;
+          height: 16px;
+      }
+      
+      .tags {
+      	display: flex;
+      	flex-wrap: wrap;
+      	gap: 0 8px;
+      	margin-top: 1em;
+      	margin-bottom: 1em;
+      }
+      
+      .tag {
+      	display: inline-block;
+      	padding: 4px 8px;
+      	border-radius: 4px;
+      	margin-bottom: 8px;
+      	font-size: 0.9em;
+      }
+      
+      .tag a {
+      	text-decoration: none;
+      	color: inherit;
+      }
+      
+      body.light .tag {
+      	background-color: #f0f0f0;
+      	border: 1px solid #dee2e6;
+      }	
+      
+      body.dark .tag {
+      	background-color: #1a1a1a;
+      	border: 1px solid #404040;
+      }
+      
+      .footer {
+          margin-top: 2em;
+          padding-top: 1em;
+          border-top: 1px solid #eee;
+          text-align: center;
+          font-size: 0.9em;
+          color: #666;
+      }
+      
+      body.dark .footer {
+          border-top-color: #333;
+          color: #999;
+      }
+      
+      .footer a {
+          text-decoration: none;
+      }
+      
+      body.light .footer a {
+          color: #0066cc;
+      }
+      
+      body.dark .footer a {
+          color: #4a9eff;
+      }
+      
+      .image-container {
+          margin: 20px 0;
+          text-align: center;
+      }
+      
+      .image-container img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      
+      body.dark .image-container img {
+          box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      }
+      
+    </style>
+  </head>
+  <body class="dark article">
+    <div class="page-container">
+      <div class="logo-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="logo.png" alt="Logo">
+          </a>
+        </div>
+      </div>
+      <div class="main-content">
+        <article>
+          <div class="article-header">
+            <div class="article-header-top">
+              <div class="compact-profile">
+                <a href="profile/nprofile1qqsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5spz3mhxue69uhhyetvv9ujuerpd46hxtnfduq32amnwvaz7tmjv4kxz7fwd4hhxarj9ec82cslh9s0q.html" class="compact-profile-link">
+                  <img src="https://cdn.nostrcheck.me/94541465094a859adea9bcacbb0704a3f8a3c77cd182901df02473ef75be6b2b/5904c263bc7fbbc4111a98284c2ce5afa9246400b3005cb0dee5c6fd7e93673c.webp" alt="Archivero" class="compact-profile-picture">
+                  <span class="compact-profile-name">
+                    Archivero
+                  </span>
+                </a>
+                <a href="naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqywhwumn8ghj7mn0wd68ytfsxyh8jcttd95x7mnwv5hxxmmd9uqp26j3wadxx3pedfk5k5jwfp6kckz809pz6ncz7dv89.html" class="compact-profile-ago">
+                  <span class="time-ago" data-timestamp="1782968327">
+                  </span>
+                </a>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-button" type="button">
+                  ⋯
+                </button>
+                <div class="dropdown-content">
+                  <a href="https://njump.me/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqywhwumn8ghj7mn0wd68ytfsxyh8jcttd95x7mnwv5hxxmmd9uqp26j3wadxx3pedfk5k5jwfp6kckz809pz6ncz7dv89" class="nostr-link" target="_blank">
+                    Open Article in Nostr
+                  </a>
+                  <a href="https://njump.me/nprofile1qqsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5spz3mhxue69uhhyetvv9ujuerpd46hxtnfduq32amnwvaz7tmjv4kxz7fwd4hhxarj9ec82cslh9s0q" class="nostr-link" target="_blank">
+                    Open Author in Nostr
+                  </a>
+                </div>
+              </div>
+            </div>
+            <h1>
+              La Inteligencia Artificial del Fin de Los Tiempos.
+            </h1>
+            <p class="summary">
+              La inteligencia artificial como arma de vigilancia masiva en la guerra moderna.
+            </p>
+            <div class="tags">
+              <span class="tag">
+                <a href="tag/noticias.html">
+                  noticias
+                </a>
+              </span>
+              <span class="tag">
+                <a href="tag/espionajemasivo.html">
+                  EspionajeMasivo
+                </a>
+              </span>
+              <span class="tag">
+                <a href="tag/blogindex.html">
+                  Blogindex
+                </a>
+              </span>
+              <span class="tag">
+                <a href="tag/inteligenciartificial.html">
+                  InteligenciArtificial
+                </a>
+              </span>
+              <span class="tag">
+                <a href="tag/documentales.html">
+                  Documentales
+                </a>
+              </span>
+              <span class="tag">
+                <a href="tag/guerrasdelfuturo.html">
+                  GuerrasDelFuturo
+                </a>
+              </span>
+            </div>
+            <div class="image-container">
+              <a href="naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqywhwumn8ghj7mn0wd68ytfsxyh8jcttd95x7mnwv5hxxmmd9uqp26j3wadxx3pedfk5k5jwfp6kckz809pz6ncz7dv89.html">
+                <img src="https://image.nostr.build/ea7d710f79dc9cd3caaf904ae0109242e81b76abd138c88212a89d81e37e72bd.jpg" alt="La Inteligencia Artificial del Fin de Los Tiempos.">
+              </a>
+            </div>
+          </div><h2 id="la-inteligencia-artificial-del-fin-de-los-tiempos">La Inteligencia Artificial del Fin de Los Tiempos.</h2>
+          <p>Recienteme fue lanzado un exclusivo mini documental del canal británico Channel 4 donde han conseguido que varios soldados del ejército de Israel den testimonio de como han operado en Gaza  y lo que describen es fascinante a la vez que terrible y podría cambiar muchas cosas.</p>
+          <p>Israel tiene un sistema de Inteligencia Artificial enfocada en el ESPIONAJE MASIVO contra los palestinos que intercepta las llamadas y mensajes de todos los habitantes  y categoriza las palabras en caso de amenaza.</p>
+          <p>Junto a este sistema, en Cisjordania y Gaza, todos los palestinos tienen un sistema de puntuación que usa la edad, género, estudios, familiares y otras decenas de características para crear, del 0 al 100, una lista de &quot;qué tan potencialmente terrorista eres&quot;, y si en una de esas características tienes algún tipo de relación con algún miembro de Hamas.</p>
+          <p>No obstante, relación significa simplemente relación no complicidad. Un vecino, que hayas ido a comprarle si es carnicero, un familiar que sí tiene vingulos con Hamás pero fue almorzar a tu casa, etc, cualquier cosa que te pueda acercar a alguien de Hamas, automáticamente eleva tu puntuaje como objetivo legítimo y te trata como un conspirador y terrorista.</p>
+          <p>El sistema, automáticamente, con esta información, incluso si no se ha llegado a hacer nada, cuando se supera un número, te asesina para prevenir cualquier posible futuro daño.</p>
+          <p>Entendiendo que, por cada 1 soldado de Hamas muerto, 20 veces civiles pueden ser daños colaterales. No solo de bombardeos, también de ataques mediante este sistema.<br />
+          Eso significa que, si eres un hombre joven palestino cuyo tío es de Hamas y vives cerca de una zona sospechosa, una IA en Israel podría decidir matarte junto a 20 personas y sería válido, aunque nadie hubiera hecho nada.</p>
+          <p>Esto explica también el asesinato sistemático de periodistas, ya que &quot;relación con Hamas&quot; es algo absolutamente subjetivo que se puede considerar desde ser un periodista cuyo tío es de Hamas hasta ser alguien de Hamas de verdad.</p>
+          <p>El soldado de Israel explica que este sistema es solo una excusa legal, donde usan los datos para ejecutar el asesinato, pero que el objetivo es simplemente atacar al máximo posible de objetivos.</p>
+          <p>La tecnología, en este caso, solo es un salvoconducto legal y una forma de hacer cientos de bombardeos diarios sin &quot;romper la ley&quot;.</p>
+          <p>Es decir, que Israel estaría cometiendo un genocidio con un sistema de inteligencia artificial que no está siendo supervisado por seres humanos, y con un saldo que, según dicen, aceptan de un soldado por cada 20 civiles muertos, o de hasta 300 si se trata de una persona relevante.</p>
+          <hr />
+          <p>Aunque estás revelaciones no son nuevas ni exclusivas, el medio +972 había publicado en 2024 sobre Lavender, otra IA enfocada en los bombardeos en Gaza.<br />
+          <a href="https://www.972mag.com/lavender-ai-israeli-army-gaza/">https://www.972mag.com/lavender-ai-israeli-army-gaza/</a></p>
+          <hr />
+          <p>Y The Guardian publicó como el proyecto Nimbus<br />
+          lo usan con Lavender y Gospel para mismos efectos:<br />
+          <a href="https://www.theguardian.com/world/2023/dec/01/the-gospel-how-israel-uses-ai-to-select-bombing-targets">https://www.theguardian.com/world/2023/dec/01/the-gospel-how-israel-uses-ai-to-select-bombing-targets</a></p>
+          <hr />
+          <p>Básicamente, una doctrina Dahiya con esteroides y, claramente, una atrocidad sin parangón desde el uso de armas químicas y plantea serias preguntas sobre el futuro de la guerra y la represión a nivel global. ¿Están aplicando todo este sistema de vigilancia y espionaje masivo como un experimento para algo más global en el futuro? La guerra al Sur del Líbano parece estar demostrando que están utilizando esta tecnología más allá de Gaza.</p>
+          <hr />
+          <p>Para ver el documental:<br />
+          WATCH: ‘Click to Kill: The AI War Machine’<br />
+          <a href="https://www.channel4.com/programmes/click-to-kill-the-ai-war-machine">https://www.channel4.com/programmes/click-to-kill-the-ai-war-machine</a></p>
+          <p>#noticias #EspionajeMasivo #Blogindex #InteligenciArtificial #Documentales #GuerrasDelFuturo</p>
+          
+        </article><zap-threads 
+        		anchor="naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqywhwumn8ghj7mn0wd68ytfsxyh8jcttd95x7mnwv5hxxmmd9uqp26j3wadxx3pedfk5k5jwfp6kckz809pz6ncz7dv89" 
+        		relays="wss://relay.damus.io,wss://nostr.wine,wss://relay.nostr.band,wss://nos.lol,wss://relay.primal.net,wss://nostr-01.yakihonne.com,wss://nostr-02.yakihonne.com,wss://purplepag.es,wss://nostr.mom,wss://relay.0xchat.com,wss://relay.gitcitadel.eu,wss://relay.damus.io,wss://relay.snort.social,wss://offchain.pub,wss://relay.nostr.wirednet.jp,wss://wot.nostr.party,wss://wot.utxo.one,wss://lang.relays.land/es"
+        		urls="naddr:njump.me/,npub:njump.me/,nprofile:njump.me/,nevent:njump.me/,note:njump.me/,tag:snort.social/t/"
+        		disable="replyAnonymously" />
+      </div>
+    </div>
+    
+    <div class="footer">
+      Built with 
+      <a href="https://github.com/dhalsim/nostr-static" target="_blank">
+        nostr-static
+      </a>
+    </div>
+    <script src="/static/js/time-ago.js">
+      ""
+    </script>
+    		<script>
+    			window.wnjParams = {
+    				position: 'bottom',
+    				startHidden: true,
+    				compactMode: true,
+    				disableOverflowFix: true,
+    			}
+    		</script>
+    		<script src="https://cdn.jsdelivr.net/npm/window.nostr.js/dist/window.nostr.min.js"></script>
+    		<script type="text/javascript" src="https://unpkg.com/zapthreads/dist/zapthreads.iife.js"></script>
+    	
+    <script src="/static/js/dropdown.js">
+      ""
+    </script>
+  </body>
+</html>

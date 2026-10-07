@@ -1,0 +1,796 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="icon" href="favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg&#43;xml">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="No es el micrófono: es el teclado">
+    <meta property="og:description" content="¿Nos escuchan realmente los teléfonos o es tu teclado el que te esta delatando?">
+    <meta property="og:url" content="https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4xfrk63rywfyx7knjwdz5uwtfdy6ksez4ws59dwnk">
+    <meta property="og:image" content="https://image.nostr.build/f00ac331ae35888dea5379f0fd89cf4dd45fd20d0a87608e4f15a47007574a78.jpg">
+    <title>
+      No es el micrófono: es el teclado
+    </title>
+    <style>
+       
+      body {
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+          line-height: 1.6;
+          max-width: 800px;
+      	margin: 0 auto;
+      	padding: 20px;
+      	font-size: 16px;
+          color: #333;
+          background-color: #fff;
+      }
+      
+       
+      body.light {
+          background-color: #ffffff;
+          color: #333333;
+      }
+      
+      body.dark {
+          background-color: #1a1a1a;
+          color: #e0e0e0;
+      }
+      
+       
+      .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+      }
+      
+       
+      a {
+          color: #0066cc;
+          text-decoration: none;
+      }
+      
+      body.light a {
+          color: #0066cc;
+      }
+      
+      body.dark a {
+          color: #4a9eff;
+      }
+      
+      a:hover {
+          text-decoration: underline;
+      }
+      
+       
+      ul, ol {
+          padding-left: 2em;
+      }
+      
+       
+      pre {
+          background-color: #f5f5f5;
+          padding: 1em;
+          border-radius: 4px;
+          overflow-x: auto;
+      }
+      
+      body.dark pre {
+          background-color: #2d2d2d;
+      }
+      
+      code {
+          font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+          font-size: 0.9em;
+      }
+      
+       
+      blockquote {
+          margin: 1em 0;
+          padding: 0.5em 1em;
+          border-left: 4px solid #ddd;
+          background-color: #f9f9f9;
+      }
+      
+      body.dark blockquote {
+          border-left-color: #404040;
+          background-color: #2d2d2d;
+      }
+      
+       
+      table {
+          border-collapse: collapse;
+          width: 100%;
+          margin: 1em 0;
+      }
+      
+      th, td {
+          padding: 0.5em;
+          border: 1px solid #ddd;
+      }
+      
+      body.dark th, body.dark td {
+          border-color: #404040;
+      }
+      
+      th {
+          background-color: #f5f5f5;
+      }
+      
+      body.dark th {
+          background-color: #2d2d2d;
+      }
+      
+       
+      hr {
+          border: none;
+          border-top: 1px solid #ddd;
+          margin: 2em 0;
+      }
+      
+      body.dark hr {
+          border-top-color: #404040;
+      }
+      
+       
+      .theme-toggle {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          padding: 8px 16px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 14px;
+          transition: background-color 0.3s;
+      }
+      
+      body.light .theme-toggle {
+          background-color: #f0f0f0;
+          color: #333;
+      }
+      
+      body.dark .theme-toggle {
+          background-color: #404040;
+          color: #fff;
+      }
+      
+      .theme-toggle:hover {
+          opacity: 0.9;
+      }
+      
+       
+      @media (max-width: 600px) {
+          .container {
+              padding: 10px;
+          }
+          
+          .theme-toggle {
+              top: 10px;
+              right: 10px;
+          }
+      }
+      
+      body.article .logo-container {
+      	margin-top: 0;
+      }
+      
+      body.article .page-container {
+      	display: flex;
+      	align-items: flex-start;
+      	max-width: 1200px;
+      	margin: 0 auto;
+      }
+      
+      body.article .main-content {
+      	flex: 1;
+      	max-width: 800px;
+      }
+      
+      body.article img {
+      	max-width: 100%;
+      	height: auto;
+      }
+      
+      body.article pre {
+      	background-color: #f5f5f5;
+      	padding: 15px;
+      	border-radius: 5px;
+      	overflow-x: auto;
+      }
+      
+      body.article code {
+      	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      }
+      
+      body.article .article-header {
+      	margin-bottom: 2em;
+      }
+      
+      body.article .article-header h1 {
+      	margin-bottom: 0.5em;
+      }
+      
+      body.article article {
+      	word-wrap: break-word;
+      	overflow-wrap: break-word;
+      	hyphens: auto;
+      }
+      
+      body.article article p {
+      	max-width: 100%;
+      	overflow-wrap: break-word;
+      	word-wrap: break-word;
+      	word-break: break-word;
+      }
+      
+      .page-container {
+      	display: flex;
+      	align-items: flex-start;
+      	max-width: 1200px;
+      	margin: 0 auto;
+      }
+      
+      .main-content {
+      	flex: 1;
+      	max-width: 800px;
+      }
+      
+      img {
+      	max-width: 100%;
+      	height: auto;
+      }
+      
+      pre {
+      	background-color: #f5f5f5;
+      	padding: 15px;
+      	border-radius: 5px;
+      	overflow-x: auto;
+      }
+      code {
+      	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      }
+      
+      .article-header {
+      	margin-bottom: 2em;
+      }
+      
+      .article-header h1 {
+      	margin-bottom: 0.5em;
+      }
+      
+      article {
+      	word-wrap: break-word;
+      	overflow-wrap: break-word;
+      	hyphens: auto;
+      }
+      
+      article p {
+      	max-width: 100%;
+      	overflow-wrap: break-word;
+      	word-wrap: break-word;
+      	word-break: break-word;
+      }
+      
+      .tags {
+      	margin-bottom: 1em;
+      }
+      		
+      @media (max-width: 768px) {
+      	.article-header {
+      		display: flex;
+      		flex-direction: column;
+      		align-items: baseline;
+      		margin-top: 15px;
+      	}
+      }
+      
+      .article-header-top {
+      	display: flex;
+      	justify-content: space-between;
+      	align-items: center;
+      	margin-bottom: 1em;
+      }
+      
+      .recommended-articles-title {
+          font-size: 1.5em;
+          font-weight: 600;
+      		margin-top: 1em;
+          margin-bottom: 1em;
+          color: #c99;
+      }
+      
+      .tag-discovery-items {
+          display: flex;
+          overflow-x: auto;
+          gap: 2em;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: thin;
+          scrollbar-color: #666 #f0f0f0;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar {
+          height: 8px;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar-track {
+          background: #f0f0f0;
+          border-radius: 4px;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar-thumb {
+          background: #666;
+          border-radius: 4px;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar-thumb:hover {
+          background: #888;
+      }
+      
+      .tag-discovery-item {
+          flex: 0 0 300px;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5em;
+      }
+      
+      .tag-image-link {
+          display: block;
+          text-decoration: none;
+          width: 100%;
+          height: 200px;
+          overflow: hidden;
+          border-radius: 4px;
+      }
+      
+      .tag-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+      
+      .tag-image-placeholder {
+          width: 100%;
+          height: 100%;
+          background-color: #f0f0f0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #999;
+          font-size: 0.9em;
+      }
+      
+      .tag-author-section {
+          display: flex;
+          align-items: center;
+          gap: 0.5em;
+      }
+      
+      .tag-author-picture {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          object-fit: cover;
+      }
+      
+      .tag-author {
+          font-size: 0.85em;
+          color: #666;
+          text-decoration: none;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+      }
+      
+      .tag-author:hover {
+          color: #333;
+      }
+      
+      .tag-title {
+          font-size: 1.2em;
+          font-weight: 600;
+          color: #333;
+          text-decoration: none;
+          display: block;
+          line-height: 1.3;
+      }
+      
+      .tag-title:hover {
+          color: #666;
+      }
+      
+      .tag-summary {
+          font-size: 0.9em;
+          color: #666;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          line-height: 1.4;
+      }
+      
+      @media (max-width: 768px) {
+          .tag-discovery-item {
+              flex: 0 0 260px;
+          }
+          
+          .tag-image-link {
+              height: 180px;
+          }
+          
+          .tag-author-picture {
+              width: 20px;
+              height: 20px;
+          }
+          
+          .tag-author {
+              font-size: 0.8em;
+          }
+      }
+      
+          @media (max-width: 768px) {
+              body {
+                  font-size: 18px;
+                  padding: 15px;
+              }
+      
+              .page-container {
+                  flex-direction: column;
+              }
+      
+              .main-content {
+                  width: 100%;
+              }
+      
+              .article-card {
+                  padding: 15px;
+              }
+          }
+      
+      .dropdown {
+      	position: relative;
+      	display: inline-block;
+      }
+      
+      .dropdown-button {
+      	background-color: #f0f0f0;
+      	border: none;
+      	border-radius: 50%;
+      	width: 20px;
+      	height: 20px;
+      	margin-left: 10px;
+      	display: flex;
+      	align-items: center;
+      	justify-content: center;
+      	font-size: 0.8em;
+      	cursor: pointer;
+      	color: #666;
+      	transition: background-color 0.2s;
+      }
+      
+      .dropdown-button:hover {
+      	background-color: #e0e0e0;
+      }
+      
+      .dropdown-content {
+      	display: none;
+      	position: absolute;
+      	right: -10px;
+      	top: 100%;
+      	background-color: white;
+      	min-width: 180px;
+      	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+      	z-index: 1;
+      	border-radius: 8px;
+      	margin-top: 8px;
+      	border: 1px solid #eee;
+      }
+      
+      .dropdown.show .dropdown-content {
+      	display: block;
+      }
+      
+      .dropdown-content a {
+      	font-size: 0.8em;
+      	color: #333;
+      	padding: 12px 16px;
+      	text-decoration: none;
+      	display: block;
+      	transition: background-color 0.2s;
+      	border-bottom: 1px solid #eee;
+      	border-radius: 8px;
+      }
+      
+      .dropdown-content a:last-child {
+      	border-bottom: none;
+      }
+      
+      .dropdown-content a:hover {
+      	background-color: #f5f5f5;
+      }
+      
+      .logo {
+          text-align: center;
+      }
+      
+      .logo img {
+          max-height: 100px;
+          width: auto;
+      }
+      
+      .logo-container {
+          margin-top: 20px;
+          margin-right: 20px;
+      }
+      
+      .logo-container img {
+          max-height: 50px;
+          width: auto;
+      }
+      
+      .compact-profile {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+      }
+      
+      .compact-profile-link {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: inherit;
+          gap: 8px;
+      }
+      
+      .compact-profile-ago {
+          margin-bottom: 1px;
+          font-size: 0.8em;
+      }
+      
+      .compact-profile-picture {
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          object-fit: cover;
+      }
+      
+      .compact-profile-name {
+          font-size: 0.9em;
+          font-weight: 500;
+      }
+      
+       
+      body.light .compact-profile-link {
+          color: #000000;
+      }
+      
+      body.light .compact-profile-link:hover {
+          color: #0066cc;
+      }
+      
+      body.dark .compact-profile-link {
+          color: #e0e0e0;
+      }
+      
+      body.dark .compact-profile-link:hover {
+          color: #4a9eff;
+      }
+      
+      .time-ago {
+          display: inline-block;
+          min-width: 70px;
+      }
+      
+      .feed-links {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5em;
+          padding: 1em;
+      }
+      
+      .feed-icon {
+          width: 16px;
+          height: 16px;
+      }
+      
+      .tags {
+      	display: flex;
+      	flex-wrap: wrap;
+      	gap: 0 8px;
+      	margin-top: 1em;
+      	margin-bottom: 1em;
+      }
+      
+      .tag {
+      	display: inline-block;
+      	padding: 4px 8px;
+      	border-radius: 4px;
+      	margin-bottom: 8px;
+      	font-size: 0.9em;
+      }
+      
+      .tag a {
+      	text-decoration: none;
+      	color: inherit;
+      }
+      
+      body.light .tag {
+      	background-color: #f0f0f0;
+      	border: 1px solid #dee2e6;
+      }	
+      
+      body.dark .tag {
+      	background-color: #1a1a1a;
+      	border: 1px solid #404040;
+      }
+      
+      .footer {
+          margin-top: 2em;
+          padding-top: 1em;
+          border-top: 1px solid #eee;
+          text-align: center;
+          font-size: 0.9em;
+          color: #666;
+      }
+      
+      body.dark .footer {
+          border-top-color: #333;
+          color: #999;
+      }
+      
+      .footer a {
+          text-decoration: none;
+      }
+      
+      body.light .footer a {
+          color: #0066cc;
+      }
+      
+      body.dark .footer a {
+          color: #4a9eff;
+      }
+      
+      .image-container {
+          margin: 20px 0;
+          text-align: center;
+      }
+      
+      .image-container img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      
+      body.dark .image-container img {
+          box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      }
+      
+    </style>
+  </head>
+  <body class="dark article">
+    <div class="page-container">
+      <div class="logo-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="logo.png" alt="Logo">
+          </a>
+        </div>
+      </div>
+      <div class="main-content">
+        <article>
+          <div class="article-header">
+            <div class="article-header-top">
+              <div class="compact-profile">
+                <a href="profile/nprofile1qqsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5spz3mhxue69uhhyetvv9ujuerpd46hxtnfduq32amnwvaz7tmjv4kxz7fwd4hhxarj9ec82cslh9s0q.html" class="compact-profile-link">
+                  <img src="https://cdn.nostrcheck.me/94541465094a859adea9bcacbb0704a3f8a3c77cd182901df02473ef75be6b2b/5904c263bc7fbbc4111a98284c2ce5afa9246400b3005cb0dee5c6fd7e93673c.webp" alt="Archivero" class="compact-profile-picture">
+                  <span class="compact-profile-name">
+                    Archivero
+                  </span>
+                </a>
+                <a href="naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4xfrk63rywfyx7knjwdz5uwtfdy6ksez4ws59dwnk.html" class="compact-profile-ago">
+                  <span class="time-ago" data-timestamp="1789447362">
+                  </span>
+                </a>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-button" type="button">
+                  ⋯
+                </button>
+                <div class="dropdown-content">
+                  <a href="https://njump.me/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4xfrk63rywfyx7knjwdz5uwtfdy6ksez4ws59dwnk" class="nostr-link" target="_blank">
+                    Open Article in Nostr
+                  </a>
+                  <a href="https://njump.me/nprofile1qqsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5spz3mhxue69uhhyetvv9ujuerpd46hxtnfduq32amnwvaz7tmjv4kxz7fwd4hhxarj9ec82cslh9s0q" class="nostr-link" target="_blank">
+                    Open Author in Nostr
+                  </a>
+                </div>
+              </div>
+            </div>
+            <h1>
+              No es el micrófono: es el teclado
+            </h1>
+            <p class="summary">
+              ¿Nos escuchan realmente los teléfonos o es tu teclado el que te esta delatando?
+            </p>
+            
+            <div class="image-container">
+              <a href="naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4xfrk63rywfyx7knjwdz5uwtfdy6ksez4ws59dwnk.html">
+                <img src="https://image.nostr.build/f00ac331ae35888dea5379f0fd89cf4dd45fd20d0a87608e4f15a47007574a78.jpg" alt="No es el micrófono: es el teclado">
+              </a>
+            </div>
+          </div><h2 id="no-es-el-micrfono-es-el-teclado">No es el micrófono: es el teclado</h2>
+          <p>A través de nuestras manos, de los teclados de las pantallas táctiles entran y salen todos los datos y comunicaciones que generamos día tras día. Cientos de miles de bytes que terminan siendo almacenados y manipulados por los mismos grandes oligarcas de los datos.</p>
+          <p>Generalmente cuando se habla de la seguridad en dispositivos móviles se refieren a la descarga de APKs piratas y los riesgos de instalar aplicaciones modificadas o dar clics en lugares indebidos, pero muy seguramente pocas veces has escuchado de la <strong>telemetría</strong>.</p>
+          <p>Asi que poco o de nada sirve que instales y utilices Signal, Briar, Keychat para tus comunicaciones si sigues usando por defecto los teclados de Google vinculados a tu cuenta.</p>
+          <h3 id="nos-escuchan-realmente-los-telfonos">¿Nos escuchan realmente los teléfonos?</h3>
+          <p>Por años, algún conocido, algún amigo o familiar nos ha jurado que el teléfono los escucha y espía de alguna manera con algún micrófono secreto. <a href="https://www.bbc.com/news/technology-49585682">Pero las distintas pruebas técnicas que se han hecho han demostrado lo evidente;</a> grabar, transcribir y analizar audios de cientos de millones de dispositivos en tiempo real tiene un costo de hardware y de batería que dejaría rastros detectables. Tú no eres tan importante para el sistema, a<a href="https://wikileaks.org/ciav7p1/"> menos que sobresalgas por algo en especial que haga que SI necesiten escucharte</a>…</p>
+          <p>Pero hay algo que si pueden hacer de forma automática.</p>
+          <p>Recopilar cientos de datos de tu comportamiento en internet y convertirte en un producto.</p>
+          <p>Por eso no hace falta un micrófono ultra-secreto cuando el teclado ya lo dice todo. Gboard ya sabe lo que vas a escribir antes de que termines de escribir.</p>
+          <p>Los algoritmos predictivos detrás de un Gboard , un SwiftKey o un Bobble no adivinan sino proyectan a partir la telemetría de tecleo, metadatos de ubicación, apps de terceros que venden su telemetría a data brokers, etc. Buena parte de tu perfil publicitario se arma con cosas que nunca escribiste en un buscador. Datos que rara vez se piensan como vigilancia por el usuario común. Pero al final, los teclados son una de las fuentes de datos más valiosas para la publicidad digital y marketing</p>
+          <p>De hecho, <a href="https://affle.com/affle_news/affle-to-acquire-strategic-stake-in-bobble-ai-the-conversation-media-platform-offering-indigenous-social-keyboard">las aplicaciones de teclado pagan a los fabricantes de teléfonos para preinstalar sus teclados en sus dispositivos</a>, de modo que sus usuarios activos aumenten y obtengan datos que se utilizan para dirigir anuncios.</p>
+          <p>Y un <a href="https://citizenlab.ca/research/vulnerabilities-across-keyboard-apps-reveal-keystrokes-to-network-eavesdroppers/">informe de Citizen Lab</a> de 2024 confirmaba que los teclados envían pulsaciones de teclas sin cifrar, exponiendo completamente los datos del usuario a los fisgones y es muy posible que las pulsaciones de estos usuarios también hayan estado bajo vigilancia masiva.</p>
+          <h3 id="qu-pasa-si-desactivo-los-permisos-de-los-teclados">¿Qué pasa si desactivo los permisos de los teclados?</h3>
+          <p>Sirve de forma marginal. Revocar micrófono, contactos, dictado por voz, sugerencias contextuales y almacenamiento corta funciones puntuales. Pero ninguna de esas revocaciones toca el permiso de red y ahí es por donde sale la información.</p>
+          <p>Por ejemplos, Los teclados de Samsung permanecen activos en segundo plano e intercepta las acciones de &quot;cortar&quot; y &quot;copiar&quot; incluso cuando el usuario configuró otro teclado como predeterminado, y en algunos modelos no puede desinstalarse ni desactivarse.</p>
+          <p>Así que, por diseño, estos teclados están hechos para una recolección sistemática sin consentimiento revocable.</p>
+          <p><img src="https://image.nostr.build/609f810e0cd27eb402e9f5bd8cd2321aabb4a83a95ce4a4990187331b1918059.jpg" alt="image" /></p>
+          <h3 id="utilizar-teclados-de-cdigo-abierto">Utilizar teclados de código abierto.</h3>
+          <p>Frente al hábito de aceptar lo que viene por defecto, venzamos la apatía y la pereza, elijamos decidir qué y cómo interactuar con la red. Intentemos usar aplicaciones de código abierto (FOSS) tanto como sea posible.</p>
+          <p><strong>AnySoftKeyboard</strong><br />
+          Sitio oficial: <a href="https://anysoftkeyboard.github.io/">https://anysoftkeyboard.github.io/</a><br />
+          F-Droid: <a href="https://f-droid.org/packages/com.menny.android.anysoftkeyboard/">https://f-droid.org/packages/com.menny.android.anysoftkeyboard/</a><br />
+          El más veterano y estable de la lista. AnySoftKeyboard es un teclado en pantalla para Android compatible con disponibilidad en +40 idiomas. y que no requiere acceso a Internet.  Admite diversas disposiciones de teclado, como QWERTY, Dvorak y AZERTY.  Incluye escritura por gestos, sugerencias de palabras y uso automático de mayúsculas. Ofrece modo oscuro, modo incógnito y tintado según la aplicación.</p>
+          <p><strong>FlorisBoard</strong><br />
+          Sitio oficial: <a href="https://florisboard.org/">https://florisboard.org/</a><br />
+          GitHub: <a href="https://github.com/florisboard/florisboard">https://github.com/florisboard/florisboard</a><br />
+          FlorisBoard es un teclado de código abierto ligero y rápido que se enfoca en la privacidad y la personalización de manera moderna y su función de autocorrección es increíblemente buena.</p>
+          <p><strong>HeliBoard</strong><br />
+          F-Droid: <a href="https://f-droid.org/packages/helium314.keyboard/">https://f-droid.org/packages/helium314.keyboard/</a><br />
+          GitHub: <a href="https://github.com/Helium314/HeliBoard">https://github.com/Helium314/HeliBoard</a><br />
+          Es el sucesor directo de OpenBoard (proyecto discontinuado ) nace explícitamente para continuar el proyecto tras su abandono, mantiene el mismo enfoque 100% FOSS sin ninguna dependencia de binarios de Google, pero con desarrollo activo, actualizaciones frecuentes y funciones que OpenBoard nunca llegó a tener (soporte multi-idioma simultáneo, historial de portapapeles configurable, Material You). Probablemente de los mejores que tiene balance tiene entre privacidad estricta y usabilidad diaria.</p>
+          <p><strong>FUTO Keyboard</strong><br />
+          Sitio oficial: <a href="https://keyboard.futo.org/">https://keyboard.futo.org/</a><br />
+          No está en F-Droid porque no es FOSS en sentido estricto — usa la &quot;FUTO Source First License&quot;, que permite ver y modificar el código pero restringe la redistribución comercial. Su punto fuerte es el reconocimiento de voz completamente offline (nada sale del dispositivo) Tiene un período de prueba gratis y después pide pago único por versión completa.</p>
+          <p><strong>GrapheneOS trae por defecto el AOSP Keyboard</strong>.</p>
+          <p>Es teclado original del proyecto de código abierto de Android (Android Open Source Project), sin ninguna capa añadida de Google.  Auditable en su totalidad, sin permiso de red por defecto. Sin permisos por defecto en general. Es la opción más segura por diseño, pero no la más cómoda.</p>
+          <p>#guias #SoberaniaDigital #AnonimatoDigital #Telemetria #OpenKeyboard</p>
+          
+        </article><zap-threads 
+        		anchor="naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4xfrk63rywfyx7knjwdz5uwtfdy6ksez4ws59dwnk" 
+        		relays="wss://relay.damus.io,wss://nostr.wine,wss://relay.nostr.band,wss://nos.lol,wss://relay.primal.net,wss://nostr-01.yakihonne.com,wss://nostr-02.yakihonne.com,wss://purplepag.es,wss://nostr.mom,wss://relay.0xchat.com,wss://relay.gitcitadel.eu,wss://relay.damus.io,wss://relay.snort.social,wss://offchain.pub,wss://relay.nostr.wirednet.jp,wss://wot.nostr.party,wss://wot.utxo.one,wss://lang.relays.land/es"
+        		urls="naddr:njump.me/,npub:njump.me/,nprofile:njump.me/,nevent:njump.me/,note:njump.me/,tag:snort.social/t/"
+        		disable="replyAnonymously" />
+      </div>
+    </div>
+    
+    <div class="footer">
+      Built with 
+      <a href="https://github.com/dhalsim/nostr-static" target="_blank">
+        nostr-static
+      </a>
+    </div>
+    <script src="/static/js/time-ago.js">
+      ""
+    </script>
+    		<script>
+    			window.wnjParams = {
+    				position: 'bottom',
+    				startHidden: true,
+    				compactMode: true,
+    				disableOverflowFix: true,
+    			}
+    		</script>
+    		<script src="https://cdn.jsdelivr.net/npm/window.nostr.js/dist/window.nostr.min.js"></script>
+    		<script type="text/javascript" src="https://unpkg.com/zapthreads/dist/zapthreads.iife.js"></script>
+    	
+    <script src="/static/js/dropdown.js">
+      ""
+    </script>
+  </body>
+</html>
