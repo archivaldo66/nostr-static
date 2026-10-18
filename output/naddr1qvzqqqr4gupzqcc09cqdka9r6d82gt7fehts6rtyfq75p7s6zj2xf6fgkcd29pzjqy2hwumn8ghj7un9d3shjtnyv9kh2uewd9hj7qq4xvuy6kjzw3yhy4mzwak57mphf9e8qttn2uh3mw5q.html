@@ -1,0 +1,941 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="icon" href="favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg&#43;xml">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="La guía definitiva para dejar de depender de Google en 2026">
+    <meta property="og:description" content="Haz parte de la Desgoogleización activa">
+    <meta property="og:url" content="https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4xvuy6kjzw3yhy4mzwak57mphf9e8qttn2uh3mw5q">
+    <meta property="og:image" content="https://image.nostr.build/16cc7f0cfce5ef6ddfc8744c91706a8efaf33e74a91409da4644317924529314.jpg">
+    <title>
+      La guía definitiva para dejar de depender de Google en 2026
+    </title>
+    <style>
+       
+      body {
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+          line-height: 1.6;
+          max-width: 800px;
+      	margin: 0 auto;
+      	padding: 20px;
+      	font-size: 16px;
+          color: #333;
+          background-color: #fff;
+      }
+      
+       
+      body.light {
+          background-color: #ffffff;
+          color: #333333;
+      }
+      
+      body.dark {
+          background-color: #1a1a1a;
+          color: #e0e0e0;
+      }
+      
+       
+      .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+      }
+      
+       
+      a {
+          color: #0066cc;
+          text-decoration: none;
+      }
+      
+      body.light a {
+          color: #0066cc;
+      }
+      
+      body.dark a {
+          color: #4a9eff;
+      }
+      
+      a:hover {
+          text-decoration: underline;
+      }
+      
+       
+      ul, ol {
+          padding-left: 2em;
+      }
+      
+       
+      pre {
+          background-color: #f5f5f5;
+          padding: 1em;
+          border-radius: 4px;
+          overflow-x: auto;
+      }
+      
+      body.dark pre {
+          background-color: #2d2d2d;
+      }
+      
+      code {
+          font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+          font-size: 0.9em;
+      }
+      
+       
+      blockquote {
+          margin: 1em 0;
+          padding: 0.5em 1em;
+          border-left: 4px solid #ddd;
+          background-color: #f9f9f9;
+      }
+      
+      body.dark blockquote {
+          border-left-color: #404040;
+          background-color: #2d2d2d;
+      }
+      
+       
+      table {
+          border-collapse: collapse;
+          width: 100%;
+          margin: 1em 0;
+      }
+      
+      th, td {
+          padding: 0.5em;
+          border: 1px solid #ddd;
+      }
+      
+      body.dark th, body.dark td {
+          border-color: #404040;
+      }
+      
+      th {
+          background-color: #f5f5f5;
+      }
+      
+      body.dark th {
+          background-color: #2d2d2d;
+      }
+      
+       
+      hr {
+          border: none;
+          border-top: 1px solid #ddd;
+          margin: 2em 0;
+      }
+      
+      body.dark hr {
+          border-top-color: #404040;
+      }
+      
+       
+      .theme-toggle {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          padding: 8px 16px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 14px;
+          transition: background-color 0.3s;
+      }
+      
+      body.light .theme-toggle {
+          background-color: #f0f0f0;
+          color: #333;
+      }
+      
+      body.dark .theme-toggle {
+          background-color: #404040;
+          color: #fff;
+      }
+      
+      .theme-toggle:hover {
+          opacity: 0.9;
+      }
+      
+       
+      @media (max-width: 600px) {
+          .container {
+              padding: 10px;
+          }
+          
+          .theme-toggle {
+              top: 10px;
+              right: 10px;
+          }
+      }
+      
+      body.article .logo-container {
+      	margin-top: 0;
+      }
+      
+      body.article .page-container {
+      	display: flex;
+      	align-items: flex-start;
+      	max-width: 1200px;
+      	margin: 0 auto;
+      }
+      
+      body.article .main-content {
+      	flex: 1;
+      	max-width: 800px;
+      }
+      
+      body.article img {
+      	max-width: 100%;
+      	height: auto;
+      }
+      
+      body.article pre {
+      	background-color: #f5f5f5;
+      	padding: 15px;
+      	border-radius: 5px;
+      	overflow-x: auto;
+      }
+      
+      body.article code {
+      	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      }
+      
+      body.article .article-header {
+      	margin-bottom: 2em;
+      }
+      
+      body.article .article-header h1 {
+      	margin-bottom: 0.5em;
+      }
+      
+      body.article article {
+      	word-wrap: break-word;
+      	overflow-wrap: break-word;
+      	hyphens: auto;
+      }
+      
+      body.article article p {
+      	max-width: 100%;
+      	overflow-wrap: break-word;
+      	word-wrap: break-word;
+      	word-break: break-word;
+      }
+      
+      .page-container {
+      	display: flex;
+      	align-items: flex-start;
+      	max-width: 1200px;
+      	margin: 0 auto;
+      }
+      
+      .main-content {
+      	flex: 1;
+      	max-width: 800px;
+      }
+      
+      img {
+      	max-width: 100%;
+      	height: auto;
+      }
+      
+      pre {
+      	background-color: #f5f5f5;
+      	padding: 15px;
+      	border-radius: 5px;
+      	overflow-x: auto;
+      }
+      code {
+      	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      }
+      
+      .article-header {
+      	margin-bottom: 2em;
+      }
+      
+      .article-header h1 {
+      	margin-bottom: 0.5em;
+      }
+      
+      article {
+      	word-wrap: break-word;
+      	overflow-wrap: break-word;
+      	hyphens: auto;
+      }
+      
+      article p {
+      	max-width: 100%;
+      	overflow-wrap: break-word;
+      	word-wrap: break-word;
+      	word-break: break-word;
+      }
+      
+      .tags {
+      	margin-bottom: 1em;
+      }
+      		
+      @media (max-width: 768px) {
+      	.article-header {
+      		display: flex;
+      		flex-direction: column;
+      		align-items: baseline;
+      		margin-top: 15px;
+      	}
+      }
+      
+      .article-header-top {
+      	display: flex;
+      	justify-content: space-between;
+      	align-items: center;
+      	margin-bottom: 1em;
+      }
+      
+      .recommended-articles-title {
+          font-size: 1.5em;
+          font-weight: 600;
+      		margin-top: 1em;
+          margin-bottom: 1em;
+          color: #c99;
+      }
+      
+      .tag-discovery-items {
+          display: flex;
+          overflow-x: auto;
+          gap: 2em;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: thin;
+          scrollbar-color: #666 #f0f0f0;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar {
+          height: 8px;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar-track {
+          background: #f0f0f0;
+          border-radius: 4px;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar-thumb {
+          background: #666;
+          border-radius: 4px;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar-thumb:hover {
+          background: #888;
+      }
+      
+      .tag-discovery-item {
+          flex: 0 0 300px;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5em;
+      }
+      
+      .tag-image-link {
+          display: block;
+          text-decoration: none;
+          width: 100%;
+          height: 200px;
+          overflow: hidden;
+          border-radius: 4px;
+      }
+      
+      .tag-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+      
+      .tag-image-placeholder {
+          width: 100%;
+          height: 100%;
+          background-color: #f0f0f0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #999;
+          font-size: 0.9em;
+      }
+      
+      .tag-author-section {
+          display: flex;
+          align-items: center;
+          gap: 0.5em;
+      }
+      
+      .tag-author-picture {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          object-fit: cover;
+      }
+      
+      .tag-author {
+          font-size: 0.85em;
+          color: #666;
+          text-decoration: none;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+      }
+      
+      .tag-author:hover {
+          color: #333;
+      }
+      
+      .tag-title {
+          font-size: 1.2em;
+          font-weight: 600;
+          color: #333;
+          text-decoration: none;
+          display: block;
+          line-height: 1.3;
+      }
+      
+      .tag-title:hover {
+          color: #666;
+      }
+      
+      .tag-summary {
+          font-size: 0.9em;
+          color: #666;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          line-height: 1.4;
+      }
+      
+      @media (max-width: 768px) {
+          .tag-discovery-item {
+              flex: 0 0 260px;
+          }
+          
+          .tag-image-link {
+              height: 180px;
+          }
+          
+          .tag-author-picture {
+              width: 20px;
+              height: 20px;
+          }
+          
+          .tag-author {
+              font-size: 0.8em;
+          }
+      }
+      
+          @media (max-width: 768px) {
+              body {
+                  font-size: 18px;
+                  padding: 15px;
+              }
+      
+              .page-container {
+                  flex-direction: column;
+              }
+      
+              .main-content {
+                  width: 100%;
+              }
+      
+              .article-card {
+                  padding: 15px;
+              }
+          }
+      
+      .dropdown {
+      	position: relative;
+      	display: inline-block;
+      }
+      
+      .dropdown-button {
+      	background-color: #f0f0f0;
+      	border: none;
+      	border-radius: 50%;
+      	width: 20px;
+      	height: 20px;
+      	margin-left: 10px;
+      	display: flex;
+      	align-items: center;
+      	justify-content: center;
+      	font-size: 0.8em;
+      	cursor: pointer;
+      	color: #666;
+      	transition: background-color 0.2s;
+      }
+      
+      .dropdown-button:hover {
+      	background-color: #e0e0e0;
+      }
+      
+      .dropdown-content {
+      	display: none;
+      	position: absolute;
+      	right: -10px;
+      	top: 100%;
+      	background-color: white;
+      	min-width: 180px;
+      	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+      	z-index: 1;
+      	border-radius: 8px;
+      	margin-top: 8px;
+      	border: 1px solid #eee;
+      }
+      
+      .dropdown.show .dropdown-content {
+      	display: block;
+      }
+      
+      .dropdown-content a {
+      	font-size: 0.8em;
+      	color: #333;
+      	padding: 12px 16px;
+      	text-decoration: none;
+      	display: block;
+      	transition: background-color 0.2s;
+      	border-bottom: 1px solid #eee;
+      	border-radius: 8px;
+      }
+      
+      .dropdown-content a:last-child {
+      	border-bottom: none;
+      }
+      
+      .dropdown-content a:hover {
+      	background-color: #f5f5f5;
+      }
+      
+      .logo {
+          text-align: center;
+      }
+      
+      .logo img {
+          max-height: 100px;
+          width: auto;
+      }
+      
+      .logo-container {
+          margin-top: 20px;
+          margin-right: 20px;
+      }
+      
+      .logo-container img {
+          max-height: 50px;
+          width: auto;
+      }
+      
+      .compact-profile {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+      }
+      
+      .compact-profile-link {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: inherit;
+          gap: 8px;
+      }
+      
+      .compact-profile-ago {
+          margin-bottom: 1px;
+          font-size: 0.8em;
+      }
+      
+      .compact-profile-picture {
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          object-fit: cover;
+      }
+      
+      .compact-profile-name {
+          font-size: 0.9em;
+          font-weight: 500;
+      }
+      
+       
+      body.light .compact-profile-link {
+          color: #000000;
+      }
+      
+      body.light .compact-profile-link:hover {
+          color: #0066cc;
+      }
+      
+      body.dark .compact-profile-link {
+          color: #e0e0e0;
+      }
+      
+      body.dark .compact-profile-link:hover {
+          color: #4a9eff;
+      }
+      
+      .time-ago {
+          display: inline-block;
+          min-width: 70px;
+      }
+      
+      .feed-links {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5em;
+          padding: 1em;
+      }
+      
+      .feed-icon {
+          width: 16px;
+          height: 16px;
+      }
+      
+      .tags {
+      	display: flex;
+      	flex-wrap: wrap;
+      	gap: 0 8px;
+      	margin-top: 1em;
+      	margin-bottom: 1em;
+      }
+      
+      .tag {
+      	display: inline-block;
+      	padding: 4px 8px;
+      	border-radius: 4px;
+      	margin-bottom: 8px;
+      	font-size: 0.9em;
+      }
+      
+      .tag a {
+      	text-decoration: none;
+      	color: inherit;
+      }
+      
+      body.light .tag {
+      	background-color: #f0f0f0;
+      	border: 1px solid #dee2e6;
+      }	
+      
+      body.dark .tag {
+      	background-color: #1a1a1a;
+      	border: 1px solid #404040;
+      }
+      
+      .footer {
+          margin-top: 2em;
+          padding-top: 1em;
+          border-top: 1px solid #eee;
+          text-align: center;
+          font-size: 0.9em;
+          color: #666;
+      }
+      
+      body.dark .footer {
+          border-top-color: #333;
+          color: #999;
+      }
+      
+      .footer a {
+          text-decoration: none;
+      }
+      
+      body.light .footer a {
+          color: #0066cc;
+      }
+      
+      body.dark .footer a {
+          color: #4a9eff;
+      }
+      
+      .image-container {
+          margin: 20px 0;
+          text-align: center;
+      }
+      
+      .image-container img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      
+      body.dark .image-container img {
+          box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      }
+      
+    </style>
+  </head>
+  <body class="dark article">
+    <div class="page-container">
+      <div class="logo-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="logo.png" alt="Logo">
+          </a>
+        </div>
+      </div>
+      <div class="main-content">
+        <article>
+          <div class="article-header">
+            <div class="article-header-top">
+              <div class="compact-profile">
+                <a href="profile/nprofile1qqsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5spz3mhxue69uhhyetvv9ujuerpd46hxtnfduq32amnwvaz7tmjv4kxz7fwd4hhxarj9ec82cslh9s0q.html" class="compact-profile-link">
+                  <img src="https://cdn.nostrcheck.me/94541465094a859adea9bcacbb0704a3f8a3c77cd182901df02473ef75be6b2b/5904c263bc7fbbc4111a98284c2ce5afa9246400b3005cb0dee5c6fd7e93673c.webp" alt="Archivero" class="compact-profile-picture">
+                  <span class="compact-profile-name">
+                    Archivero
+                  </span>
+                </a>
+                <a href="naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4xvuy6kjzw3yhy4mzwak57mphf9e8qttn2uh3mw5q.html" class="compact-profile-ago">
+                  <span class="time-ago" data-timestamp="1780283837">
+                  </span>
+                </a>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-button" type="button">
+                  ⋯
+                </button>
+                <div class="dropdown-content">
+                  <a href="https://njump.me/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4xvuy6kjzw3yhy4mzwak57mphf9e8qttn2uh3mw5q" class="nostr-link" target="_blank">
+                    Open Article in Nostr
+                  </a>
+                  <a href="https://njump.me/nprofile1qqsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5spz3mhxue69uhhyetvv9ujuerpd46hxtnfduq32amnwvaz7tmjv4kxz7fwd4hhxarj9ec82cslh9s0q" class="nostr-link" target="_blank">
+                    Open Author in Nostr
+                  </a>
+                </div>
+              </div>
+            </div>
+            <h1>
+              La guía definitiva para dejar de depender de Google en 2026
+            </h1>
+            <p class="summary">
+              Haz parte de la Desgoogleización activa
+            </p>
+            <div class="tags">
+              <span class="tag">
+                <a href="tag/espionajemasivo.html">
+                  EspionajeMasivo
+                </a>
+              </span>
+              <span class="tag">
+                <a href="tag/desgoogleizacion.html">
+                  Desgoogleizacion
+                </a>
+              </span>
+              <span class="tag">
+                <a href="tag/anonimatodigital.html">
+                  AnonimatoDigital
+                </a>
+              </span>
+              <span class="tag">
+                <a href="tag/descentralizacin.html">
+                  Descentralizacin
+                </a>
+              </span>
+              <span class="tag">
+                <a href="tag/blogindex.html">
+                  Blogindex
+                </a>
+              </span>
+              <span class="tag">
+                <a href="tag/guias.html">
+                  guias
+                </a>
+              </span>
+            </div>
+            <div class="image-container">
+              <a href="naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4xvuy6kjzw3yhy4mzwak57mphf9e8qttn2uh3mw5q.html">
+                <img src="https://image.nostr.build/16cc7f0cfce5ef6ddfc8744c91706a8efaf33e74a91409da4644317924529314.jpg" alt="La guía definitiva para dejar de depender de Google en 2026">
+              </a>
+            </div>
+          </div><p><strong>Desgoogleización activa.</strong><br />
+          <em>Versión. 1.0</em></p>
+          <p>«Desgoogleización» consiste en sustituir los servicios de Google —como Gmail, Drive, Chrome y Android, entre otros— por alternativas que respeten la privacidad. El objetivo es sencillo: recuperar el control, reducir el seguimiento y proteger tu identidad digital.</p>
+          <p>Esta guía está enfocada a usuarios de Android y Huawei, aunque las arbitrarias medidas que implementará Google con el “Developer Verification Program” —que bloqueará automáticamente cualquier APK no firmada por un desarrollador— afectarán a algunas de las alternativas disponibles para los usuarios de Android.<br />
+          Tal y como se indica, es una primera versión que podrá tener actualizaciones en el futuro, ya que este campo ha avanzado rápidamente debido a la creciente preocupación por la vigilancia y la monetización de los datos.</p>
+          <p><strong>¿Por qué es más importante que nunca dejar de usar Google en estos momentos?</strong></p>
+          <p>Google recopila enormes cantidades de datos, entre los que se incluyen:<br />
+          •	Historial de búsqueda, navegación y actividad en línea<br />
+          •	Seguimiento de la ubicación y contexto físico<br />
+          •	Correos electrónicos y archivos adjuntos<br />
+          •	Fotos y vídeos<br />
+          •	Perfil e identidad<br />
+          •	Patrones de uso del dispositivo<br />
+          •	Dispositivo y red<br />
+          •	Voz y comunicación<br />
+          •	Datos financieros y de consumo<br />
+          •	Y el más subestimado: los metadatos.</p>
+          <p>Estos datos se utilizan para la publicidad personalizada, la vigilancia masiva y el entrenamiento de la inteligencia artificial. Dejar de usar Google te ayuda a:<br />
+          •	Proteger tu privacidad<br />
+          •	Mejorar tu seguridad<br />
+          •	Evitar anuncios intrusivos<br />
+          •	Recuperar la propiedad de tus datos<br />
+          •	Ganar autonomía y desarrollar un pensamiento crítico<br />
+          •	Romper el sesgo algorítmico<br />
+          •	Mejorar el rendimiento y el control del dispositivo<br />
+          •	Reducir la dependencia de un único ecosistema centralizado<br />
+          •	Alcanzar la soberanía digital</p>
+          <p>Aunque al principio pueda parecer abrumador, la transición puede ser gradual y muy gratificante. Tener presente que, con tu esfuerzo, tus conversaciones, búsquedas y documentos dejan de ser analizados de forma permanente modifica la manera en que te expresas y actúas en línea. Es un efecto sutil pero real, conocido como el efecto panóptico.</p>
+          <h3 id="paso-1-analiza-tu-uso-de-google">Paso 1: Analiza tu uso de Google</h3>
+          <p>Antes de cambiar, evalúa tu dependencia.<br />
+          Cómo realizar el análisis:</p>
+          <ul>
+          <li><input disabled="" type="checkbox" /> 2.     -Accede al panel de control de tu cuenta de Google</li>
+          <li><input disabled="" type="checkbox" /> 3.     -Consulta «Mi actividad» y «Datos y privacidad»</li>
+          <li><input disabled="" type="checkbox" /> 4.     -Haz una lista de todos los servicios que utilizas</li>
+          </ul>
+          <p>Servicios habituales que debes tener en cuenta</p>
+          <ul>
+          <li><input disabled="" type="checkbox" /> -Gmail, Calendario, Contactos</li>
+          <li><input disabled="" type="checkbox" /> - Google Drive y Documentos</li>
+          <li><input disabled="" type="checkbox" /> -Chrome y Búsquedas</li>
+          <li><input disabled="" type="checkbox" /> -Historial de Play</li>
+          <li><input disabled="" type="checkbox" /> -Mapas y YouTube</li>
+          </ul>
+          <p>Pueden ser muchos más. En cualquier caso, esta lista te servirá de guía para la migración y te ayudará a no dejar nada por alto.</p>
+          <h2 id="paso-2-haz-primero-una-copia-de-seguridad-de-todo">Paso 2: Haz primero una copia de seguridad de todo</h2>
+          <p>Este es el paso más importante.<br />
+          Usando Google Takeout<br />
+          <img src="https://cdn.nostrcheck.me/630f2e00db74a3d34ea42fc9cdd70d0d64483d40fa1a149464e928b61aa28452/b3a58f2c0eae3c9d154319775449f250e1936447d1d85df4608530ee103a474b.webp" alt="image" /></p>
+          <ul>
+          <li><input disabled="" type="checkbox" /> Ve a takeout.google.com</li>
+          <li><input disabled="" type="checkbox" /> Selecciona tus datos (Correo, Drive, Fotos, etc.)</li>
+          <li><input disabled="" type="checkbox" /> Elige el formato ZIP y exporta una vez</li>
+          <li><input disabled="" type="checkbox" /> Descarga el archivo y guárdalo en un lugar seguro</li>
+          </ul>
+          <p>.</p>
+          <p><em>Notas importantes</em></p>
+          <pre><code>Tus datos permanecerán en Google hasta que los elimines
+          Las exportaciones de gran volumen pueden tardar varios días
+          Guarda siempre una copia de seguridad local
+          </code></pre>
+          <p><strong>Si te saltas este paso, podrías perder tus datos de forma definitiva.</strong></p>
+          <h3 id="paso-3-elige-tu-conjunto-de-herramientas-de-privacidad">Paso 3: Elige tu conjunto de herramientas de privacidad</h3>
+          <p>Aquí hay un universo de posibilidades. Lo importante es probar y quedarte con lo mejor se te adecue a tus necesidades. Aquí te presento las opciones más destacadas.<br />
+          <img src="https://cdn.nostrcheck.me/630f2e00db74a3d34ea42fc9cdd70d0d64483d40fa1a149464e928b61aa28452/4de1727dc4367dbd1ce67d83a06061588a07600e4104a270095bbf79d99b9f63.webp" alt="image" /></p>
+          <p><strong>Las mejores opciones «todo en uno»</strong></p>
+          <ul>
+          <li><input disabled="" type="checkbox" /> Todo el Suite de Proton (viene integrado con Proton Mail, Proton Calendar, Proton VPN y Proton Pass — todo bajo un mismo paraguas.</li>
+          <li><input disabled="" type="checkbox" /> Tuta Suite (Correo + Calendario, herramientas en expansión)</li>
+          <li><input disabled="" type="checkbox" /> Filen (solo almacenamiento en la nube, sin servicios adicionales), aunque más económico</li>
+          </ul>
+          <p>Estos paquetes simplifican la transición.</p>
+          <h3 id="paso-4-sigue-un-plan-de-migracin-gradual">Paso 4: Sigue un plan de migración gradual</h3>
+          <p><strong>Semanas 1 y 2</strong><br />
+          Empieza con cambios sencillos:</p>
+          <ul>
+          <li><input disabled="" type="checkbox" /> Cambia de motor de búsqueda.</li>
+          <li><input disabled="" type="checkbox" /> - Instala el navegador Firefox o Brave Browser</li>
+          <li><input disabled="" type="checkbox" /> -Utiliza OsmAnd o KagiMaps para consultar mapas</li>
+          <li><input disabled="" type="checkbox" /> -Cambia de autenticador de dos factores.</li>
+          </ul>
+          <p>Estos cambios requieren un esfuerzo mínimo, pero ofrecen grandes ventajas en materia de privacidad.</p>
+          <p><strong>Semanas 3 y 4: Transición al correo electrónico</strong></p>
+          <p>El correo electrónico es el paso más complicado y personal, pero también el más importante.</p>
+          <ul>
+          <li><input disabled="" type="checkbox" /> Crea una cuenta en Proton o Tuta</li>
+          <li><input disabled="" type="checkbox" /> Reenvía temporalmente los mensajes de Gmail</li>
+          <li><input disabled="" type="checkbox" /> Actualiza la dirección de correo electrónico en todos los servicios</li>
+          <li><input disabled="" type="checkbox" /> Importa los contactos y el calendario</li>
+          <li><input disabled="" type="checkbox" /> Tras probarlo durante unas semanas, puedes dejar de usar Gmail por completo.</li>
+          </ul>
+          <p><strong>Estrategia para móviles</strong></p>
+          <p>Enfoque para principiantes</p>
+          <ul>
+          <li><input disabled="" type="checkbox" /> -Desactiva el seguimiento de Google siempre que sea posible.</li>
+          <li><input disabled="" type="checkbox" /> Utiliza F-Droid - <a href="http://f-droid.org">http://f-droid.org</a></li>
+          </ul>
+          <p>Y</p>
+          <ul>
+          <li><input disabled="" type="checkbox" /> Aurora Store - <a href="http://auroraoss.com">http://auroraoss.com</a></li>
+          </ul>
+          <p>Con Aurora Store puedes usar las apps de Play Store sin necesidad de una cuenta de Google; con F-Droid dispones de una gran cantidad de aplicaciones de código abierto que no te hacen depender de grandes empresas tecnológicas. Si quieres ir más allá, puedes probar <strong>Obtainium</strong>, que te permite descargar las apps directamente desde sus repositorios de GitHub; es algo más avanzado que F-Droid.</p>
+          <p><strong>Método avanzado</strong><br />
+          Instala GrapheneOS (teléfonos Pixel)<br />
+          utiliza LineageOS / CalyxOS<br />
+          GrapheneOS requeriría una guía aparte pues es el sistema más privado y seguro que podemos tener en un teléfono. Esto elimina el seguimiento de Google a nivel del sistema.</p>
+          <p><strong>Alojamiento propio para un control total</strong><br />
+          Para usuarios avanzados, el alojamiento propio es la solución definitiva.</p>
+          <p><a href="https://nextcloud.com/">Nextcloud</a> (sustituto de Drive)<br />
+          <a href="https://immich.app/">Immich</a> (fotos)<br />
+          <a href="https://searx.space/">Searx</a> (motor de búsqueda)</p>
+          <p><strong>Ventajas</strong><br />
+          Propiedad total de los datos<br />
+          Sin acceso de terceros<br />
+          Configuración personalizada</p>
+          <p><strong>Inconvenientes</strong><br />
+          Requiere conocimientos técnicos<br />
+          Necesita mantenimiento</p>
+          <p>Aun así, resulta muy gratificante para la privacidad a largo plazo.</p>
+          <p><strong>Retos habituales y cómo abordarlos</strong></p>
+          <p><strong>1. Aplicaciones que requieren los servicios de Google</strong><br />
+          Muchas apps dependen de los servicios de Google que se puede reemplazar con <a href="https://github.com/microg">MicroG Project</a>, que es una implementación modificada libre y ligera de los servicios de Google — la app cree que tiene Google, pero no lo tiene.</p>
+          <p>Con las aplicaciones bancarias, los métodos alternativos para la verificación de integridad con microG dejaron de funcionar y, desde 2025-2026, esto se volvió mucho más difícil.</p>
+          <p>Si tu banco local es tu prioridad, microG solo ya no es suficiente.</p>
+          <p>Puedes intentar utilizar la versión web de tu banco local en el navegador.</p>
+          <p>Si nada de lo anterior funciona: <strong>GrapheneOS</strong> + <strong>SandboxedPlay</strong> sería la opción más documentada, pero está orientada a usuarios avanzados.</p>
+          <p><strong>2. Curva de aprendizaje</strong><br />
+          Empieza poco a poco y ve avanzando gradualmente.</p>
+          <p><strong>3. Faltan funciones</strong><br />
+          Algunas aplicaciones pueden parecer menos pulidas, pero mejoran rápidamente.</p>
+          <p><strong>4. Gestión de inicios de sesión</strong><br />
+          Utiliza un gestor de contraseñas como Bitwarden.</p>
+          <p><strong>Preguntas frecuentes sobre cómo dejar de depender de Google</strong></p>
+          <ol>
+          <li>¿Puedo dejar de depender de Google solo en parte?<br />
+          Sí, incluso los pequeños cambios aportan grandes beneficios.</li>
+          <li>¿Cuál es el primer paso más sencillo?<br />
+          Cambia de motor de búsqueda y de navegador.</li>
+          <li>¿Es Proton mejor que Tuta?<br />
+          Ambos son excelentes; elige en función de las características que prefieras.</li>
+          <li>¿Perderé mis datos?<br />
+          No, si haces una copia de seguridad adecuada con Takeout.</li>
+          <li>¿Es necesario GrapheneOS?<br />
+          No, pero ofrece el máximo nivel de privacidad. Aunque con apps bancarias si sería obligatorio.</li>
+          <li>¿Cuánto tiempo lleva?<br />
+          Entre unos días y unos meses, dependiendo de tu ritmo.</li>
+          </ol>
+          <p>Conclusión: toma el control sin estrés</p>
+          <p>Dejar de usar Google en 2026 es una opción realista, flexible y empoderadora. Tal y como se destaca en la guía, la preparación y la transición gradual son las claves del éxito.</p>
+          <p>No hace falta que lo dejes todo de la noche a la mañana. Empieza por los cambios más sencillos, gana confianza y avanza paso a paso. Con el tiempo, crearás una vida digital que respete tu privacidad sin dejar de satisfacer tus necesidades diarias.</p>
+          <p>#guias #EspionajeMasivo #Desgoogleizacion #AnonimatoDigital #Descentralizacin #Blogindex</p>
+          
+        </article><zap-threads 
+        		anchor="naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4xvuy6kjzw3yhy4mzwak57mphf9e8qttn2uh3mw5q" 
+        		relays="wss://relay.damus.io,wss://nostr.wine,wss://relay.nostr.band,wss://nos.lol,wss://relay.primal.net,wss://nostr-01.yakihonne.com,wss://nostr-02.yakihonne.com,wss://purplepag.es,wss://nostr.mom,wss://relay.0xchat.com,wss://relay.gitcitadel.eu,wss://relay.damus.io,wss://relay.snort.social,wss://offchain.pub,wss://relay.nostr.wirednet.jp,wss://wot.nostr.party,wss://wot.utxo.one,wss://lang.relays.land/es"
+        		urls="naddr:njump.me/,npub:njump.me/,nprofile:njump.me/,nevent:njump.me/,note:njump.me/,tag:snort.social/t/"
+        		disable="replyAnonymously" />
+      </div>
+    </div>
+    
+    <div class="footer">
+      Built with 
+      <a href="https://github.com/dhalsim/nostr-static" target="_blank">
+        nostr-static
+      </a>
+    </div>
+    <script src="/static/js/time-ago.js">
+      ""
+    </script>
+    		<script>
+    			window.wnjParams = {
+    				position: 'bottom',
+    				startHidden: true,
+    				compactMode: true,
+    				disableOverflowFix: true,
+    			}
+    		</script>
+    		<script src="https://cdn.jsdelivr.net/npm/window.nostr.js/dist/window.nostr.min.js"></script>
+    		<script type="text/javascript" src="https://unpkg.com/zapthreads/dist/zapthreads.iife.js"></script>
+    	
+    <script src="/static/js/dropdown.js">
+      ""
+    </script>
+  </body>
+</html>

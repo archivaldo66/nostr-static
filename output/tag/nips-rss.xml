@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nostr Libre</title>
+    <link>https://archivaldo66.github.io/nostr-static</link>
+    <description>Nostr Articles Feed</description>
+    <managingEditor> (Nostr Static)</managingEditor>
+    <pubDate>Mon, 29 Jun 2026 21:21:18 -0500</pubDate>
+    <item>
+      <title>¿Qué son los NIPs?</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq429kns52t0pv8saeef9kkk629vgknqktjxurrmqjc.html</link>
+      <description>¿Qué son los NIPs?</description>
+      <content:encoded><![CDATA[<h2 id="qu-son-los-nips">¿Qué son los NIPs?</h2>
+<p>Los NIPs (acrónimo de <em>Nostr Implementation Possibilities</em>) son el conjunto de reglas y estándares que definen cómo funciona el protocolo Nostr — básicamente las &quot;reglas del juego&quot; que todos los clientes y relays deben seguir para ser compatibles entre sí. Sin NIPs, cada app haría las cosas a su manera y nada funcionaría en conjunto.</p>
+<p><strong>¿Qué define un NIP?</strong></p>
+<p>Cada NIP puede especificar una o varias cosas:</p>
+<p><strong>Nuevos kinds</strong> — &quot;el kind 1 es un post de texto corto&quot;<br />
+Comportamientos de relays — cómo filtrar, almacenar, o rechazar eventos.</p>
+<p><strong>Extensiones de tags</strong> — nuevos tags dentro de los eventos-</p>
+<p><strong>Flujos de interacción</strong> — cómo funciona el login, los zaps, el cifrado.</p>
+<p><strong>Convenciones opcionales</strong> — cosas que los clientes pueden implementar,</p>
+<p><strong>¿Pero qué es un protocolo?</strong><br />
+Es un conjunto de reglas estandarizadas sobre cómo las personas pueden comunicarse en internet. La diferencia fundamental del protocolo Nostr es que estas reglas no son propiedad de un individuo, corporación o gobierno, sino del colectivo de personas que las cumplen y las hacen cumplir juntas, lo que genera mayor libertad e inclusión en comparación con plataformas cerradas como Twitter o Meta.</p>
+<p><strong>Ejemplos de protocolos famosos en internet:</strong> Ethernet, TCP, HTTP, SMTP y Bitcoin.</p>
+<h3 id="cules-seran-estas-reglas-en-nostr">¿Cuáles serían estas reglas en Nostr?</h3>
+<p>Estas reglas están en los NIPs, que son los documentos que definen los estándares de cómo funciona el protocolo — cada uno detalla algo muy específico. Hay muchos, pero unos básicos serían:</p>
+<p>NIP-01: Define la estructura fundamental de Nostr: qué es un evento, cómo se firman con criptografía y cómo los clientes se comunican con los relays.<br />
+NIP-02: Define cómo guardar y compartir tu lista de personas que sigues.<br />
+NIP-04: Define los mensajes directos cifrados en Nostr para generar un secreto compartido entre dos usuarios.<br />
+NIP-05: Permite ligar tu clave pública a un dominio de internet (como <a href="mailto:usuario@dominio.com">usuario@dominio.com</a>), dándote una identidad legible y verificable sin autoridad central.<br />
+NIP-07: Estándar para que apps web de Nostr pidan firmas a una extensión del navegador (como Alby o nos2x) sin que el sitio toque nunca tu clave privada.<br />
+NIP-57: Define cómo enviar pagos Lightning Network directamente a otro usuario como reacción a sus publicaciones, integrando Bitcoin en el protocolo social.<br />
+NIP-65: Te permite publicar qué relays usas para escribir y cuáles para leer.</p>
+<h3 id="relacin-entre-nips-kinds-y-eventos">Relación entre NIPs, kinds y eventos</h3>
+<p>Los tres niveles se relacionan así:<br />
+NIP  →  define el significado y reglas<br />
+│<br />
+└──▶  Kind  →  identifica el tipo de evento<br />
+│<br />
+└──▶  Evento  →  es la instancia concreta firmada<br />
+Por ejemplo:</p>
+<p>NIP-57 define cómo funcionan los zaps.</p>
+<p>Para eso especifica el kind 9735 (zap receipt)</p>
+<p>Y cada pago genera un evento kind 9735 firmado por el receptor</p>
+<p>Cualquiera podría proponer un nuevo NIP, y si la comunidad lo adopta, se convierte en estándar.</p>
+<p><strong>Listado total de NIPs</strong><br />
+<a href="https://nips.nostr.com/">https://nips.nostr.com/</a></p>
+<p>#nostrenespanol #Blogindex #guias #Descentralizacion</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/cb11175fa2ee22cae07081430511bb5d8868d7057f9b63e9873d354375b295f5.png" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Mon, 29 Jun 2026 21:21:18 -0500</pubDate>
+    </item>
+  </channel>
+</rss>

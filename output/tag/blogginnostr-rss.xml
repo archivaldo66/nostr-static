@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nostr Libre</title>
+    <link>https://archivaldo66.github.io/nostr-static</link>
+    <description>Nostr Articles Feed</description>
+    <managingEditor> (Nostr Static)</managingEditor>
+    <pubDate>Wed, 24 Jun 2026 22:41:35 -0500</pubDate>
+    <item>
+      <title>Cómo publicar en Nostr: Tipos de Contenido y Plataformas de Blogging.</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4xgk5wd2kddny53jjvdfk26n8fph4z46gtgze94kz.html</link>
+      <description>Herramientas del blogging descentralizado</description>
+      <content:encoded><![CDATA[<p>Teniendo de base que Nostr no es una red social, es un protocolo descentralizado tenemos que tener muy en cuenta que en Nostr todo es un evento con un número identificador llamado kind. no hay mensajes, posts, perfiles ni reacciones como entidades separadas.</p>
+<p>El kind (tipo) es un número entero que le dice a los clientes y relays qué tipo de información contiene el evento y cómo debe interpretarse. Es básicamente el &quot;tipo&quot; o &quot;esquema&quot; del evento.</p>
+<p>En resumen: los eventos son el cómo se empaqueta y autentica la información, y los kinds son el qué significa esa información. Juntos forman un protocolo minimalista pero increíblemente extensible.</p>
+<p>Hagamos un repaso de los kinds y NIPS relativos a las publicaciones tipo bloggin.</p>
+<p><strong>Alerta de mucho texto.</strong> pero es necesario para que sepamos que vamos a publicar y las posibilidades que se tienen.</p>
+<p><strong>Kind 1 — La nota corta (el Twitter de Nostr)</strong></p>
+<p>El Kind 1 es una nota de texto básica en el protocolo Nostr, que sirve de base para las publicaciones de texto al estilo de las redes sociales. Permite a los usuarios publicar contenido de texto plano, responder a otras publicaciones, crear conversaciones encadenadas y mencionar o citar otros eventos. Este tipo es fundamental para la comunicación social en la red Nostr.<br />
+Son efímeras, inmediatas y no tienen estructura formal. Puedes escribir un hilo concatenando varias notas kind 1, o simplemente soltar un pensamiento. Cualquier cliente de Nostr (Damus, Primal, Amethyst, Snort) las muestra por defecto.</p>
+<p><strong>NIP-05 — La identidad verificable del blogger</strong>~~<br />
+El NIP-05 permite que un usuario de Nostr sea identificado por un nombre legible en lugar de una clave pública larga. Las URLs de NIP-05 se parecen a los correos electrónicos: <a href="mailto:bob@example.com">bob@example.com</a>.<br />
+El NIP-05 está diseñado principalmente para ayudar a compartir información de contacto y realizar búsquedas. Para personas o entidades asociadas con un dominio de buena reputación —como una empresa o un proyecto, estableciendo así un grado de confianza.</p>
+<p><strong>Kind 30023 — El artículo largo (blogging nativo)</strong><br />
+Los eventos de contenido extenso (tipo 30023) permiten a los usuarios publicar artículos, entradas de blog, ensayos o cualquier texto que exceda los límites de las notas habituales. Estos eventos están diseñados para ser editables y utilizan el formato Markdown para garantizar una visualización uniforme en diferentes clientes.<br />
+Este tipo de evento es &quot;direccionable&quot; — lo que significa que puede ser actualizado sin crear un nuevo ID.  Un artículo kind 30023 incluye metadatos estructurados como título, imagen de portada, etiquetas temáticas (t tags), la fecha de primera publicación (published_at) y un identificador único (d tag) que permite actualizarlo sin perder su dirección en la red. No necesitas saber programar para publicar este tipo de evento; existen clientes de blogging con interfaces visuales que hacen todo el trabajo por ti.</p>
+<p><strong>Kind 7 — Reacciones y likes</strong><br />
+Los eventos de reacción (tipo 7) permiten a los usuarios expresar respuestas sencillas a otros eventos, similares a los &quot;me gusta&quot;, &quot;no me gusta&quot; o las reacciones con emojis en otras plataformas. Ofrecen una forma sencilla de interactuar con el contenido sin necesidad de escribir una respuesta completa. A diferencia de las plataformas centralizadas, nadie puede falsificar una reacción en Nostr: está firmada con tu llave única.</p>
+<p><strong>Kind 6 y 16 — Reposts y Quotes</strong><br />
+El NIP-18 define el estándar para repostear contenido de otros usuarios, con o sin comentario adicional. El kind 6 es el repost simple (boost). El kind 16 es el &quot;generic repost&quot; para tipos de eventos distintos al kind 1. Los quote posts permiten añadir tu perspectiva sobre la nota de otro usuario, generando una conversación en capas que se puede seguir desde cualquier cliente compatible.</p>
+<p><strong>Zaps — Valor por valor (NIP-57)</strong><br />
+Aunque técnicamente los zaps son eventos kind 9735, merecen mención especial. El NIP-57 define cómo enviar pagos en Bitcoin por Lightning directamente a eventos y usuarios de Nostr, integrando pagos de valor a valor directamente en el protocolo.<br />
+Los zaps no son propinas ni &quot;likes costosos&quot; — son una nueva forma de expresar valor con escasez perfecta, tokens de apreciación basados en satoshis imposibles de falsificar. Un artículo que recibes sats directamente en tu billetera. Sin intermediarios, sin plataforma cobrando comisión.</p>
+<p><strong>Nutzaps (NIP-61) — La alternativa a los zaps Lightning</strong><br />
+Existe una alternativa emergente a (NIP-57). El NIP-61 define los Nutzaps: pagos usando tokens Cashu (ecash) en lugar de Lightning. La diferencia práctica para un blogger es que los Nutzaps no requieren que el receptor tenga una billetera Lightning activa ni una Lightning Address configurada.</p>
+<p><strong>Kind 40-44 — Canales y Comunidades Públicas</strong></p>
+<p>El NIP-28 define canales de chat público usando kind 40 para la creación del canal, kind 41 para sus metadatos, y kind 42 para los mensajes dentro de él. Es el equivalente a canales de Telegram o Discord, pero descentralizado.<br />
+Para comunidades más estructuradas (tipo Reddit), existe el NIP-72 que define Moderated Communities. Habla, por ejemplo, soporta comunidades que permiten la creación de grupos temáticos donde puedes publicar tu artículo directamente dentro de una comunidad relevante.</p>
+<p><strong>Kind 30818 (NIP-54) — El Wikipedia descentralizado</strong><br />
+El NIP-54 define el kind 30818, un evento direccionable para descripciones o entradas enciclopédicas sobre temas particulares. Se espera que múltiples personas escriban artículos sobre exactamente los mismos temas, con variaciones pequeñas o contenido completamente independiente.<br />
+El cliente más activo para este tipo de contenido es <a href="wikifreedia.xyz">Wikifreedia</a>, un cliente NIP-54 con vista multi-artículo. La implicación para bloggers es interesante pues puedes escribir un artículo wiki sobre tu área de conocimiento, y ese artículo existir en la red Nostr permanentemente, actualizable, citable por otros, y coexistente con versiones de otros autores sobre el mismo tema.<br />
+Fuentes:<br />
+<a href="https://github.com/nostr-protocol/nips">https://github.com/nostr-protocol/nips</a><br />
+<a href="https://nips.nostr.com/">https://nips.nostr.com/</a></p>
+<h2 id="escribir-en-nostr-la-gua-de-herramientas-que-nadie-public">Escribir en Nostr: la guía de herramientas que nadie publicó</h2>
+<p>El ecosistema de Nostr ha madurado hasta el punto de ofrecer una herramienta para cada tipo de escritor y cada estilo de trabajo. Nostr ya no es territorio exclusivo de desarrolladores y entusiastas de la criptografía.  En los últimos años el ecosistema ha producido una generación de herramientas diseñadas para escritores, periodistas, bloggers y creadores de contenido que quieren recuperar la soberanía sobre su trabajo sin renunciar a una experiencia de usuario digna. Editores web, gestores de medios, lectores de feeds, sitios personales autogenerados, suites editoriales para equipos.</p>
+<p>A continuación, presentamos una selección de los clientes, editores y servicios web más relevantes para quien quiere hacer del protocolo Nostr su plataforma de publicación principal.</p>
+<h3 id="yakihonne--el-mejor-para-mvil-y-pchttpsyakihonnecom"><a href="https://yakihonne.com/">YakiHonne — El mejor para móvil y PC</a></h3>
+<p>YakiHonne es un cliente web y móvil de Nostr diseñado para publicar y explorar contenido de formato largo. A diferencia de muchos clientes que se enfocan en interacciones cortas tipo Twitter, YakiHonne está orientado a creadores y lectores que quieren una plataforma para artículos, blogs y discusiones en profundidad. Disponible en iOS, Android y como app web, combina accesibilidad con una experiencia de usuario pulida.</p>
+<p>Como uno de los primeros clientes de Nostr en ofrecer apps móviles con capacidades completas de edición de artículos, YakiHonne cubre un vacío que muchos otros clientes ignoran. Escribir o editar en movimiento se siente fluido; la app sincroniza rápidamente con los relays y el rendimiento es ágil incluso en conexiones lentas.<br />
+YakiHonne incluye una billetera integrada sin KYC y Smart Widgets, lo que permite monetizar desde el mismo cliente sin configuración externa.</p>
+<h3 id="highlightercom--para-lectores-que-destacan-y-comentanhttpshighlightercom"><a href="https://highlighter.com/">Highlighter.com — Para lectores que destacan y comentan</a></h3>
+<p>Highlighter es un cliente enfocado en la lectura y el resaltado de contenido de formato largo. Permite a los lectores seleccionar fragmentos del texto, destacarlos y comentarlos directamente en el protocolo Nostr —todo firmado criptográficamente. Los usuarios pueden resaltar, zapear y comentar los fragmentos destacados de tus artículos.</p>
+<h3 id="makimono--un-editor-minimalista-que-no-distraehttpsmakimonolumilumiapp"><a href="https://makimono.lumilumi.app/">Makimono — Un editor minimalista que no distrae</a></h3>
+<p>El nombre lo dice todo. Makimono (巻物) significa &quot;rollo de pergamino&quot; en japonés —La elección no es accidental: esta herramienta tiene la misma filosofía. Sin adornos, sin funciones innecesarias. Solo tú, el texto, y el protocolo.</p>
+<p>Makimono es un editor web para artículos largos en Nostr. Lo desarrolla TsukemonoGit, una desarrolladora japonesa que también mantiene Lumilumi, un cliente web de Nostr.</p>
+<p>Implementa NIP-23, así que todo lo que publicas genera un evento kind 30023 estándar. Eso significa que tu artículo aparece automáticamente en cualquier cliente que soporte ese formato: Habla.news, YakiHonne, Primal, Highlighter.<br />
+La propuesta es simple: una ventana limpia, Markdown, y publicar en Nostr sin fricción. Para el escritor que ya tiene su flujo de trabajo resuelto y no necesita que el editor le complique la vida.</p>
+<h3 id="hablanews--el-ms-completo-para-lectores-y-escritores-de-momento-est-cadohttpshablanews"><a href="https://habla.news/">Habla.news — El más completo para lectores y escritores (De momento está caído)</a></h3>
+<p>Habla es una plataforma construida sobre Nostr para leer, escribir post de formato largo y recibir zaps directamente por tu contenido.<br />
+De todos los clientes que soportan artículos largos, es el más completo (O lo era). Puedes mencionar npubs dentro del artículo de forma interactiva, publicar directamente en comunidades temáticas —algo parecido a Reddit, pero sobre Nostr—, y configurar múltiples relays desde el mismo editor.</p>
+<p>El editor soporta Markdown completo, portadas y etiquetas. Las URLs siguen el formato habla.news/tu-npub/slug-del-articulo, que los buscadores pueden indexar.</p>
+<h3 id="oracolo--tu-blog-de-nostr-en-un-solo-archivo-htmlhttpsoracolome"><a href="https://oracolo.me/">Oracolo — Tu blog de Nostr en un solo archivo HTML</a></h3>
+<p>Hay una idea al fondo de Oracolo que cuesta un poco procesar la primera vez que la escuchas.<br />
+Tu sitio web personal. Con todas tus entradas, tus notas, tus imágenes. Actualizado en tiempo real desde Nostr. En un solo archivo de 500 kilobytes que puedes mandarte por email.</p>
+<p>Oracolo es un blog minimalista impulsado por Nostr que consiste en un solo archivo HTML. Puedes usar cualquier cliente de Nostr que soporte formato largo para escribir tus artículos y tu blog personal se actualiza automáticamente. También puedes publicar notas e imágenes.</p>
+<p>Con Oracolo no requiere que inicies sesión para crear tu sitio. Te autentificas con tu npub que es tu clave pública o con NIP-05 es tu identidad verificada con formato de email. El wizard configura el archivo, lo descargas, y ya. El sitio vive en ese HTML, no en un servidor que alguien más controla.</p>
+<p>Oracolo es para quien quiere un blog en Nostr en diez minutos. Sin cuentas adicionales. Sin servidor. Sin nada que mantener después.</p>
+<p>Pero hay un caso de uso que lo describe mejor que cualquier otro: la página de presentación personal. Alguien te encuentra, busca tu nombre, abre el archivo — y ve quién eres, tus artículos recientes, tus notas, tu foto. Todo alimentado en tiempo real desde tu actividad en Nostr. Todo dentro de algo que cabrías en un email adjunto.</p>
+<p>En el ecosistema de blogging de Nostr, si npub.pro es tu sitio web profesional con SEO y dominio propio, Oracolo es tu tarjeta de presentación digital — liviana, portable, y elegantemente simple.<br />
+Ejemplo:<br />
+<img src="https://image.nostr.build/0f0cf2597c397cfef63de26baa0fc4d8d9898d92162f0d431c2455fcd6e27ac8.jpg" alt="image" /></p>
+<h3 id="npubpro--tu-blog-de-nostr-visible-para-todo-el-mundohttpsnpubpro"><a href="https://npub.pro/">Npub.pro — Tu blog de Nostr visible para todo el mundo</a></h3>
+<p>Tarde o temprano todo autor en Nostr se hace la misma pregunta: ¿cómo le muestro lo que hago a alguien que no está en Nostr?<br />
+Un <strong>npub</strong> no le dice nada a nadie fuera del protocolo. La curva de aprendizaje puede tomar su tiempo en algunas personas. Lo que esa persona necesita es una URL normal, una página con tu nombre, tu trabajo, una foto. Algo que no requiera explicación.</p>
+<p>Npub.pro resuelve ese problema. Y hasta ahora, ninguna otra herramienta en el ecosistema lo ha resuelto con la misma elegancia.</p>
+<p>La mayoría de las herramientas de blogging en Nostr son clientes: lugares donde vas a leer y escribir dentro del protocolo. Npub.pro es otra cosa.</p>
+<p>Toma tu contenido de Nostr y lo convierte en un sitio web. Sin duplicar trabajo, sin mantener dos presencias. ¿Ya publicaste en Nostr? Tu contenido ya está ahí esperando. Tú solo eliges qué mostrar.</p>
+<p>Hay algo que los usuarios descubren con cierta sorpresa la primera vez: cuando creas el sitio, tus posts y tu perfil ya están adentro. No hay migración. No hay formularios de importación. No hay nada que configurar. El contenido vive en los relays — Npub.pro simplemente le pone una puerta.</p>
+<p>Npub.pro permite a los usuarios crear sitios web personales a partir de su contenido de Nostr. Es gratuito para empezar, de código abierto y auto-hospedable. No almacena tu información: solo hospeda el código para convertir eventos de Nostr en páginas web.</p>
+<p>#nostrespanol #resenas #ContraLaCensura #Descentralizacion #Nosterspanol #BlogginNostr</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/0006b143d1486837fa72f3cb86435365a5dd1989ed952ebf715f8892a46b8d74.png" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Wed, 24 Jun 2026 22:41:35 -0500</pubDate>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nostr Libre</title>
+    <link>https://archivaldo66.github.io/nostr-static</link>
+    <description>Nostr Articles Feed</description>
+    <managingEditor> (Nostr Static)</managingEditor>
+    <pubDate>Thu, 04 Jun 2026 15:21:36 -0500</pubDate>
+    <item>
+      <title>Gossip: el cliente Nostr para quienes se toman en serio sus claves.</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4d5u5zutcg4q4vet2wfxkcajf89xj65rrfgdk6jdk.html</link>
+      <description>El cliente Nostr para quienes se toman en serio sus claves y privacidad,</description>
+      <content:encoded><![CDATA[<h2 id="gossip-el-cliente-nostr-para-quienes-se-toman-en-serio-sus-claves">Gossip: el cliente Nostr para quienes se toman en serio sus claves.</h2>
+<p><a href="https://github.com/mikedilger/gossip">Gossip</a> es un cliente atípico de escritorio para Nostr. No es un cliente para usuarios principiantes. Su enfoque es claro: prioriza seguridad, soberanía del usuario y rendimiento por encima de la estética o la facilidad de uso. Estos son sus pilares de diferenciación de otros programas.</p>
+<p>Desarrollado por Mike Dilger, un neozelandés-estadounidense cuyo npub es público en Nostr. El proyecto acumula 853 estrellas en GitHub, tiene 30 contribuidores y está escrito en *<em>99.4% Rust</em>.</p>
+<h3 id="1-el-gossip-model-nip-65">*1. El &quot;Gossip Model&quot; (NIP-65)</h3>
+<p>El Gossip Model fue nombrado así por este cliente, porque desde el primer día intentó encontrar las publicaciones de las personas que sigues donde sea más probable que estén, basándose en las listas de relays de esas personas y media docena de heurísticas adicionales. Hoy múltiples clientes usan un modelo similar, centrado en NIP-65. Gossip se conecta a todos los relays necesarios para cubrir a todos tus seguidos, intentando al mismo tiempo escuchar el mínimo número de relays necesario para lograrlo, y se ajusta dinámicamente cuando un relay cae o se desconecta. <a href="https://github.com/mikedilger/gossip">GitHub</a><br />
+Esto es conceptualmente distinto a simplemente suscribirse a una lista fija de relays como hacen Amethyst o Damus.</p>
+<h3 id="2-manejo-seguro-de-claves-privadas">*2. Manejo seguro de claves privadas</h3>
+<p>Gossip maneja las claves privadas de la forma más segura razonable (sin llegar a hardware tokens): las mantiene cifradas bajo una contraseña en disco, requiere esa contraseña al inicio, y pone a cero la memoria antes de liberarla. <a href="https://github.com/mikedilger/gossip">GitHub</a> Esto lo distingue de clientes web donde la clave privada ha sido robada en casos reales.</p>
+<h3 id="3-evita-tecnologas-de-navegador"><em>3. Evita tecnologías de navegador</em></h3>
+<p>Gossip evita las tecnologías web (salvo HTTP GET y WebSockets, necesarias para Nostr). El stack web es enorme, complejo y probablemente lleno de vulnerabilidades no descubiertas, representando una superficie de ataque masiva. Esto incluye JavaScript, HTML, CSS y todo lo accesible vía navegador. En su lugar usa renderizado estilo OpenGL. No es tan bonito, pero cumple su función. <a href="https://github.com/mikedilger/gossip">GitHub</a></p>
+<h3 id="4-rendimiento"><em>4. Rendimiento</em></h3>
+<p>Gossip apunta a alto rendimiento usando la base de datos LMDB, el lenguaje Rust y arquitecturas de código diseñadas siempre con el rendimiento en mente. A menos que tengas hardware muy antiguo, la red será probablemente tu cuello de botella. <a href="https://github.com/mikedilger/gossip">GitHub</a></p>
+<h3 id="5-control-del-usuario"><em>5. Control del usuario</em></h3>
+<p>Gossip tiene (al momento de escribir esto) 70 configuraciones distintas. Cuando el valor correcto es incierto, se elige un valor por defecto razonable y se le da al usuario el mecanismo para cambiarlo. <a href="https://github.com/mikedilger/gossip">GitHub</a></p>
+<h3 id="6-privacidad-y-tor"><em>6. Privacidad y Tor</em></h3>
+<p>Para quien desee permanecer anónimo, Gossip puede usarse sobre Tor. Soporta certificados TLS nativos para configurar confianza en sitios .onion, y ofrece opciones como no cargar avatares, no cargar imágenes, y no compartir necesariamente a quién sigues. <a href="https://github.com/mikedilger/gossip">GitHub</a></p>
+<h3 id="moderacin-de-contenido">Moderación de contenido</h3>
+<p>Gossip ofrece listas de personas, muteado, descarte de hilos, advertencias de contenido, un script de filtrado de spam programable en Rhai, designación de relays como &quot;SpamSafe&quot;, y feeds globales efímeros que desaparecen al cerrar el cliente. <a href="https://github.com/mikedilger/gossip">GitHub</a></p>
+<h3 id="historial-de-releases">Historial de releases</h3>
+<p>La versión más reciente es la <em>0.14.0</em> (marzo 2025), con 21 releases totales. La 0.13.0 introdujo soporte para adjuntar imágenes y videos via servidores Blossom, soporte de metadatos imeta, y búsqueda por relay. En releases anteriores se mejoró la velocidad de carga de imágenes/video, se corrigió la carga de hilos, y se añadió soporte limitado para kind-20 (imágenes). <a href="https://github.com/mikedilger/gossip/releases">GitHub</a></p>
+<p><img src="https://image.nostr.build/9dd62dba4ddf8433ecc0af44e9fc689196888000cc6ff252733f45cda23d342e.png" alt="image" /><br />
+Create a New Nostr Account — genera un par de claves nuevo desde cero<br />
+I Already have a Nostr Account — importas tu nsec o ncryptsec existente<br />
+Just follow people (no account) — modo lectura, sin clave privada.</p>
+<p><img src="https://image.nostr.build/6ded4f0ca09201a96d44f3683006383867d23f34e30d1ddabbc5c0eea49e368a.png" alt="image" /></p>
+<p>Aquí es donde Gossip implementa lo que mencionamos sobre el manejo seguro de claves: tu nsec nunca se guarda en texto plano, sino cifrada bajo una contraseña local.<br />
+Tienes tres campos:</p>
+<p><strong>Enter your private key</strong> — pega tu nsec1... (o en formato hex). Usa Ctrl+V como dice el aviso al pie, el clic derecho probablemente no funcione.</p>
+<p><strong>Enter a passphrase</strong> — esta contraseña NO es tu nsec ni tu contraseña de Nostr. Es una contraseña nueva que Gossip usa para cifrar tu clave privada en el disco local. Puedes poner lo que quieras, pero no la olvides: te la pedirá cada vez que abras Gossip.</p>
+<p><img src="https://image.nostr.build/540b1aefc8be14de3cc54276a2e48c7ee2bb29805c5f7638b1f14eed7233a1f0.png" alt="image" /></p>
+<p>aquí se ve el Gossip Model en acción por primera vez.</p>
+<p><strong>Relay List:</strong> Found (verde) — Gossip encontró tu lista de relays publicada (NIP-65). Esto es lo que mencioné en la reseña: el cliente sabe dónde encontrarte sin que tú le digas nada manualmente.<br />
+<strong>Metadata:</strong> Missing — tu perfil (kind:0, nombre, foto, bio) no lo ha cargado aún.<br />
+<strong>Contact List:</strong> Missing — tu lista de seguidos tampoco.<br />
+Gossip encontró tu perfil en varios relays y te pregunta desde cuál quieres cargarlo.</p>
+<p>Presiona Load en cualquiera de los relays listados. Te recomiendo probar primero con wss://nos.lol/ o wss://nostr.mom/ — son relays públicos estables y generalmente rápidos. Gossip cargará tu metadata (nombre, foto, bio) y contact list desde ahí.<br />
+<img src="https://image.nostr.build/926ac1667a04a048ae7e3d8055a23bd9a5ff277c9c4ff5089e8589e87fcc4fe4.png" alt="image" /></p>
+<hr />
+<p><img src="https://image.nostr.build/22174ed624d6942818a14533596605c14626317a23935ec2cf000fd0be59b785.png" alt="image" /><br />
+Esta es la pantalla &quot;Setup Relays&quot;. Aquí se configura el NIP-65, la pieza central de la arquitectura de Gossip.</p>
+<p>Las tres columnas:<br />
+<strong>OUTBOX</strong>  — los relays donde tú publicas. Gossip enviará tus notas a todos estos. Los que ves ya son los que tenías configurados en tu perfil.<br />
+<strong>INBOX</strong>  — los relays donde otros pueden enviarte mensajes y menciones.<br />
+<strong>DISCOVERY</strong> — relays usados para descubrir perfiles y eventos. Gossip sugiere agregar 4 más.</p>
+<p>#guias #NostrEspanol #AnonimatoDigital #resenas #ClientesNostr</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/22f560d35af255cd3a992de906aa67cb8ef5c8d55fd33078876966499bf7e5f4.png" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Thu, 04 Jun 2026 15:21:36 -0500</pubDate>
+    </item>
+  </channel>
+</rss>

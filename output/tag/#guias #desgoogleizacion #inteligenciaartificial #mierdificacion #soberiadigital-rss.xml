@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nostr Libre</title>
+    <link>https://archivaldo66.github.io/nostr-static</link>
+    <description>Nostr Articles Feed</description>
+    <managingEditor> (Nostr Static)</managingEditor>
+    <pubDate>Fri, 04 Sep 2026 23:55:09 -0500</pubDate>
+    <item>
+      <title>La muerte de la Web abierta</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy88wumn8ghj7mn0wvhxcmmv9uqp2vmhfejxztt9xae9js2h2ayks6jgf4p8gjsxlpjez.html</link>
+      <description>La MIERDIFICACION de Internet se acelera</description>
+      <content:encoded><![CDATA[<h2 id="la-muerte-de-la-la-web-abierta">La muerte de la la web abierta</h2>
+<p>Cada año <a href="https://tuta.com/es/blog/google-search-dominance-drops">millones de personas ya dejaron de buscar en el todopoderoso Google</a> como lo hacían antes.</p>
+<p>Ahora buscas algo en Google y antes de entrar ya aparece un resumen hecho con Inteligencia Artificial.</p>
+<p>Respuesta inmediata + “Conocimiento infinito” al alcance de un clic = liberación de picos constantes de dopamina y falsa sensación de haber encontrado la respuesta.</p>
+<p>Y esto no solo cambió a Google. También a los seres humanos y su forma de buscar y acceder al conocimiento.</p>
+<p>Ya ni siquiera hay un esfuerzo al buscar con palabras claves o comandos de búsqueda como antaño.</p>
+<p>Ahora directamente empezamos a conservar en modo chat con Google en su AI Mode de forma infinita como si de un oráculo se tratara.</p>
+<p>Esto está cambiando y matando al internet como lo conocemos.</p>
+<p>Porque si Google, ChatGpT y Claude nos responden todo automáticamente ¿Para qué nos molestamos en entrar a una página web a leer un artículo? ¿Para qué voy a ver un video de Youtube de 30 minutos o 1 hora si un reel te lo explica en 20 o segundos de forma sintética?</p>
+<p>Esto tiene un nombre: <strong>Google Zero</strong>. La tendencia encontrar las respuestas sin salir de Google.</p>
+<p>Pero el fenómeno es más amplio. También existe el concepto de <strong>&quot;Walled Garden&quot;</strong> (Jardín amurallado) o mejor conocido como un &quot;<em>Ecosistema cerrado</em>&quot; en español. Donde las plataformas (redes sociales) se vuelven un sistema cerrado donde los usuarios entran y permanecen, se vuelven adictos y manipulados por el algoritmo.</p>
+<p>Y cuando ese ecosistema te lo da todo masticado, <a href="https://www.seroundtable.com/pew-google-ai-overviews-39808.html">los usuarios hacen solamente clic en páginas y blogs apenas un 8% de las veces</a>. (Zero-Click Searches)</p>
+<p>Como resultado: Cada vez menos usuarios empezaran a visitar paginas webs. Blogs, repositorios universitarios y papers donde se produjo realmente la información.</p>
+<h2 id="la-mierdificacion-de-internet-se-acelera">La MIERDIFICACION de Internet se acelera.</h2>
+<p>Pero esto no es solamente culpa de Google o la IA. Antes, entrar a internet era toda una aventura. Las páginas web te recibían con los brazos abiertos para que leyeras sin ataduras y saltaras de un contenido a otro por el mero placer de descubrir. No había exceso banners ni publicidad, ni cookies acechando cada clic, ni muros de pago. Era un espacio libre, cómodo y generoso, donde el conocimiento y el entretenimiento fluían sin pedirte nada a cambio. Pero hoy, esa magia se ha esfumado. Llegar a un artículo se ha vuelto una carrera de obstáculos: te bombardean con recargas de publicidad antes de que puedas leer un escueto párrafo de cuatro líneas, y justo cuando el texto empieza a ponerse interesante, te exigen suscribirte o pagar para continuar.</p>
+<p>Desde que las páginas optaron por publicidad obligatoria, cookies obligatorias, registros obligatorios y un montón de otras cosas obligatorias. Todo eso arruinó la experiencia de visitar una página y navegar por ella.</p>
+<p><img src="https://image.nostr.build/c801d9e2ded0c48dbc1692ad1c4a3791cb24c1c3016297bcaf997eb18e97359d.jpg" alt="image" /></p>
+<p>Por eso, en un mundo donde la prisa y la inmediatez es la regla general, cada vez tiene más sentido saltarse la web y buscar directamente en la IA.</p>
+<p>¿Y si cada vez menos usuarios dan clic en una página o blog, quién va a pagar por seguir produciéndola?</p>
+<p>Porque, aunque sea mediocre y sesgado, la IA te dará un resumen de un artículo en unos cuantos segundos...</p>
+<p>Todavía va a necesitar que un ser humano en algún lado investigue, escriba y genere conocimiento.</p>
+<p>Cada vez más, los sitios grandes, realmente creadores de contenido escrito y blogs han ido dejando de escribir en sus blogs por lo mismo y cada vez más autores tienen menos incentivos para redactar y están buscando otros canales y formas de llevar gente a sus páginas web. Al mundo del SEO (Search Engine Optimization) le hace falta un cambio y no es necesariamente el AEO ((Answer Engine Optimization u optimización para motores de respuesta) porque realmente nadie sabe optimizar para AEO, porque por lo general un sitio optimizado para SEO ya está listo para ser referenciado por una IA.</p>
+<h2 id="buscar-o-preguntar">¿Buscar o Preguntar?</h2>
+<p>Desde Altavista o Yahoo. La mayoría no entiende que existe una diferencia entre Buscar y Preguntar.</p>
+<p>Google y la IA entendieron que la mayoría de personas no querían buscar, querían preguntar.</p>
+<p>La paradoja:</p>
+<p>Cuanto más fácil se hace obtener respuestas, menos poder tiene el usuario de elegir la fuente.</p>
+<p>•	En &quot;buscar&quot;: tú elegías qué sitios visitar<br />
+•	En &quot;preguntar&quot;: Google/IA elige qué respuesta darte<br />
+•	En &quot;recibir&quot;: el algoritmo elige qué ves</p>
+<p>Cambias comodidad a cambio de control.</p>
+<p>Según la Teoría X de McGregor, aplicada este caso, mientras más se “faciliten” las cosas a los usuarios, más usarán esos canales.</p>
+<p>La Ley del Menor Esfuerzo (Principle of Least Effort):</p>
+<blockquote>
+<p>Los usuarios siempre elegirán el camino que requiera menos esfuerzo cognitivo y físico</p>
+</blockquote>
+<p><strong>Web moderna abierta:</strong></p>
+<p>•	Restricciones: Publicidad invasiva, paywalls, cookies forzadas, popups<br />
+•	Control: &quot;tienes que hacer esto para acceder&quot;<br />
+•	Todas usan rastreadores que roban metadatos<br />
+•	Fricción: navegación difícil.<br />
+•	Necesidad de usar adblocks</p>
+<p><strong>→Da como resultado que los usuarios huyan</strong></p>
+<p><strong>Ecosistema cerrado :</strong></p>
+<p>•	Facilidad: todo en un lugar<br />
+•	Fluidez: scroll infinito, algoritmo que te da lo que quieres<br />
+•	Cero fricciones: no necesitas hacer nada-<br />
+•	IA complaciente en las respuestas</p>
+<p><strong>→ Resultado: Los usuarios se quedarán.</strong></p>
+<p>Todo esto da como resultado que hoy en día <a href="https://www.elespanol.com/invertia/observatorios/digital/20240421/google-meta-netflix-grandes-tecnologicas-siguen-acaparando-trafico-pasa-redes/848915367_0.html">entre 6 y 8 empresas manejadas por oligarcas del Big Tech acaparan el 65-70% del tráfico</a> de Internet.</p>
+<h3 id="todo-esto-se-convierte-en-ciclo-vicioso-perfecto">Todo esto se convierte en ciclo vicioso perfecto</h3>
+<p>Experiencia web empeora<br />
+↓<br />
+Usuarios migran a redes sociales<br />
+↓<br />
+Más uso de la Inteligencia Artificial<br />
+↓<br />
+Menos tráfico en sitios web<br />
+↓<br />
+Publishers más desesperados<br />
+↓<br />
+Monetizan más agresivamente<br />
+↓<br />
+Experiencia empeora aún más<br />
+↓<br />
+Empeora la desinformación y la manipulación</p>
+<p><img src="https://image.nostr.build/2c92f3948502c3ed701760ffee684b4a1629ab2b70811ae90805faddea955ab4.jpg" alt="image" /></p>
+<h2 id="qu-hacer-para-combatir-la-mierdificacion-de-internet-y-mantener-tu-soberana-cognitiva">¿Qué hacer para combatir la mierdificacion de internet y mantener tu soberanía cognitiva?</h2>
+<ul>
+<li>
+<p>Si vas a seguir usando Google añades -ia al final de lo que buscas (por ejemplo: &quot;data centers -ia&quot;)</p>
+</li>
+<li>
+<p>Utilizar Motores y navegadores de búsqueda alternativos como: Searx, Ecosia, Tor Browser, Brave, LibreWolf y Mullvad Browser.</p>
+</li>
+<li>
+<p>El motor de búsqueda alternativo <a href="https://www.marginalia.nu/">Marginalia</a> prioriza sitios estáticos, antiguos y livianos no comerciales, los cuales suelen quedar sepultados bajo las búsquedas corporativas de Google.</p>
+</li>
+<li>
+<p>Instalar la app de Wikipedia para la búsqueda de información. no te pide tu información personal, no tiene publicidad, no usa algoritmos, contenido verificable y además muestra el trending de búsquedas.</p>
+</li>
+<li>
+<p>Utilizar alternativas descentralizadas, comunitarias y basadas en protocolos abiertos para combatir el monopolio de las Big Tech, investigando y priorizando NOSTR por encima de cualquier otro.</p>
+</li>
+<li>
+<p>Volver al uso de las <em>Small Web</em>, antiguos sitios minimalistas de texto plano ligeros, libres de rastreadores y publicidad. O en general tomarse la molestia de LEER blogs pequeños que tengan información de calidad.</p>
+</li>
+<li>
+<p>Construir autoridad digital. No basta con tener una página web; hay que publicar contenido propio, real, coherente y actualizado d[Text here](URL here)e forma constante, y procurar que otras páginas confiables lo citen y enlacen. Con el tiempo, esa página gana reputación y puede convertirse en una fuente de referencia sobre un tema específico, tanto para los buscadores como para los sistemas de IA.</p>
+</li>
+<li>
+<p>En la era de las suscripciones infinitas, &quot;revivir la mula&quot; es un acto de resistencia cultural. Las redes Peer-to-Peer (P2P) son operadas por archivistas anónimos que rescatan lo que el mercado decide borrar por falta de rentabilidad o por la censura del Copyright.</p>
+</li>
+<li>
+<p>Usar y Fomentar las bibliotecas fantasmas tipo: BibliotecaSecreta en Telegram, <a href="https://annas-archive.is/es">Anna's Archive</a>, Library Genesis <a href="https://libgen.li/">(LibGen)</a> y <a href="https://z-lib.sk/">Z Library</a>.</p>
+</li>
+</ul>
+<p>#guias #Desgoogleizacion #InteligenciaArtificial #Mierdificacion #SoberiaDigital</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/9a636e06aabd51c8989c74d193901024635793dd8ac7826953b83e5879ef5e83.jpg" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Fri, 04 Sep 2026 23:55:09 -0500</pubDate>
+    </item>
+  </channel>
+</rss>

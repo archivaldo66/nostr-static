@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nostr Libre</title>
+    <link>https://archivaldo66.github.io/nostr-static</link>
+    <description>Nostr Articles Feed</description>
+    <managingEditor> (Nostr Static)</managingEditor>
+    <pubDate>Mon, 29 Jun 2026 21:10:30 -0500</pubDate>
+    <item>
+      <title>¿Qué es Nostr Wallet Connect (NWC)?</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4vae4ghm0ga25yut88qu4jjmedd4rxk24wgm8hdvy.html</link>
+      <description>¿Qué es Nostr Wallet Connect (NWC)?</description>
+      <content:encoded><![CDATA[<h2 id="qu-es-nostr-wallet-connect-nwc">¿Qué es Nostr Wallet Connect (NWC)?</h2>
+<h3 id="entendiendo-el-protocolo-nip-47">Entendiendo el Protocolo NIP-47</h3>
+<p>Nostr Wallet Connect (NWC) es el protocolo que permite a aplicaciones (incluyendo clientes Nostr) comunicarse con wallets Lightning de forma asíncrona y segura, reduciendo significativamente la fricción comparada con métodos manuales.</p>
+<p>Pero para entender Nostr Wallet Connect, primero necesitamos recordar (entender) cómo funciona Nostr como protocolo.</p>
+<p><strong>Los 3 Grandes Agentes de Nostr</strong></p>
+<p>Nostr funciona con 3 componentes principales:</p>
+<pre><code>El usuario: Tiene dos llaves - pública y privada (criptografía asimétrica). El autor escribe un evento. Este evento se publica en los relays.
+Los Relays: Servidores que reciben, distribuyen y opcionalmente almacenan eventos (según el tipo de evento y políticas).
+El Cliente: El usuario que quiere tener acceso a esos eventos. Arma un filtro, una suscripción a los relays. Cuando al relay le llega un evento que hace match con ese filtro, eventualmente se lo sirve al usuario.
+</code></pre>
+<p>Tanto el usuario como el autor no tienen que conocerse, solo verán los relays. El evento puede ser válido pero el usuario aún no conocerlo. Los eventos podrían quedar sin publicar si ningún relay los acepta.<br />
+Esto está alineado con la filosofía de Nostr: servidor tonto / cliente inteligente.</p>
+<p><strong>¿Qué es un Kind?</strong><br />
+Es el tipo del evento. Hay muchos tipos de eventos. Nostr particiona los KINDS (que son un número) en distintos rangos, y distintos rangos nos dan distintas propiedades de esos eventos.</p>
+<p><strong>Eventos Regulares (Kind 1000 - 10000)</strong><br />
+¿Qué significa &quot;regular&quot;? Que los relays los van a guardar y si se los preguntan, los devuelven. Quedan guardados en el relay.<br />
+Ejemplo: kind 1 = post de texto, kind 0 = metadata de perfil</p>
+<p><strong>Eventos Efímeros (Kind 20000 - 30000)</strong><br />
+¿Qué significa &quot;efímero&quot;? Cuando un relay recibe uno de estos eventos automáticamente se los pasa a los clientes que los quieran, pero NO los guarda.</p>
+<p>Si alguien pregunta por un kind 25000, el relay le va a mandar los que tenga en ese momento, pero NO eventos del pasado. Esos nunca los guarda, los borra siempre.</p>
+<p>Ventaja: Estos eventos efímeros reducen la carga sobre los relays. Conforme más eventos efímeros se utilizan, menos carga de storage terminan teniendo los relays.<br />
+NWC usa eventos efímeros (kinds 23194, 23195, 23197) porque las solicitudes de pago no necesitan quedar guardadas permanentemente.</p>
+<p><strong>Eventos Reemplazables (Kind 10000 - 20000 o 30000 - 40000)</strong><br />
+Es como &quot;pisar&quot; un tweet con otro, como editar, reemplazar. Si un nuevo evento del mismo tipo y del mismo autor llega, reemplaza al anterior.</p>
+<p>Ejemplo: Tu perfil (kind 0) es reemplazable. Cada vez que actualizas tu perfil, el nuevo evento reemplaza al viejo.</p>
+<p><strong>NIPs Relevantes para NWC</strong><br />
+NIP-01: Evento básico y filtros - estructura y semántica. Define cómo se construye un evento Nostr y cómo los clientes filtran eventos de relays.</p>
+<p>NIP-04: Encriptación con una llave simétrica. Está deprecado pero se sigue usando. Es lo que nos permite establecer un mensaje seguro entre dos usuarios de Nostr. El mensaje queda encriptado y solo las personas involucradas en esa conversación van a poder leer el contenido del mensaje.</p>
+<p>NIP-44: Cifrado moderno que reemplaza a NIP-04. Más seguro y robusto. NWC moderno usa NIP-44.<br />
+NIP-47: Nostr Wallet Connect. El protocolo que estamos estudiando.</p>
+<h3 id="qu-es-entonces-nostr-wallet-connect-nip-47-el-problem-statement">¿Qué es entonces Nostr Wallet Connect (NIP-47)? El Problem Statement</h3>
+<p>NWC es la forma en cómo Nostr resuelve el problema de realizar pagos &quot;entre comillas offline&quot;, es decir, no tener que estar accediendo físicamente, sincrónicamente a un pago.</p>
+<p>Es algo así como un servicio de débito automático para Bitcoin.</p>
+<p><strong>Los problemas que NWC resuelve:</strong></p>
+<p>—Interoperabilidad entre agentes: Apps diferentes necesitan hablar con wallets diferentes.<br />
+—Seguridad: No quieres exponer tu wallet o nodo Lightning directamente al internet.<br />
+—Portabilidad: Quieres poder usar tu wallet desde múltiples dispositivos/apps.<br />
+—Ubicación flexible: Tu nodo Lightning puede estar en cualquier lado (Raspberry Pi en casa, servidor en la nube)<br />
+—API estándar: Todas las wallets y apps hablan el mismo &quot;idioma&quot;</p>
+<p><strong>¿Qué es NWC en Términos Simples?</strong><br />
+Un nodo Lightning sin puertos expuestos, con ubicación flexible, y que tiene una API estándar.<br />
+NWC NO es una wallet. NWC NO es Lightning.<br />
+NWC es el protocolo de comunicación que permite que aplicaciones (clientes) interactúen con wallets Lightning de forma segura, asíncrona y sin exponer infraestructura.</p>
+<p>🔑 Analogía: Si Lightning es tu banco, NWC es el protocolo que permite que apps (como Amazon, Netflix) le digan a tu banco &quot;cobra $X&quot; sin que tú tengas que estar físicamente presente cada vez. Es débito automático, pero para Bitcoin.</p>
+<p><strong>¿Qué Hace NWC?</strong><br />
+Tres cosas fundamentales:</p>
+<pre><code>Establece una conexión entre un wallet service y el cliente: Es como &quot;emparejar&quot; tu app con tu wallet.
+Evento de información: Nos permite saber qué cosas vamos a poder hacer con esa wallet service. ¿Puede solo pagar? ¿Puede generar facturas? ¿Puede consultar balance?
+Provee una API: Una Interfaz de Programación de Aplicaciones que nos va a permitir interactuar con la wallet.
+</code></pre>
+<p><strong>¿Cómo Funciona NWC?</strong></p>
+<p>Tenemos 4 elementos/componentes en la arquitectura NWC:</p>
+<pre><code>Wallet Service: Tu wallet Lightning (puede ser Minibits, Alby, tu nodo propio)
+Lightning Network: La red de pagos real que mueve los satoshis
+Relays de Nostr: Los mismos relays de Nostr. Se usan como mensajeros.
+Cliente: Tu aplicación Nostr (Amethyst, Primal, Damus) u otra app que quiera usar tu wallet
+</code></pre>
+<p><strong>El Flujo Completo</strong></p>
+<p>Paso a paso, esto es lo que sucede:</p>
+<pre><code>El cliente le pide a la wallet una nueva conexión
+La wallet devuelve un string de conexión (con pubkey, relay, secret)
+El cliente guarda esa conexión
+Cuando el cliente quiere cobrarse o pagar algo, ocurre una Llamada a Procedimiento Remoto (RPC) del cliente al relay de Nostr
+El relay lee ese mensaje y lo reenvía a la wallet
+La wallet lo ejecuta en Lightning Network
+La wallet publica el resultado (éxito o error) al relay
+El relay entrega el resultado al cliente
+</code></pre>
+<p><strong>Ejemplo:</strong> Estás en Amethyst y haces clic en ⚡ para zapear. Amethyst crea un evento kind 23194 (request) cifrado con tu secret, lo envía al relay especificado en tu conexión NWC. El relay lo reenvía a Minibits (tu wallet). Minibits descifra, ve que pides pagar 1000 sats, verifica que tienes permisos y fondos, ejecuta el pago en Lightning, y publica un evento kind 23195 (response) al relay diciendo &quot;pago exitoso&quot;. El relay entrega la respuesta a Amethyst. Amethyst muestra &quot;Zap enviado ⚡&quot;.</p>
+<p>Los enlaces <em>nostr+walletconnect://</em> son parte del protocolo Nostr Wallet Connect (NWC), Permite conectar billeteras Lightning a aplicaciones (incluyendo apps de Nostr).</p>
+<h3 id="conclusin">Conclusión</h3>
+<p><strong>Sin NWC:</strong><br />
+Ves un post → Click en Zap → Copia factura Lightning → Abres wallet → Pegas factura → Pagas → Vuelves a Nostr<br />
+7 pasos, tedioso, nadie lo haría frecuentemente.</p>
+<p><strong>Con NWC:</strong><br />
+Ves un post → Click en Zap → Listo. Tu wallet paga automáticamente<br />
+1 paso, instantáneo, experiencia como &quot;dar like&quot;<br />
+NWC hace que enviar satoshis sea tan fácil como dar like. Esta es la clave de la adopción masiva.<br />
+¿Qué Puedo Hacer con Nostr Wallet Connect?<br />
+Básicamente hay 3 grandes categorías de operaciones que puedes hacer:</p>
+<p><strong>Categoría 1: Pagos</strong><br />
+pay_invoice: Pagar una factura Lightning. La app le dice a la wallet &quot;paga esta invoice&quot;.<br />
+multi_pay_invoice: Pagar múltiples facturas en una sola llamada. Útil para pagos batch.</p>
+<p><strong>Categoría 2: Invoices (Recibir dinero)</strong><br />
+make_invoice: Generar una factura para recibir pago. La app le dice a la wallet &quot;crea una invoice por 500 sats&quot;.<br />
+lookup_invoice: Consultar el estado de una factura. ¿Fue pagada? ¿Expiró? ¿Está pendiente?</p>
+<p><strong>Categoría 3: Información</strong><br />
+get_balance: Obtener el balance de satoshis en la wallet.<br />
+get_info: Obtener información sobre qué comandos soporta la wallet. No todas las wallet tienen esa funcion.</p>
+<p>Nostr Wallet Connect (NIP-47) es un protocolo que permite interacción segura, asíncrona y descentralizada entre aplicaciones y wallets Lightning.<br />
+No es una wallet. No es Lightning. Es el puente de comunicación entre ambos.</p>
+<p>Usa la infraestructura de Nostr (relays, eventos, cifrado) para proveer una API estándar que cualquier wallet puede implementar y cualquier app puede consumir.<br />
+Su innovación principal es el desacoplamiento: separar dónde están los fondos (custodia) de cómo se usan (operaciones).</p>
+<p>Para los usuarios finales, NWC es invisible. Solo ven que los saps funcionan mágicamente. Pero debajo, hay un protocolo elegante que resuelve problemas complejos de interoperabilidad, seguridad y descentralización.</p>
+<p><strong>Recursos Técnicos para más información</strong><br />
+NIP-47 oficial: <a href="https://github.com/nostr-protocol/nips/blob/master/47.md">https://github.com/nostr-protocol/nips/blob/master/47.md</a><br />
+NWC Documentation: <a href="https://docs.nwc.dev/">https://docs.nwc.dev/</a><br />
+Alby NWC GitHub: <a href="https://github.com/getAlby/nostr-wallet-connect">https://github.com/getAlby/nostr-wallet-connect</a><br />
+NWC website: <a href="https://nwc.dev/">https://nwc.dev/</a></p>
+<p>#nostrenespanol #Descentralizacion #NWC</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/aa5f712ce59ea4fdbba7792f88ae1d121251a59e71c82ec6f4af2e890ae603ab.jpg" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Mon, 29 Jun 2026 21:10:30 -0500</pubDate>
+    </item>
+    <item>
+      <title>Empezar en Lightning Network con Nostr</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4g3pyct2sgerywd2tweck2dtp0ptxukzjfq256vxg.html</link>
+      <description>Lightning Network y Nostr: La Combinación Perfecta</description>
+      <content:encoded><![CDATA[<h2 id="empezar-en-lightning-network-con-nostr">Empezar en Lightning Network con Nostr</h2>
+<p><em>Los &quot;satoshis Eléctricos&quot; para Zaps y Micropagos</em></p>
+<p><img src="https://image.nostr.build/802bdf14629ad96cdf32f04a141ac71a5eb59169035cf04d0741b454c3da9d2d.png" alt="image" /></p>
+<p><strong>¿Qué es Lightning Network?</strong><br />
+Lightning Network es un sistema de pagos virtuales construida sobre Bitcoin que permite transacciones instantáneas y con comisiones mínimas (fracciones de centavo). Es perfecta para micropagos como los Zaps, porque puedes enviar desde 1 satoshi (0.00000001 BTC) de forma prácticamente gratuita.</p>
+<p>Bitcoin era lento y caro para compras pequeñas como un café. En ese entonces unos querían bloques más grandes (más centralización), otros querían bloques pequeños (más seguridad). Pero en medio de esa “guerra” dos desarrolladores, Joseph Poon y Thaddeus Dryja, propusieron en 2015 una solución tan elegante que parecía ciencia ficción. Su solución fue radical: ¿Y si no todas las transacciones necesitan estar en la blockchain principal?<br />
+Y así nació Lightning Network: una &quot;segunda capa&quot; sobre Bitcoin. Una red de pagos construida sobre Bitcoin (on-chain) que resolvía el problema de raíz, permitiendo que Bitcoin siguiera siendo seguro y se convirtiera en un medio de pago viable.</p>
+<p>Esta solución al problema de escalabilidad de Bitcoin permite que las transacciones sean instantáneas y con comisiones minúsculas. Sin Lightning, cada transacción en la blockchain principal de Bitcoin sería lenta y costosa.<br />
+Esta tecnología es la que hace posibles los Zaps en Nostr y los micropagos cotidianos con satochis de Bitcoin.</p>
+<h2 id="entendiendo-lightning-la-analoga-del-efectivo">Entendiendo Lightning: La Analogía del Efectivo</h2>
+<p>Piénsalo así:</p>
+<ol>
+<li>
+<ul>
+<li>Bitcoin on-chain = Tu cuenta de ahorros en el banco</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Lightning Network = El efectivo en tu bolsillo</li>
+</ul>
+</li>
+</ol>
+<p>Tú normalmente no pagas el café diario con transferencia bancaria desde tu cuenta de ahorros. Sacas efectivo y lo llevas en tu bolsillo. Lightning es ese bolsillo digital: rápido, práctico, para el día a día.</p>
+<p>Lightning es una red de pagos y nada más, no es ahorro ni holding a largo plazo, es el dinero que llevas encima para usarlo hoy.</p>
+<h2 id="lightning-network-y-nostr-la-combinacin-perfecta">Lightning Network y Nostr: La Combinación Perfecta</h2>
+<p><strong>¿Por qué Lightning es crucial para Nostr?</strong></p>
+<p>Si Nostr es una red social descentralizada resistente a censura, Lightning Network es el sistema monetario descentralizado que la hace viable económicamente. Juntas, estas dos tecnologías crean algo único: una economía digital completa sin intermediarios.</p>
+<p><strong>Dos Protocolos, Una Visión</strong></p>
+<ul>
+<li><input disabled="" type="checkbox" /> •	Nostr resuelve: Comunicación descentralizada. Tus mensajes, publicaciones e identidad no dependen de ninguna empresa.</li>
+<li><input disabled="" type="checkbox" /> •	Lightning resuelve: Dinero descentralizado de intercambio rápido. Tus pagos no dependen de bancos ni procesadores de pago.</li>
+<li><input disabled="" type="checkbox" /> Juntos crean una economía circular completa y libre.</li>
+</ul>
+<p><strong>¿Qué Aporta Cada Uno al Otro?</strong></p>
+<p>Bitcoin/Lightning → Nostr:</p>
+<ul>
+<li><input disabled="" type="checkbox" /> Monetización nativa sin anuncios ni intermediarios</li>
+<li><input disabled="" type="checkbox" /> •	Zaps: Recompensa directa e instantánea a creadores de contenido</li>
+<li><input disabled="" type="checkbox" /> •	Economía circular: Los usuarios pueden ganar, gastar y ahorrar dentro del ecosistema</li>
+<li><input disabled="" type="checkbox" /> •	Incentivos alineados: Buen contenido = sats reales, no likes vacíos</li>
+<li><input disabled="" type="checkbox" /> •	Eliminación de la extracción de valor por plataformas (YouTube se queda 45%, Nostr 0%)</li>
+<li><input disabled="" type="checkbox" /> Nostr → Bitcoin/Lightning:</li>
+<li><input disabled="" type="checkbox" /> •	Directorio público de Lightning: Encuentra personas por su npub para pagarles</li>
+<li><input disabled="" type="checkbox" /> •	Lightning Address reutilizable integrada en perfiles</li>
+<li><input disabled="" type="checkbox" /> •	Red social para Bitcoin: Discusión, educación, adopción</li>
+<li><input disabled="" type="checkbox" /> •	Caso de uso masivo: miles de micropagos (Zaps) circulando diariamente. Prueba social de que Lightning está funcionando a gran escala.</li>
+</ul>
+<h2 id="la-magia-de-los-zaps-dinero-como-protocolo-social">La Magia de los Zaps: Dinero Como Protocolo Social</h2>
+<p>En redes sociales tradicionales:</p>
+<ul>
+<li><input disabled="" type="checkbox" /> Likes → No significan nada económicamente</li>
+<li><input disabled="" type="checkbox" /> •	Algoritmo decide quién gana dinero (ads, views)</li>
+<li><input disabled="" type="checkbox" /> •	Plataforma extrae 30-50% del valor generado</li>
+<li><input disabled="" type="checkbox" /> •	Monetización requiere miles/millones de seguidores</li>
+</ul>
+<p><strong>En Nostr + Lightning:</strong></p>
+<ul>
+<li>
+<p><input disabled="" type="checkbox" /> •	Zaps → Son dinero real (satoshis de Bitcoin)</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox" /> •	Audiencia decide directamente quién recibe recompensas</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox" /> •	Cero extracción de valor (comisión &lt;1% va a la red Lightning, no a una empresa)</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox" /> •	Puedes ganar con 10 fans comprometidos, no necesitas viralizar.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox" /> Cada perfil Nostr (npub) puede tener una Lightning Address</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox" /> Es como un email: <a href="mailto:usuario@wallet.com">usuario@wallet.com</a></p>
+</li>
+<li>
+<p><input disabled="" type="checkbox" /> •	Es reutilizable (no necesitas generar nueva dirección cada vez)</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox" /> •	Es pública pero segura (no revela tu balance)</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox" /> •	Funciona en cualquier wallet Lightning compatible</p>
+</li>
+</ul>
+<p>Por ejemplo: Un artista en Nostr publica una canción. 50 personas le envían Zaps de 1000 sats cada uno (50,000 sats ≈ $50). En YouTube, necesitaría ~25,000 vistas para ganar eso, y YouTube se quedaría con $22. En Nostr, el artista recibe los $50 completos, menos centavos de comisión Lightning.</p>
+<h2 id="nostr-wallet-connect-la-pieza-clave">Nostr Wallet Connect: La Pieza Clave</h2>
+<p><a href="https://archiveroprohibido.npub.pro/post/18e16332ed69e224/">Nostr Wallet Connect (NWC)</a> es el protocolo que hace que Lightning y Nostr trabajen juntos sin fricción. Permite que tu cliente Nostr (Damus, Amethyst, Primal) se conecte a tu wallet Lightning (Zeus, Blink, Alby, Coinos) de forma segura y automática.</p>
+<p>Los enlaces nostr+walletconnect:// son parte del protocolo Nostr Wallet Connect (NWC), que permite conectar billeteras Lightning a apps de Nostr.</p>
+<p><strong>Sin NWC:</strong><br />
+•	Ves un post → Click en Zap → Copia factura Lightning → Abres wallet → Pegas factura → Pagas → Vuelves a Nostr<br />
+•	7 pasos, tedioso, nadie lo haría frecuentemente.</p>
+<p><strong>Con NWC:</strong><br />
+•	Ves un post → Click en Zap → Listo. Tu wallet paga automáticamente<br />
+•	1 paso, instantáneo, experiencia como &quot;dar like&quot;</p>
+<p>NWC hace que enviar satoshis sea tan fácil como dar like.</p>
+<h2 id="creando-economas-circulares-de-bitcoin">Creando Economías Circulares de Bitcoin</h2>
+<p>La visión de Bitcoin siempre fue ser dinero peer-to-peer, no solo una inversión. Pero Bitcoin on-chain puede ser lento y costoso para comprar café o dar propinas.</p>
+<p>Lightning + Nostr crean un buen entorno para que Bitcoin pueda circular. El potencial existe, pero aún representa una fracción marginal del ecosistema Lightning.</p>
+<ul>
+<li><input disabled="" type="checkbox" /> Ganar: Recibe Zaps por tu contenido, trabajo, arte</li>
+<li><input disabled="" type="checkbox" /> •	Gastar: Envía Zaps a otros creadores, paga servicios</li>
+<li><input disabled="" type="checkbox" /> •	Ahorrar: Acumula sats y mueve a cold storage cuando tengas suficiente</li>
+<li><input disabled="" type="checkbox" /> •	Circular: Todo el ecosistema usa la misma moneda (satoshis)</li>
+</ul>
+<p>Esto es lo que los cypherpunks soñaron durante décadas: una economía digital donde el dinero fluye libremente sin intermediarios extractivos.</p>
+<h2 id="por-qu-debera-importarte-lightning-si-usas-nostr">¿Por Qué Debería Importarte Lightning Si Usas Nostr?</h2>
+<p>Incluso si no te importa Bitcoin como inversión, Lightning te importa si usas Nostr porque:</p>
+<ul>
+<li><input disabled="" type="checkbox" /> Es la única forma de monetizar sin algoritmos: No necesitas millones de seguidores. 100 fans que te envían $1/mes = $100/mes directos.</li>
+<li><input disabled="" type="checkbox" /> •	Elimina la dependencia de publicidad: No necesitas rastrear usuarios, vender datos, o inyectar anuncios para ganar.</li>
+<li><input disabled="" type="checkbox" /> •	Alinea incentivos: En Twitter, contenido polémico viraliza (porque genera engagement = ads). En Nostr, contenido valioso recibe Zaps (porque la gente vota con su dinero).</li>
+<li><input disabled="" type="checkbox" /> •	Globalmente accesible: Alguien en Argentina puede enviarte sats tan fácil como alguien en Japón. Sin conversiones, sin bancos, sin fronteras.</li>
+<li><input disabled="" type="checkbox" /> •	Resistente a censura económica: PayPal te puede cerrar la cuenta, tu banco te puede bloquear. Nadie puede bloquear Lightning.</li>
+</ul>
+<p>En conclusión: Nostr y Lightning se complementan de forma poderosa: Nostr aporta un directorio social y Lightning aporta micropagos instantáneos. Juntos crean algo único en las redes sociales: monetización directa sin intermediarios. Pero cada protocolo tiene valor independiente y sus propios desafíos.</p>
+<p>#Blogindex #NostrEspañol #Descentralizacion #NWC #SoberabiaFinanciera #LightningNetwork #guias #nosrtrespanol</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/982e2edba29e410e8cd4d3898ae5ca2eaf66e77d7891695ae79449fe01dfdd96.jpg" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Sun, 31 May 2026 20:40:43 -0500</pubDate>
+    </item>
+  </channel>
+</rss>

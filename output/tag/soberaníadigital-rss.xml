@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nostr Libre</title>
+    <link>https://archivaldo66.github.io/nostr-static</link>
+    <description>Nostr Articles Feed</description>
+    <managingEditor> (Nostr Static)</managingEditor>
+    <pubDate>Mon, 17 Aug 2026 20:32:43 -0500</pubDate>
+    <item>
+      <title>GrapheneOS el sistema operativo telefónico más seguro del mundo</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4gfrrgemkde3nqjz2v9u526nnfetryn228ynp03c0.html</link>
+      <description>GrapheneOS es la mejor combinación de hardware y software para quien se toma en serio la amenaza de la vigilancia cotidiana, no solo por marketing, sino porque es de los pocos proyectos que documenta qué protege y qué no.</description>
+      <content:encoded><![CDATA[<h2 id="grapheneos-el-sistema-operativo-telefnico-ms-seguro-del-mundo">GrapheneOS el sistema operativo telefónico más seguro del mundo</h2>
+<p>Llevo un par de semanas usando un Pixel 8 Pro (Reacondicionado) con <a href="https://grapheneos.org/">GrapheneOS</a> y esta es mi reseña como normie; sin conocimientos previos de desarrollo Android ni experiencia con ROMs alternativas, solo la perspectiva de alguien que decidió probarlo.</p>
+<p>Y hasta donde he podido comparar, es la mejor combinación de hardware y software para quien se toma en serio la amenaza de la vigilancia cotidiana, no solo por marketing, sino porque es de los pocos proyectos que documenta qué protege y qué no.</p>
+<p>Inmersos como estamos en el Mercado de la Atención en el que ya estamos hasta el cuello, los celulares modernos —o sea, computadoras de bolsillo— son pieza clave de este entramado algorítmico.</p>
+<p>La publicidad se inyecta en cada rincón posible de nuestra experiencia sensorial despierta. La atención ha sido monetizada a extremos impensables, creando un ecosistema de información de manipulación psicológica que nos dice que pensar y que consumir, apelando a nuestros instintos más bajos.</p>
+<p>Por ello, deberíamos, al menos, ser capaces de ser los dueños de nuestros espacios digitales. Si el celular es la mayor herramienta de distracción y control jamás creada, y no somos capaces de abandonarlo, al menos podríamos intentar un mínimo control sobre ese aparato que nos destruye poco a poco la independencia cognitiva.</p>
+<p><img src="https://image.nostr.build/6d66815181b55854727e6643fa1d6d4ad1a631f30fead4001f1409bf7267df0f.jpg" alt="image" /></p>
+<p>Empezaré haciendo la distinción entre el celular Pixel y sus distintos modelos, y el sistema operativo GrapheneOS como entidades separadas.</p>
+<p>Todo lo que normalmente se usa, desde apps de mensajería como Signal, WhatsApp y Telegram, funcionan perfectamente. Para redes sociales, apps como X, Instagram, TikTok, y Youtube funcionan normalmente.</p>
+<p>En cuanto a la conectividad Bluetooth, funciona bastante bien, sin problemas más allá de los habituales errores menores y retrasos que cualquier dispositivo inalámbrico tiene en cualquier sistema.</p>
+<p>También he probado algunos juegos. todo se ejecuta normalmente porque el SO no consume recursos en segundo plano. Diría que incluso funciona mejor que Android de fábrica por eso.</p>
+<p>Aunado a lo anterior, siento que la duración de la batería dura más desde que se instaló GrapheneOS. En un uso intensivo fácilmente sobrevive un día completo sin descargarse. La carga es un poco lenta, pero solo porque uso un cargador de 35W genérico que me llegó con el celular.</p>
+<p>La calidad de fotos y videos es buena tanto con la cámara de GrapheneOS como con la de Pixel.</p>
+<p>la diferencia aparece en condiciones de poca luz, donde el procesamiento multi-frame de HDR+/Night Sight de Google sigue dando resultados más limpios. Uso principalmente la cámara de Pixel, sin Google Play services en sandbox y con acceso a la red desactivado, precisamente para aprovechar ese procesamiento sin abrir ningún canal de datos hacia Google. Lo que realmente valoro de la cámara nativa de GrapheneOS es que entrega la imagen mucho más cercana a lo que capta el sensor, sin el procesamiento computacional agresivo de Google, captura la escena tal cual es, sin que el algoritmo o la IA decida por mí como debería verse mejor.</p>
+<p>La biometría funciona normalmente bajo GrapheneOS. Inicialmente habían eliminado el desbloqueo facial básico, aunque recientemente se terminó integrando una versión más robusta y segura del desbloqueo facial, pero el escáner de huellas va perfectamente bien.</p>
+<p>La calidad de las llamadas funciona como debería. Probado con un chip que no requiere registro (De momento no he probado servicios de eSIM anónimos)</p>
+<p>La mayoría de apps bancarias y gubernamentales están mayormente bien. Omito las billeteras de cripto porque la mayoría ya están enfocadas en la privacidad y funcionan sin problemas en GrapheneOS. En cuanto a los bancos, <a href="https://www.redeszone.net/noticias/seguridad/revolut-usuarios-grapheneos-bloqueo-aplicacion/">Revolut recientemente bloqueó GrapheneOS</a>. Algunas aún tienen problemas, aunque la mayoría funcionan. <a href="https://privsec.dev/posts/android/banking-applications-compatibility-with-grapheneos/">Hay un sitio web que lista qué apps bancarias funcionan por país en GrapheneOS.</a> Google Pay obviamente no funciona, ni siquiera con servicios de Google Play en sandbox.</p>
+<p>La personalización es un punto débil porque GrapheneOS prioriza la seguridad y privacidad reduciendo la superficie de ataque. No es altamente personalizable, pero ese es el intercambio por una mejor privacidad y control sobre tus datos y tu atención cognitiva.</p>
+<h3 id="por-qu-grapheneos-solo-soporta-telfonos-pixel">¿Por qué GrapheneOS solo soporta teléfonos Pixel?</h3>
+<p>A primera vista, pensar en usar hardware de Google para evitar la vigilancia parece un sin sentido, ¿O sea, para rebelarte contra Google tienes que darle dinero a Google? Un nivel de ironía que ni el mejor guionista de Black Mirror se atrevería a describir…</p>
+<p>Aplicando la formula esotérica oriental de <em>Cabalgar el tigre</em> se trataría de, frente a la circunstancia actual, aplicar, en el terreno político e informático, la misma lógica del yudo en la vida privada, usar la fuerza y los propios recursos tecnológicos del enemigo para revertir su impulso y neutralizarlo, para combatirlo e incluso destruirlo.</p>
+<h4 id="1-chip-de-seguridad-titan">1. CHIP DE SEGURIDAD TITAN</h4>
+<p>Pero es porque los Pixels incluyen un chip de seguridad dedicado llamado <strong>Titan M</strong></p>
+<p>Maneja:</p>
+<ul>
+<li>encriptación respaldada por hardware</li>
+<li>almacenamiento seguro de claves</li>
+<li>protección contra fuerza bruta</li>
+<li>arranque verificado</li>
+<li>Protección física contra ataques de canal lateral y manipulación directa del chip</li>
+<li>Certificación criptográfica de identidad/dispositivo</li>
+<li>Independencia total del procesador principal.</li>
+<li>Verificación biométrica sin exponer los datos.</li>
+</ul>
+<p>La mayoría de los teléfonos Android no tienen nada cercano a esto.</p>
+<h4 id="2-el-arranque-verificado-realmente-funciona">2. EL ARRANQUE VERIFICADO REALMENTE FUNCIONA</h4>
+<p>En muchos teléfonos Android:</p>
+<ul>
+<li>Desbloquear el bootloader debilita la seguridad inmediatamente.</li>
+<li>Los Pixels son diferentes: permiten grabar una clave de confianza propia en vez de depender solo de la de Google.</li>
+<li>GrapheneOS puede usar protecciones fuertes de arranque verificado, durante la instalación graba sus propias claves en el chip Titan M2 y vuelve a bloquear el bootloader bajo ellas, manteniendo protecciones fuertes de arranque verificado incluso en un SO personalizado.</li>
+</ul>
+<p>El resultado es un sistema operativo personalizado que queda tan protegido por hardware como el Android de fábrica. La única diferencia está en quién valida esa seguridad: en lugar de Google, la verificación corre a cargo de GrapheneOS.</p>
+<h4 id="3-los-pixels-soportan-etiquetado-de-memoria-por-hardware">3. LOS PIXELS SOPORTAN ETIQUETADO DE MEMORIA POR HARDWARE</h4>
+<p>Los Pixels más nuevos incluyen ARM MTE. Es una función de seguridad construida directamente en el procesador.</p>
+<p>Esto ayuda a detectar:</p>
+<ul>
+<li>corrupción de la memoria</li>
+<li>exploits de uso después de liberar</li>
+<li>desbordamientos de búfer</li>
+</ul>
+<p>GrapheneOS usa esto agresivamente para la protección contra exploits. Esto solo está disponible desde Pixel 8 en adelante, por el soporte de 7 años garantizado y las funciones ARM MTE.</p>
+<h4 id="4-grapheneos-est-extremadamente-endurecido">4. GRAPHENEOS ESTÁ EXTREMADAMENTE ENDURECIDO</h4>
+<p>Las características incluyen:</p>
+<ul>
+<li>malloc endurecido.</li>
+<li>Google Play en sandbox: corre sin privilegios de sistema, con permisos revocables como cualquier otra app.</li>
+<li>Aislamiento estricto de apps: sandbox reforzado por app, con controles granulares como el permiso de Red y de Sensores por app — inexistentes en Android stock.</li>
+<li>Protección USB: acceso deshabilitado por defecto con el teléfono bloqueado, cerrando la puerta a herramientas forenses de extracción física.</li>
+<li>Mitigaciones avanzadas contra exploits.</li>
+</ul>
+<h4 id="5-la-mayora-de-los-oems-rompen-la-seguridad-para-roms-personalizados">5. LA MAYORÍA DE LOS OEMS ROMPEN LA SEGURIDAD PARA ROMS PERSONALIZADOS</h4>
+<p>OEM es la sigla en inglés de Original Equipment Manufacturer — &quot;fabricante de equipo original&quot;.</p>
+<p>Samsung es un buen ejemplo.</p>
+<p>Si desbloqueas el bootloader:</p>
+<ul>
+<li>Knox se rompe</li>
+<li>la atestación se debilita</li>
+<li>las características de seguridad desaparecen</li>
+<li>El dispositivo quedaría marcado como &quot;tampered&quot; (manipulado) de forma irreversible, y esto desactiva permanentemente servicios fundamentales del celular.</li>
+</ul>
+<p>¿Y entonces por qué GrapheneOS solo funciona en Pixels? Pues porque Google es el único que, al fabricar su hardware, ha tenido en cuenta que alguien quiera instalar otro sistema operativo sin que salte la alarma de seguridad. Los demás fabricantes ni lo contemplan.</p>
+<h4 id="6-el-proyecto-prioriza-la-seguridad-sobre-la-popularidad">6. EL PROYECTO PRIORIZA LA SEGURIDAD SOBRE LA POPULARIDAD</h4>
+<p>GrapheneOS ha dicho muchas veces:</p>
+<ul>
+<li>Soportar hardware inseguro elimina el propósito entero del proyecto.</li>
+<li>Su objetivo no es la adopción máxima.</li>
+<li>Su objetivo es la seguridad máxima.</li>
+</ul>
+<p><a href="https://www.makeuseof.com/grapheneos-expanding-supported-devices-motorola/">GrapheneOS anunció una asociación con Motorola para dispositivos futuros a partir de alrededor de 2027.</a> Y una colaboración confirmada con un OEM mayor (Snapdragon) para hardware de próxima generación.</p>
+<p>Así que la exclusividad de Pixel podría cambiar eventualmente.</p>
+<p>Pero SOLO si el hardware cumple con los estándares de seguridad de GrapheneOS.</p>
+<p>Esa es la parte importante.</p>
+<p>La mayoría de las nuevas versiones Android están diseñadas alrededor de características y marketing.</p>
+<p>GrapheneOS está diseñado para sobrevivir ataques del mundo real y esta seguridad endurecida y la ausencia de servicios de Google lo convierten en una de las mejores opciones de privacidad disponibles.</p>
+<p>La vigilancia masiva no está por llegar.</p>
+<p>Ya está aquí.</p>
+<p><a href="https://www.telemundo.com/noticias/noticias-telemundo/inmigracion/ice-reconocimiento-facial-dhs-camaras-calles-celulares-migrantes-rcna257606">El reconocimiento facial con IA se está extendiendo en las cámaras.</a> Los bancos rastrean cada transacción. Las apps venden tus datos. Las grandes tecnológicas y los gobiernos están construyendo el panóptico en tiempo real.</p>
+<p>Android está a punto de volverse un sistema cerrado como Apple.</p>
+<p>Probablemente no puedas detener la máquina de la noche a la mañana.</p>
+<p>Pero puedes hacerte extremadamente costoso y molesto de vigilar.</p>
+<p><strong>¡Deja de ser un producto!</strong></p>
+<p>#resenas #GrapheneOS #PrivacidadDigital #SoberaníaDigital #AnonimatoDigital #VigilanciaMasiva</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/bc8baf94aa19d55ccdaf44f74f02b15faf9c692ddc621df1ebacf6fec391dfa6.jpg" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Mon, 17 Aug 2026 20:32:43 -0500</pubDate>
+    </item>
+    <item>
+      <title>Verificación de edad - la puerta de salida del anonimato en internet</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4dev5jaf489dx6stpwsm575zw2fhkx4jnvcef3eq0.html</link>
+      <description>Verificación de edad - la puerta de salida del anonimato en internet</description>
+      <content:encoded><![CDATA[<p>Como si no bastara con que cada vez que usamos el Internet, dejamos un no tan endeble rastro. Cada búsqueda, cada clic, cada reproducción de video, cada formulario que llenamos, cada imagen que descargamos o subimos a la red. Nada de eso desaparece: queda registrado, se analiza, se comercializa.</p>
+<p>Hasta tu historial clínico, tus inclinaciones políticas, tus miedos y fetiches, tus hábitos de consumo, tus charlas privadas. Ya nada hay oculto y todo se convierte en metadatos.</p>
+<p>Y no conformes con que Google, Amazon, Meta o Apple hagan exactamente todo eso, ahora cuatro senadores gringos de la máxima potencia global quieren que cada teléfono y computadora vendido en Norteamérica (y por extensión el patio trasero imitará sus políticas) exija tu fecha de nacimiento antes de funcionar para ti.</p>
+<p><a href="https://www.govtrack.us/congress/bills/119/s5090/text">Se trata del S.5090, &quot;Digital Age Assurance Act of 2026&quot; (&quot;Ley de Verificación de Edad Digital de 2026&quot;)</a>, un proyecto de ley bipartidista introducido en el Senado de EE. UU. el 22 de julio de 2026 por senadores de ambos partidos, por Andy Kim, Cynthia Lummis, Adam Schiff y John Barrasso. Dos demócratas y dos republicanos. Actualmente está estado de &quot;Introducido&quot; con un 25% de progreso legislativo. Fue leído dos veces y remitido al Comité de Comercio, Ciencia y Transporte del Senado.</p>
+<p>El proyecto obligaría a los proveedores de sistemas operativos a exigir que los usuarios indiquen su edad, y obligaría a los desarrolladores de aplicaciones, operadores de sitios web y proveedores de navegadores a solicitar una señal de edad a esos sistemas operativos.<br />
+En otras palabras: es una arquitectura de verificación de edad a nivel de sistema operativo. En lugar de que cada app o sitio web pida directamente tu documento de identidad o verifique tu edad por su cuenta, el modelo propuesto centraliza esa función en el OS (Android, iOS, Windows, etc.), que luego emite una &quot;señal de edad&quot; hacia las apps, navegadores y sitios que la soliciten.</p>
+<p>Esto alcanzaría el teléfono en tu bolsillo, la laptop en tu escritorio, la consola bajo tu televisor. Las cuentas que ya tienes se incluyen el día en que entra en vigor. Tu propia máquina entonces te delata. Entrega tu grupo de edad a cada app, cada tienda de apps y cada navegador, y ellos están obligados a tratar esa señal como el indicador principal de quién eres. Un proveedor de navegador bajo este proyecto de ley es cualquiera que posea o mantenga un navegador. Un hombre que mantiene un fork en su tiempo libre lleva la misma obligación que Google, y las multas ascienden a $2,500 por una violación negligente y $7,500 por una intencional, multiplicadas por cada niño afectado. La Sección 10 promete no requerir ID gubernamental ni escaneos faciales. La Sección 3(d) luego dice que cuando un proveedor obtenga información clara y convincente de que tu edad declarada es incorrecta, deberá verificarla. Nunca dice cómo. La Sección 4(c) obliga a los desarrolladores de apps a reportarte cuando decidan que mentiste. Los grupos se detienen en 17 y archivan a los adolescentes con adultos, mientras que las leyes estatales para las que esto está diseñado trazan su línea en 18. La señal federal no puede distinguir a un joven de 17 años de un hombre adulto. Cada sitio bajo un mandato de 18+ necesitará más que la señal.</p>
+<h3 id="necesitar-tus-documentos-de-identificacin">¡Necesitará tus documentos de identificación!</h3>
+<p>Este el mismo patrón que ya se está discutiendo y aprobando en otras jurisdicciones europeas y anglosajonas.</p>
+<p><img src="https://image.nostr.build/83220d0e2afe7f9a0d1b7153e935c652b269e7a858faeaf28f45c6f00e48a407.jpg" alt="image" /></p>
+<h3 id="australia--el-pionero-en-el-mundo">Australia — el pionero en el mundo</h3>
+<p>Introducido el 21 de noviembre de 2024, aprobado por ambas cámaras el 29 de noviembre de 2024. Recibió sanción real (Royal Assent) el 10 de diciembre de 2024, y entró en vigor efectivamente el 10 de diciembre de 2025 (habiendo tenido un año de plazo para que las plataformas se prepararan).</p>
+<p>Es una ley australiana del parlamento que prohíbe a los menores de 16 años tener una cuenta en las plataformas de redes sociales.</p>
+<p><a href="https://privacymatters.dlapiper.com/2026/02/australias-social-media-ban-and-the-esafety-commissioners-social-media-minimum-age-regulatory-guidance/">Online Safety Amendment (Social Media Minimum Age) Act 2024. Es la primera ley de su tipo en el mundo que prohíbe a los menores de 16 años el acceso a plataformas</a> como Facebook, Instagram, Reddit, Snapchat, TikTok, Twitter, Threads, Twitch, Kick y YouTube, con la posibilidad de que se agreguen más plataformas.</p>
+<p>Y obliga a las empresas a crear sistemas de verificación de edad. A diferencia del modelo de EE.UU. o la UE, ósea este es un ban directo por edad a nivel de plataforma, no una infraestructura de señal a nivel de sistema operativo. La responsabilidad recae en las plataformas, no en padres o menores, con multas de hasta 150.000 unidades de penalización (~49,5 millones AUD) por incumplimiento.</p>
+<h3 id="el-caso-europeo--el-ms-orwelliano">El caso europeo – El más orwelliano.</h3>
+<p>El problema data de más atrás con la (Digital Services Act, 2022), en donde se sentaron los principios y estructuras.</p>
+<p>Todo arranca en forma con el anuncio del 15 de abril de 2026, cuando Emmanuel Macron reunió a varios líderes europeos, entre ellos Ursula von der Leyen y Pedro Sánchez, para coordinar una posible prohibición de las redes sociales para menores a nivel de la UE. Con el objetivo de impulsar una acción común y acelerar al mismo ritmo entre los Estados miembros.</p>
+<p>A partir de ahí la Comisión construyó la app de verificación tomando como plantilla el marco del certificado COVID-19 de la UE — es decir, reutilizaron literalmente la estructura de verificación digital que ya habían desplegado durante la cuarentena para pasaportes sanitarios, y la adaptaron para la verificación de edad.</p>
+<p>Pero apenas días después del lanzamiento, <a href="https://www.techradar.com/vpn/vpn-privacy-security/first-your-age-next-your-identity-inside-the-hack-that-broke-the-eu-age-verification-apps-privacy-promises">investigadores independientes como Paul Moore, quien ha vulnerado la app de verificación de edad de la UE tres veces desde abril de 2026. Su conclusión, tras más de 20 años de experiencia en el campo: &quot;la verificación de edad anónima no funciona</a>.&quot;</p>
+<p>El diagnóstico de Moore va al grano. No es un bug. Es la arquitectura misma.</p>
+<p><em>&quot;En el momento en que separas la identidad de la edad de alguien, esa persona no puede responder la pregunta.&quot;</em> Así de simple. Por eso llama a las últimas mejoras de seguridad &quot;teatro de seguridad&quot; — sin rodeos.</p>
+<p>El problema tiene nombre: confianza del lado del cliente. Si nada sale del dispositivo, ¿cómo verificas lo que se obtuvo? No hay forma. Un catch-22 servido en bandeja a los legisladores europeos.</p>
+<p>Y hay algo más. El actor de amenaza no es un tercero malicioso, dice Moore. Es el propio usuario. <em>&quot;No quieren verificación de edad en primer lugar, así que van a buscar formas de evadir el sistema.&quot;</em> Y si el sistema puede evadirse por diseño — lo van a hacer. Obvio, casi de sentido común, pero nadie lo dice así de claro.</p>
+<p><strong>La predicción más inquietante, sin embargo, no es técnica. Es política.</strong></p>
+<p>El fracaso de la estructura de verificación de edad — inevitable, según Moore — empujará a los legisladores hacia controles más invasivos. Una ruta de escalada, la llama: primero intentas lo natural, después exiges probar tu identidad completa, todo bajo la bandera de la seguridad infantil.</p>
+<p>La infraestructura nunca fue el fin. Es el medio. Hacia algo más amplio. Más autoritario.</p>
+<h3 id="nuevamente-necesitaran-tus-documentos-de-identificacin">¡Nuevamente necesitaran tus documentos de identificación!</h3>
+<h3 id="chat-control--proyecto-en-paralelo-del-mismo-totalitarismo">Chat Control – proyecto en paralelo del mismo totalitarismo.</h3>
+<p>Es un proyecto de la misma UE que ha tenido varias etapas y debates y básicamente sería una regulación que permitiría a las plataformas en línea escanear mensajes privados en busca de material de abuso sexual infantil (CSAM). Presentada como protección infantil. Los críticos la llaman infraestructura de vigilancia masiva porque un sistema construido para escanear un tipo de contenido puede escanear cualquier cosa.</p>
+<p>Plataformas como DMs de Instagram, Facebook, Discord, Snapchat, mensajería de Xbox, Gmail, iCloud Mail serían las más afectadas.</p>
+<ol>
+<li><strong>-Signal:</strong> ya avisó que dejaría de funcionar en Europa de aprobarse.</li>
+<li><strong>GrapheneOS:</strong> Declaró que seguirá siendo usable por cualquiera en el mundo sin requerir información personal, identificación ni cuenta. Reconocieron explícitamente que eso podría significar que sus dispositivos no se puedan vender en ciertas regiones, y que están dispuestos a aceptarlo.</li>
+</ol>
+<p>Si se aprueba el Control de Chat, obligará al escaneo del lado del cliente: por lo que las empresas tendrán que escanear el contenido de las comunicaciones privadas, incluidos los mensajes encriptados y los correos electrónicos, antes de que se envíen.</p>
+<p>Europa está descubriendo lo que ya vivió EE. UU. Hace más de 20 años con <a href="https://www.csis.org/analysis/fact-sheet-section-215-usa-patriot-act">la llamada Ley Patriota</a> que permitía la recolección masiva de metadatos telefónicos. PRISM recopiló comunicaciones de internet de las principales empresas tecnológicas de EE. UU. Hoy en día, tus datos pasan por manos de multimillonarios, monopolios en la nube, laboratorios de IA, redes publicitarias, corredores de datos y contratistas de defensa, y luego se reempaquetan como innovación, seguridad o seguridad nacional. <a href="https://www.lawfaremedia.org/article/nsa-ends-bulk-collection-telephony-metadata-under-section-215">La Ley de LIBERTAD de EE. UU. solo limitó parte del programa telefónico masivo más tarde.</a> Así que ahorremonos la lección: Europa está luchando contra esto ahora en público,<a href="https://www.pogo.org/analyses/the-history-and-future-of-mass-metadata-surveillance"> mientras que América lo normalizó después del 11-S y lo vendió como libertad.</a></p>
+<p>Como siempre, tales regulaciones vienen con una hipocresía abrumadora. La misma Europa incapaz de controlar las fronteras y de saber quiénes son los millones de inmigrantes que los invaden quieren espiar y controlar a 450 millones de europeos.</p>
+<p>#noticias #VerificaciónDeEdad #SoberaníaDigital #VigilanciaDigital #EspionajeMasivo #ChatControl</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/a52f4e95c7d1b2630fc5760091a5c7cab314afbcf5653cf36cd321ae9d31a5cc.jpg" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Sun, 09 Aug 2026 23:17:21 -0500</pubDate>
+    </item>
+  </channel>
+</rss>

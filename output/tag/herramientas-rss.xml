@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nostr Libre</title>
+    <link>https://archivaldo66.github.io/nostr-static</link>
+    <description>Nostr Articles Feed</description>
+    <managingEditor> (Nostr Static)</managingEditor>
+    <pubDate>Mon, 13 Jul 2026 00:57:50 -0500</pubDate>
+    <item>
+      <title>Inkan: identidad permanente sobre Nostr</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy88wumn8ghj7mn0wvhxcmmv9uqp2k238ptrqktgxgm4gvnj0945g4zsdar5z6c8wyp40.html</link>
+      <description>Inkan es un sistema de identidad para Nostr con la clave maestra en frío permanente</description>
+      <content:encoded><![CDATA[<p>Entre las muchas discusiones que surgen en torno a Nostr y sus obstáculos y soluciones hay una en particular que quizá no atraiga tanta atención como debería tener debido a su importancia, y es lo relativo a la fragilidad de las identidades. Si perder una clave privada significa perder 100, 1000 p cien mil seguidores, nadie con algo serio que construir va a querer apostar su reputación en Nostr.</p>
+<p>Porque si perder tu frase semilla en una billetera implica una grave pérdida económica, perder la clave privada en Nostr o que te la roben significa perder la capacidad de retener automáticamente las publicaciones y a los propios seguidores. El resultado son patrones de uso poco serios y efímeros, con contenido de calidad relativamente baja. Es decir, baja confianza en el protocolo.</p>
+<p>Como dijimos, si pierdes tu nsec, pierdes todo lo que construiste sobre él. Seguidores, reputación, historial. No hay recuperación posible. Para cuentas con decenas de miles de seguidores, eso no es un problema menor que pueda resolver una plataforma centralizada: es un desincentivo suficiente para no invertir en serio en una presencia basada en Nostr. El resultado son patrones de uso poco serios y efímeros, con contenido de calidad relativamente baja. Es decir, baja confianza en el protocolo.</p>
+<p><a href="https://www.inkan.cc">Inkan</a> es una propuesta para atacar ese problema desde la raíz. Porque Inkan es algo bastante más sofisticado que un simple fork de Jumble.</p>
+<h3 id="nostr-ms-delegacin">Nostr más delegación</h3>
+<p>La descripción más precisa podría ser: Inkan es Nostr más delegación. Una capa de identidad que se asienta sobre el protocolo sin modificarlo. Los eventos siguen siendo eventos Nostr. Los relays siguen siendo relays. Lo que cambia es la relación entre una identidad y la clave que firma en su nombre.</p>
+<h3 id="inkan-es-un-sistema-de-identidad-para-nostr-con-la-clave-maestra-en-fro-permanente">Inkan es un sistema de identidad para Nostr con la clave maestra en frío permanente</h3>
+<p>Inkan permite identidades en línea cuya clave privada puede crearse en almacenamiento en frío y permanecer allí de forma permanente. La clave nunca tiene que tocar un dispositivo conectado a internet ni tiene que estar a mano. La identidad en sí, sin embargo, puede usarse fácilmente para autenticación cotidiana en línea: publicar, responder, enviar mensajes o iniciar sesión en servicios.</p>
+<p>La arquitectura central es una cadena de delegación: <strong>master → intermedias → firmante</strong>. La clave maestra es la identidad permanente, el objeto al que los seguidores deben vincularse. La clave firmante es la que trabaja en el día a día —publica notas, responde, interactúa. Si esa clave se pierde o se compromete, se revoca desde la clave inmediatamente superior y se genera una nueva. La identidad maestra no se toca. No necesita tocar nada.</p>
+<p>Lo que hace posible esto es que las delegaciones no viven en Nostr sino en Ethereum. Cada declaración —de delegación, de revocación, de invalidación permanente— se registra on-chain. Eso las hace auditables e independientes de cualquier relay. Un cliente Inkan lee esas declaraciones desde la blockchain y puede reconstruir, para cualquier clave pública y cualquier momento pasado, el mapa completo de delegaciones directas e indirectas vigentes en ese instante.</p>
+<p>Inkan te permite revocar y reemplazar pares de claves en caso de pérdida o robo de tu clave privada. También puedes realizar rotaciones periódicas de claves de forma preventiva. Todo esto se realiza de manera descentralizada. De esta forma, Inkan te proporciona una identidad en línea permanente que solo tú controlas y que puedes mantener con total seguridad a largo plazo.</p>
+<p><img src="https://image.nostr.build/7afd5b58c0a5526379d130eefb85b0d10a26c64915b24959a29ad1044b309d00.jpg" alt="image" /></p>
+<p><strong>&quot;Get write access to Inkan relay&quot;</strong></p>
+<p>Las dos opciones que te muestra son las formas estándar de conectar tu identidad Nostr:<br />
+<strong>NIP-07</strong> es una extensión de navegador —nos2x, Alby, o similar— que guarda tu clave y firma eventos sin exponerla. Es la opción más común para escritorio.<br />
+<strong>NIP-46</strong> es firma remota, donde la clave vive en otro dispositivo —por ejemplo Amber en Android— y el navegador le pide permiso para firmar.</p>
+<p><strong>&quot;Sponsored on-chain transaction&quot;</strong></p>
+<p>Esta opción es para quien quiere crear una identidad Inkan pero no tiene ETH para pagar el gas de Ethereum. (En todo caso las transacciones no son caras. Oscilan entre los 0,40 y 0,80 dólares por delegación o revocación.)</p>
+<p>Lo que implica: envías tu transacción de creación de identidad ya firmada —generada offline con la Utilidad de Gestión— a un patrocinador, que la publica en Ethereum pagando el gas. En ningún momento el patrocinador ve tus claves privadas. Solo recibe la transacción firmada lista para difundir.</p>
+<h3 id="prubalo-t-mismo">Pruébalo tú mismo</h3>
+<p>Un camino rápido:</p>
+<ol>
+<li>
+<p>Descarga la Utilidad de Gestión de Inkan. <a href="https://www.inkan.cc/settings/inkan-management-utility">https://www.inkan.cc/settings/inkan-management-utility</a></p>
+</li>
+<li>
+<p>Ejecuta el AppImage en un sistema Linux actual, idealmente con air gap. Probado en Ubuntu 24.04 y Tails 7.7.2. El camino más rápido en la utilidad es &quot;Configuración rápida de identidad&quot;.</p>
+</li>
+<li>
+<p>Almacena de forma segura las claves privadas maestra e intermedias que produce la utilidad. Transfiere el par de claves firmante a tu sistema habitual (conectado a internet).</p>
+</li>
+<li>
+<p>Lleva la transacción de creación de identidad a Ethereum mediante un patrocinador que cubra el gas y la difunda por ti, o pagando y difundiéndola tú mismo desde la utilidad.</p>
+</li>
+<li>
+<p>Una vez confirmada la transacción, inicia sesión en <a href="http://www.inkan.cc">www.inkan.cc</a> con NIP-07 y sigue el asistente de configuración.</p>
+</li>
+<li>
+<p>Configura el sellado de tiempo en Bitcoin para tus eventos. Por ahora esto implica usar el relay y el servidor de sellado de tiempo de Inkan. Escribe a <a href="mailto:contact@inkan.cc">contact@inkan.cc</a> para solicitar acceso. Las opciones de autoalojamiento están en desarrollo.</p>
+</li>
+</ol>
+<h3 id="por-qu-vale-la-pena">¡Por qué vale la pena?</h3>
+<p>Inkan no es para el usuario casual ni básico de Nostr. Todo el proceso requiere conocimiento técnico, algo de experiencia y Linux y disposición para entender qué se está firmando y por qué. Pero plantea algo que el ecosistema necesita y que nadie más ha resuelto con esta coherencia: una identidad que puede vivir décadas, sobrevivir claves comprometidas, y estar en cold storage mientras firma eventos todos los días.</p>
+<p>Si Nostr va a ser una plataforma seria para creadores, periodistas o cualquier disidente que construya reputación a largo plazo, el problema de la seguridad y permanencia total de identidad tiene que resolverse. Inkan es hasta ahora la propuesta más articulada para hacerlo.</p>
+<p>#resenas #herramientas #nostrespanol #Inkan</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/27461481eb28df67bc4c4a7bf5eab8bf6e3e0b9b174662bf0ecb83c3d340696e.jpg" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Mon, 13 Jul 2026 00:57:50 -0500</pubDate>
+    </item>
+  </channel>
+</rss>

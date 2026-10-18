@@ -1,0 +1,171 @@
+=== RESUMEN POR RELAY ===
+  wss://relay.damus.io                       2 artículos
+  wss://nostr.wine                           0 artículos
+  wss://relay.nostr.band                     ERROR: no conecta (error opening websocket to 'wss://relay.nostr.band': failed to WebSock…)
+  wss://nos.lol                              0 artículos
+  wss://relay.primal.net                     0 artículos
+  wss://nostr-01.yakihonne.com               18 artículos
+  wss://nostr-02.yakihonne.com               2 artículos
+  wss://purplepag.es                         0 artículos
+  wss://nostr.mom                            29 artículos
+  wss://relay.0xchat.com                     ERROR: no conecta (error opening websocket to 'wss://relay.0xchat.com': failed to WebSock…)
+  wss://relay.gitcitadel.eu                  ERROR: no conecta (error opening websocket to 'wss://relay.gitcitadel.eu': failed to WebS…)
+  wss://relay.snort.social                   0 artículos
+  wss://offchain.pub                         0 artículos
+  wss://relay.nostr.wirednet.jp              0 artículos
+  wss://wot.nostr.party                      ERROR: no conecta (error opening websocket to 'wss://wot.nostr.party': failed to WebSocke…)
+  wss://wot.utxo.one                         0 artículos
+  wss://lang.relays.land/es                  0 artículos
+
+=== ARTÍCULOS ENCONTRADOS EN ALGÚN RELAY: 29 ===
+
+- Wikileaks y la Soberanía de la Información  [2026-09-28]
+  d=QNvlfagCn47drSNIyuBJn (ya está en config)
+  en 4 relay(s): wss://relay.damus.io, wss://nostr-01.yakihonne.com, wss://nostr-02.yakihonne.com, wss://nostr.mom
+
+- No es el micrófono: es el teclado  [2026-09-14]
+  d=2GmDdrHoZrsEN9ii5hdUt (ya está en config)
+  en 4 relay(s): wss://relay.damus.io, wss://nostr-01.yakihonne.com, wss://nostr-02.yakihonne.com, wss://nostr.mom
+
+- La muerte de la Web abierta  [2026-09-04]
+  d=3wNda-e7rYAWWIhjHMBtJ (ya está en config)
+  en 2 relay(s): wss://nostr-01.yakihonne.com, wss://nostr.mom
+
+- GrapheneOS el sistema operativo telefónico más seguro del mundo  [2026-08-17]
+  d=BF4gvnc0HJayEjsNV2MJ9 (ya está en config)
+  en 2 relay(s): wss://nostr-01.yakihonne.com, wss://nostr.mom
+
+- Verificación de edad - la puerta de salida del anonimato en internet  [2026-08-09]
+  d=nYIu59ZmAat7OPNRocVSf (ya está en config)
+  en 2 relay(s): wss://nostr-01.yakihonne.com, wss://nostr.mom
+
+- Nueva York obliga a que cada impresora 3D venga con un rastreador instalado  [2026-08-08]
+  d=nj2jBlawuer01QW-ni1Xd (ya está en config)
+  en 2 relay(s): wss://nostr-01.yakihonne.com, wss://nostr.mom
+
+- "ZapTrax, streaming descentralizado sobre Nostr  [2026-07-20]
+  d=38UBUfKXBCZlu8VX3DAKH (ya está en config)
+  en 2 relay(s): wss://nostr-01.yakihonne.com, wss://nostr.mom
+
+- Inkan: identidad permanente sobre Nostr  [2026-07-13]
+  d=YQ8V0Yh27T2rykDTPoGAk (ya está en config)
+  en 2 relay(s): wss://nostr-01.yakihonne.com, wss://nostr.mom
+
+- Alexandria (GitCitadel) — La biblioteca descentralizada de Nostr  [2026-07-06]
+  d=w52JXzydGmcjZ3AxCKCtH (ya está en config)
+  en 2 relay(s): wss://nostr-01.yakihonne.com, wss://nostr.mom
+
+- La Inteligencia Artificial del Fin de Los Tiempos.  [2026-07-01]
+  d=jQwZcD9jmKRNHulXGyB-O (ya está en config)
+  en 2 relay(s): wss://nostr-01.yakihonne.com, wss://nostr.mom
+
+- ¿Qué son los NIPs?  [2026-06-29]
+  d=Qm8QKxXxw9ImkiEb-0Yr7 (ya está en config)
+  en 2 relay(s): wss://nostr-01.yakihonne.com, wss://nostr.mom
+
+- ¿Qué es Nostr Wallet Connect (NWC)?  [2026-06-29]
+  d=gsT_oGUBqg89YKykj3YUr (ya está en config)
+  en 2 relay(s): wss://nostr-01.yakihonne.com, wss://nostr.mom
+
+- ¿QUÉ SON LOS ZAPS? -   El sistema de propinas que puede revolucionar internet.  [2026-06-29]
+  d=1bbZMvmFzGWTXMwzkuTde (ya está en config)
+  en 2 relay(s): wss://nostr-01.yakihonne.com, wss://nostr.mom
+
+- Hablando de NOSTR para principiantes  [2026-06-29]
+  d=rQNl6418cFVBy8TIHlPC8 (ya está en config)
+  en 2 relay(s): wss://nostr-01.yakihonne.com, wss://nostr.mom
+
+- Cómo publicar en Nostr: Tipos de Contenido y Plataformas de Blogging.  [2026-06-24]
+  d=2-G5VkfJFRcSejgHoQWHZ (ya está en config)
+  en 2 relay(s): wss://nostr-01.yakihonne.com, wss://nostr.mom
+
+- El blogging en Nostr vs. Plataformas Centralizadas: Por Qué Importa.  [2026-06-17]
+  d=AZZcazUfIlWKLhWGRZEb1 (ya está en config)
+  en 2 relay(s): wss://nostr-01.yakihonne.com, wss://nostr.mom
+
+- Gossip: el cliente Nostr para quienes se toman en serio sus claves.  [2026-06-04]
+  d=m9AqxEAVejrMlvI9M-PcJ (ya está en config)
+  en 2 relay(s): wss://nostr-01.yakihonne.com, wss://nostr.mom
+
+-  LA MENTIRA DE LA ECONOMÍA CREADORA  [2026-06-03]
+  d=M3IPiTgZB9WDxMvcDhYV3 (ya está en config)
+  en 1 relay(s): wss://nostr.mom
+
+- La guía definitiva para dejar de depender de Google en 2026  [2026-05-31]
+  d=38MZBtIrWbwmOl7Irp-sW (ya está en config)
+  en 1 relay(s): wss://nostr.mom
+
+- Empezar en Lightning Network con Nostr  [2026-05-31]
+  d=DBL-PFFG5Kvqe5axVnXRH (ya está en config)
+  en 1 relay(s): wss://nostr.mom
+
+- La guía definitiva para dejar de depender de Google en 2026  [2026-05-27]
+  d=ba139725ab34eeb6 (NO está en tu config.yaml)
+  en 1 relay(s): wss://nostr.mom
+
+- ¿Que tan privado es Nostr realmente?  [2026-05-17]
+  d=ba93f8069f790963 (ya está en config)
+  en 1 relay(s): wss://nostr.mom
+
+- Entendiendo NOSTR Wallet Connect  [2026-04-28]
+  d=18e16332ed69e224 (NO está en tu config.yaml)
+  en 1 relay(s): wss://nostr.mom
+
+- Bro: El Apretón de Manos Digital que puede cambiar las reglas del intercambio Freelance.  [2026-04-28]
+  d=c2dde8ef16bb4a61 (ya está en config)
+  en 1 relay(s): wss://nostr.mom
+
+- La Inteligencia Artificial del Fin de Los Tiempos.  [2026-04-17]
+  d=682e434099b82280 (NO está en tu config.yaml)
+  en 1 relay(s): wss://nostr.mom
+
+- ¿Qué son los NIPs?  [2026-04-02]
+  d=e8507da3e14a7159 (NO está en tu config.yaml)
+  en 1 relay(s): wss://nostr.mom
+
+- Qué es Nostr Wallet Connect (NWC)  [2026-03-29]
+  d=01932f7429bbc543 (NO está en tu config.yaml)
+  en 1 relay(s): wss://nostr.mom
+
+- ¿QUÉ SON LOS ZAPS?  [2026-03-08]
+  d=42f330c2eb7c3194 (NO está en tu config.yaml)
+  en 2 relay(s): wss://nostr-01.yakihonne.com, wss://nostr.mom
+
+- Hablando de NOSTR para principiantes  [2026-03-07]
+  d=a577a2d0bca2be8d (ya está en config)
+  en 1 relay(s): wss://nostr.mom
+
+=== ARTÍCULOS DE TU config.yaml QUE NINGÚN RELAY TIENE ===
+  (ninguno: todos aparecen en al menos un relay)
+
+=== NADDR LISTOS PARA PEGAR EN config.yaml (artículos hallados) ===
+articles:
+  - naddr1qq24znnkd3nxze6rdc6rwerj2d8yj7t4gf9xuqg5waehxw309aex2mrp0yhxgctdw4eju6t0qyw8wumn8ghj7mn0wd68ytfsxyh8jcttd95x7mnwv5hxxmmdqyw8wumn8ghj7mn0wd68ytfsxgh8jcttd95x7mnwv5hxxmmdqy8hwumn8ghj7mn0wd68ytnddaksygrrpuhqpkm550f5afp0e8xawrgdv3yr6s86rg2fge8f9zmp4g5y2gpsgqqqw4rsjvr33v # Wikileaks y la Soberanía de la Información
+  - naddr1qq2ny3mdg3j8yjr0tfe8x32w895kjdtgv32hgqg5waehxw309aex2mrp0yhxgctdw4eju6t0qyw8wumn8ghj7mn0wd68ytfsxyh8jcttd95x7mnwv5hxxmmdqyw8wumn8ghj7mn0wd68ytfsxgh8jcttd95x7mnwv5hxxmmdqy8hwumn8ghj7mn0wd68ytnddaksygrrpuhqpkm550f5afp0e8xawrgdv3yr6s86rg2fge8f9zmp4g5y2gpsgqqqw4rs6nd6us # No es el micrófono: es el teclado
+  - naddr1qq2nxa6wv3sj6efhwfv5z46hf95x5jzdgf6y5qguwaehxw309ahx7um5wgknqvfw09skk6tgdahxuefwvdhk6qg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa28kgt00u # La muerte de la Web abierta
+  - naddr1qq25y335vamxucesfp9xz729dfe5u43jf49rjqguwaehxw309ahx7um5wgknqvfw09skk6tgdahxuefwvdhk6qg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa28tatzpq # GrapheneOS el sistema operativo telefónico más seguro del mundo
+  - naddr1qq2kuk2fw56njkndg9shgd602p89ymmr2efkvqguwaehxw309ahx7um5wgknqvfw09skk6tgdahxuefwvdhk6qg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa28pcdpum # Verificación de edad - la puerta de salida del anonimato en internet
+  - naddr1qq2ku63jdfpxccthw4jhyvp329tj6mnfx9vxgqguwaehxw309ahx7um5wgknqvfw09skk6tgdahxuefwvdhk6qg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa28tlf97t # Nueva York obliga a que cada impresora 3D venga con un rastreador instalado
+  - naddr1qq2nxwz4gf2kvj6cgfp45mr48pt9sv6yg995sqguwaehxw309ahx7um5wgknqvfw09skk6tgdahxuefwvdhk6qg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa2840dlm7 # "ZapTrax, streaming descentralizado sobre Nostr
+  - naddr1qq24j5fc2cc9j6pjxa2ryuneddz9g5r0gaqkkqguwaehxw309ahx7um5wgknqvfw09skk6tgdahxuefwvdhk6qg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa28hmq8fl # Inkan: identidad permanente sobre Nostr
+  - naddr1qq2hwdfjffv857tygakkx6j6xdqhss6tgd6ysqguwaehxw309ahx7um5wgknqvfw09skk6tgdahxuefwvdhk6qg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa283t8avq # Alexandria (GitCitadel) — La biblioteca descentralizada de Nostr
+  - naddr1qq2k55thtf35gwt2d494ynjgw4k9s3meggk57qguwaehxw309ahx7um5wgknqvfw09skk6tgdahxuefwvdhk6qg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa288uar83 # La Inteligencia Artificial del Fin de Los Tiempos.
+  - naddr1qq24zmfc299hskrcwuu5jmttd9zkytfst9erwqguwaehxw309ahx7um5wgknqvfw09skk6tgdahxuefwvdhk6qg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa28fkjf3d # ¿Qué son los NIPs?
+  - naddr1qq2kwu65tah5w42zw9nnsw2efdukk63nt92hyqguwaehxw309ahx7um5wgknqvfw09skk6tgdahxuefwvdhk6qg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa28n4k925 # ¿Qué es Nostr Wallet Connect (NWC)?
+  - naddr1qq2nzcnztfxhvm2x0fr4w4zcf4mh56m423jx2qguwaehxw309ahx7um5wgknqvfw09skk6tgdahxuefwvdhk6qg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa282dnwr2 # ¿QUÉ SON LOS ZAPS? -   El sistema de propinas que puede revolucionar internet.
+  - naddr1qq2hy52wdsmrgvfcvdr9vsne8p2yjjrv2ppnsqguwaehxw309ahx7um5wgknqvfw09skk6tgdahxuefwvdhk6qg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa288pq8g2 # Hablando de NOSTR para principiantes
+  - naddr1qq2nyt28x4txkej2gefxx5m9dfn5sm632ay95qguwaehxw309ahx7um5wgknqvfw09skk6tgdahxuefwvdhk6qg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa28hkrs9v # Cómo publicar en Nostr: Tipos de Contenido y Plataformas de Blogging.
+  - naddr1qq25zkj6vdsh54txf9k9wj6vdpt5w5j6g43rzqguwaehxw309ahx7um5wgknqvfw09skk6tgdahxuefwvdhk6qg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa28a843z5 # El blogging en Nostr vs. Plataformas Centralizadas: Por Qué Importa.
+  - naddr1qq2k6w2pw9uy2s2kv448yntvweynjnfd2p355qguwaehxw309ahx7um5wgknqvfw09skk6tgdahxuefwvdhk6qg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa28pdp7a4 # Gossip: el cliente Nostr para quienes se toman en serio sus claves.
+  - naddr1qq256v6f2p54ge66ggu4w3rcf4mxx3rgt9trxqg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa283y76vn #  LA MENTIRA DE LA ECONOMÍA CREADORA
+  - naddr1qq2nxwzdtfp8gjtj2a38wm20dsm5juns94e4wqg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa28a2pg77 # La guía definitiva para dejar de depender de Google en 2026
+  - naddr1qq25gsjv94gyv3j8x49hvut9x4shs4nwtpfysqg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa28yantj8 # Empezar en Lightning Network con Nostr
+  - naddr1qqgxycf3xvunwv34v93rxdr9v43rvqg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa28dl0pl0 # La guía definitiva para dejar de depender de Google en 2026
+  - naddr1qqgxycfexdnrsvpk89nrwwfs8ymrxqg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa289nwcxv # ¿Que tan privado es Nostr realmente?
+  - naddr1qqgrzwr9xymrxvejv4jrvwt9xgergqg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa28d7mh9r # Entendiendo NOSTR Wallet Connect
+  - naddr1qqgxxvnyv3jnsetxxymxyc35vymrzqg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa28rqnhd9 # Bro: El Apretón de Manos Digital que puede cambiar las reglas del intercambio Freelance.
+  - naddr1qqgrvwpjv56rxdps8yukywpjxgurqqg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa288nhcxm # La Inteligencia Artificial del Fin de Los Tiempos.
+  - naddr1qqgx2wp4xqmkgcfnv5cngcfhxy6njqg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa285ysswl # ¿Qué son los NIPs?
+  - naddr1qqgrqvfexvexvde5xgukycnrx56rxqg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa28esayav # Qué es Nostr Wallet Connect (NWC)
+  - naddr1qqgrgvnxxvenqcejv43rwcenxyungqguwaehxw309ahx7um5wgknqvfw09skk6tgdahxuefwvdhk6qg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa28hq2h07 # ¿QUÉ SON LOS ZAPS?
+  - naddr1qqgxzdfhxasnyepsvf3kzvnzv5uxgqg0waehxw309ahx7um5wghx6mmdqgsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5srqsqqqa28sktugk # Hablando de NOSTR para principiantes

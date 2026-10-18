@@ -74,7 +74,7 @@ func main() {
 					// Fetch events
 					log.Println("fetching events from relays: ", config.Relays)
 
-					events, eventIDToNaddr, err := helpers.FetchEvents(
+					events, eventIDToNaddr, err := helpers.FetchEventsByAuthor(
 						config.Relays,
 						config.Articles,
 					)

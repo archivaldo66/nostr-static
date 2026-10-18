@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nostr Libre</title>
+    <link>https://archivaldo66.github.io/nostr-static</link>
+    <description>Nostr Articles Feed</description>
+    <managingEditor> (Nostr Static)</managingEditor>
+    <pubDate>Mon, 06 Jul 2026 22:20:04 -0500</pubDate>
+    <item>
+      <title>Alexandria (GitCitadel) — La biblioteca descentralizada de Nostr</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy88wumn8ghj7mn0wvhxcmmv9uqp2ae4xf99s7nev3rk6cm2tge5z7zrfdphgjqs4c6qs.html</link>
+      <description>Alexandria — La biblioteca descentralizada de Nostr</description>
+      <content:encoded><![CDATA[<h2 id="alexandria-gitcitadel--la-biblioteca-descentralizada-de-nostr">Alexandria (GitCitadel) — La biblioteca descentralizada de Nostr</h2>
+<p>Alexandria es un proyecto de <a href="https://geyser.fund/hero/gitcitadel">GitCitadel</a>, un ecosistema más amplio que incluye también un cliente Git descentralizado sobre Nostr y un relay propio. Este breve contexto es importante saberlo pues comparte infraestructura y filosofía con ese proyecto mayor: la soberanía total del software, la documentación y el código sobre el protocolo Nostr.</p>
+<p>Alexandria tiene un potencial enorme y pretende convertirse en la mayor biblioteca pública del conocimiento humano, para contenido largo y estructurado, descentralizado e incensurable basado en Nostr.<br />
+Accesible en <a href="https://next-alexandria.gitcitadel.eu/about">next-alexandria.gitcitadel.eu</a> y solamente teniendo ya tus llaves Nostr, no busca competir con las plataformas de microblogging ni con los editores de artículos comunes. Alexandria está orientada a quienes buscan publicar contenido más largo y complejo, —como publicar ahí su propio libro— y por eso su diseño ha sido despojado de elementos innecesarios.</p>
+<h3 id="el-formato-modular-ms-all-del-kind-30023">El formato modular: más allá del kind 30023</h3>
+<p>La innovación central de Alexandria no está en la interfaz, sino en los tipos de eventos que propone. La especialidad de este cliente es la capacidad de mostrar artículos de formato largo, particularmente del tipo modular: los event kinds 30040 y 30041. Los artículos modulares se conocen frecuentemente como el formato eBook de Nostr: los eventos 30040 contienen los metadatos y la lista ordenada de notas 30041, que contienen el contenido formateado.</p>
+<p>¿Qué significa esto en la práctica? El nuevo event kind 30040 permite tomar cualquier tipo de nota y crear una &quot;colección de notas&quot;, un &quot;libro de notas&quot;, un &quot;diario de notas&quot; o una &quot;revista de notas&quot;. Puede anidarse o incrustarse en otras notas, creando cualquier combinación y jerarquía de notas que se pueda imaginar, limitada únicamente por la capacidad del equipo para procesar las relaciones. El kind 30041 va un paso más allá: permite partir un texto largo en secciones. Capítulos, fragmentos, episodios. Cada uno existe como una nota independiente que puede referenciarse o coleccionarse por separado.<br />
+Juntos, los dos kinds hacen posible algo que Nostr no tenía antes: estructura. No solo notas sueltas flotando en un feed, sino textos con forma, con orden, con partes que se relacionan entre sí.</p>
+<p>Esto es muy diferente a publicar un artículo kind 30023. Esto es distinto. Cada sección existe como un evento separado — citable, enlazable, referenciable por cualquier otro autor. Sin copiar y pegar. Sin perder la autoria.</p>
+<p>Es básicamente un sistema de wiki-linking (como Obsidian o los backlinks de Roam) pero implementado sobre tags de eventos Nostr, lo que le da a Alexandria una capa de conocimiento navegable entre publicaciones distintas.</p>
+<p><img src="https://image.nostr.build/f7e2b0570da125130232c7b41c427d9c2c793338504161a58f950a2286df154b.jpg" alt="image" /></p>
+<h3 id="funcionalidades-actuales">Funcionalidades actuales</h3>
+<p>La versión en desarrollo (v0.0.2, alojada en <a href="https://next-alexandria.gitcitadel.eu/">next-alexandria.gitcitadel.eu</a> ya incorpora un conjunto amplio de funciones, aunque el propio equipo la describe como alpha. Entre lo más relevante:</p>
+<p>Búsqueda: por identificadores únicos (hex, npub, naddr, nevent, note, nprofile, NIP-05), por nombre de perfil, por d-tag y por hashtag.<br />
+Publicación: de cualquier kind de evento, incluyendo publicaciones 30040, secciones 30041 y páginas wiki 30818.<br />
+Interacción: comentarios con kinds 01 y 1111 sobre cualquier evento.<br />
+Infraestructura: monitoreo de relays y detección automática de relays locales.<br />
+Lectura: tabla de contenidos, renderizado de artículos de formato largo, publicaciones modulares, notas y páginas wiki — todo procesado con #NostrMarkup, en AsciiDoc o Markdown según corresponda al kind.<br />
+Acceso: extensión de navegador (NIP-07), El login funciona con extensiones de navegador tipo Nos2x npub-only y Amber sin exponer la clave privada en el navegador.</p>
+<h3 id="una-biblioteca-gutenberg-descentralizada">Una biblioteca Gutenberg descentralizada</h3>
+<p>El equipo de Alexandria ha demostrado la escala de lo que esto permite. Han publicado clásicos completos (de momento todos en inglés) usando notas 30040/30041 —dividida por capítulos, para mostrar con qué rapidez puede cargar un texto de esa extensión. La referencia al proyecto interno como &quot;Gutenberg Edition&quot; no es accidental: la analogía con la imprenta de Gutenberg como democratizador del conocimiento es explícita.<br />
+La idea es que sea posible que puedan ser publicados libros completos en Nostr, navegables como tales, exportables como ePub o PDF. No páginas sueltas — publicaciones con estructura, con índice, con partes que se sostienen juntas. Aunque el catálogo todavía es pequeño.</p>
+<h3 id="para-quin-es-alexandria">¿Para quién es Alexandria?</h3>
+<p>No es la típica plataforma para quien quiere escribir un post de opinión y recibir zaps rápidamente. Es la herramienta para quien quiere publicar en Nostr documentación técnica, libros, manuales, investigación académica, o cualquier corpus de conocimiento estructurado que merezca existir de forma permanente y descentralizada, con una arquitectura donde cada sección puede vivir, evolucionar y ser citada de forma independiente.</p>
+<hr />
+<h3 id="faq---qu-es-y-qu-no-es-alexandria">FAQ - Qué es y qué no es Alexandria</h3>
+<h4 id="es-un-sitio-para-descargar-archivos-de-libros">¿Es un sitio para descargar archivos de libros?</h4>
+<p>No. Es, quizás, lo contrario en términos técnicos y filosóficos. Alexandria no trabaja con archivos alojados — trabaja con eventos Nostr individuales (30040, 30041, 30818) que permanecen atomizados, dispersos entre relays, y se reensamblan solo al momento de leer. No hay un PDF o un EPUB &quot;guardado&quot; en algún lado dentro del sistema; hay piezas de contenido firmadas que se van uniendo.</p>
+<h4 id="entonces-es-como-annas-archive-o-z-library-pero-para-nostr">¿Entonces es como Anna's Archive o Z Library, pero para Nostr?</h4>
+<p>Tampoco. El propio equipo se distancia explícitamente de esa comparación: Anna's Archive indexa a sabiendas material con copyright y por eso vive en pelea constante con registradores de dominio y agencias de vigilancia. Alexandria no busca ser un catálogo de descargas — busca ser algo que ya no dependa de la categoría &quot;descarga&quot; para funcionar.</p>
+<h4 id="reemplaza-a-bittorrent">¿Reemplaza a BitTorrent?</h4>
+<p>No compite con torrents, compite con la idea de usar archivos como unidad de publicación. La diferencia técnica central: un torrent está hasheado pero no firmado — puedes confirmar que dos torrents tienen el mismo contenido, pero no quién lo publicó, así que dependes de índices centralizados para confiar en lo que descargas. Un evento Nostr viene firmado por su autor y es verificable de forma aislada, sin importar por qué canal viajó.</p>
+<h4 id="es-solo-para-e-books">¿Es solo para e-books?</h4>
+<p>Es el uso más visible, pero no el único. También sirve para papers científicos (con AsciiMath y LaTeX), documentación técnica, páginas wiki colaborativas (kind 30818), y artículos de formato largo simple (kind 30023).</p>
+<h4 id="es-un-archivo-permanente-tipo-biblioteca-de-conservacin">¿Es un archivo permanente, tipo biblioteca de conservación?</h4>
+<p>Al revés. Para Alexandria guardar algo como archivo estático es sacarlo de circulación, como meterlo en una caja en el ático. Alexandria apunta a que el contenido quede en la &quot;mesa de luz&quot; — accesible, citable, comentable, vivo — no archivado y quieto.</p>
+<h4 id="puedo-exportar-lo-que-publico-ah-a-pdf-o-epub">¿Puedo exportar lo que publico ahí a PDF o EPUB?</h4>
+<p>Sí, pero no desde Alexandria. Esa función vive en la app hermana, Wikistr, a través de un servidor Asciidoctor propio. Alexandria lee y escribe eventos; Wikistr es quien convierte esos eventos en archivo cuando hace falta.</p>
+<h4 id="por-qu-no-simplemente-subir-el-archivo-completo-ms-simple">¿Por qué no simplemente subir el archivo completo, más simple?</h4>
+<p>Porque el argumento del equipo es justamente que no hay ningún beneficio en dividir algo grande según un índice, transportarlo en piezas y reensamblarlo para usarlo — eso es lo que ya hace cualquier archivo comprimido. La apuesta es dejar todo permanentemente en piezas: comentar piezas, resaltar piezas, compartir piezas, remezclar piezas entre índices distintos. Es más trabajo de diseño, pero es un modelo de uso distinto, no una versión más incómoda del mismo modelo.</p>
+<h4 id="est-terminado-listo-para-usarse-sin-bugs">¿Está terminado, listo para usarse sin bugs?</h4>
+<p>No todavía. Hay dos versiones corriendo en paralelo. Alexandria.gitcitadel.eu es la estable — v0.0.1, funciona bien, pero tiene menos funciones. Next-alexandria.gitcitadel.eu es la otra — v0.0.2, staging, y el propio equipo la describe como &quot;buggy, muy alpha&quot;. Ahí vive todo lo interesante: el buscador con prefijos, el editor AsciiDoc, la tabla de contenidos, la vista de diagrama. Es la versión que todavía se está terminando de perfeccionar.</p>
+<hr />
+<p>Alexandria es un proyecto independiente, con un potencial enorme, y todavía en sostenido por donaciones y por un equipo que documenta en público hasta sus propios errores. Ese estado inacabado todavía se nota en la curva de aprendizaje: alguien que no maneje ya los conceptos básicos de Nostr, la lógica de eventos, y una sintaxis de marcado como AsciiDoc y markdown, se va a topar con más de una pared antes de publicar su primer libro.</p>
+<p>Alexandria tiene la capacidad técnica. El siguiente paso es la documentación — guías claras para usuarios comunes. Sin eso, difícilmente llegue una masa crítica de autores independientes que sostengan la plataforma.</p>
+<p>Si te interesa acompañar el desarrollo, <a href="https://geyser.fund/project/gitcitadel">pueden apoyar el proyecto acá</a></p>
+<p>#resenas #nostrenespanol #BibliotecaDescentralizada #SoberaniaDigital</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/d502fa85979316d8393434e12a9e718f98f805d8f6166e5f1bd9c1c2949144f5.jpg" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Mon, 06 Jul 2026 22:20:04 -0500</pubDate>
+    </item>
+  </channel>
+</rss>

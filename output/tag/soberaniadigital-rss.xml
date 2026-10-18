@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nostr Libre</title>
+    <link>https://archivaldo66.github.io/nostr-static</link>
+    <description>Nostr Articles Feed</description>
+    <managingEditor> (Nostr Static)</managingEditor>
+    <pubDate>Mon, 06 Jul 2026 22:20:04 -0500</pubDate>
+    <item>
+      <title>Alexandria (GitCitadel) — La biblioteca descentralizada de Nostr</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy88wumn8ghj7mn0wvhxcmmv9uqp2ae4xf99s7nev3rk6cm2tge5z7zrfdphgjqs4c6qs.html</link>
+      <description>Alexandria — La biblioteca descentralizada de Nostr</description>
+      <content:encoded><![CDATA[<h2 id="alexandria-gitcitadel--la-biblioteca-descentralizada-de-nostr">Alexandria (GitCitadel) — La biblioteca descentralizada de Nostr</h2>
+<p>Alexandria es un proyecto de <a href="https://geyser.fund/hero/gitcitadel">GitCitadel</a>, un ecosistema más amplio que incluye también un cliente Git descentralizado sobre Nostr y un relay propio. Este breve contexto es importante saberlo pues comparte infraestructura y filosofía con ese proyecto mayor: la soberanía total del software, la documentación y el código sobre el protocolo Nostr.</p>
+<p>Alexandria tiene un potencial enorme y pretende convertirse en la mayor biblioteca pública del conocimiento humano, para contenido largo y estructurado, descentralizado e incensurable basado en Nostr.<br />
+Accesible en <a href="https://next-alexandria.gitcitadel.eu/about">next-alexandria.gitcitadel.eu</a> y solamente teniendo ya tus llaves Nostr, no busca competir con las plataformas de microblogging ni con los editores de artículos comunes. Alexandria está orientada a quienes buscan publicar contenido más largo y complejo, —como publicar ahí su propio libro— y por eso su diseño ha sido despojado de elementos innecesarios.</p>
+<h3 id="el-formato-modular-ms-all-del-kind-30023">El formato modular: más allá del kind 30023</h3>
+<p>La innovación central de Alexandria no está en la interfaz, sino en los tipos de eventos que propone. La especialidad de este cliente es la capacidad de mostrar artículos de formato largo, particularmente del tipo modular: los event kinds 30040 y 30041. Los artículos modulares se conocen frecuentemente como el formato eBook de Nostr: los eventos 30040 contienen los metadatos y la lista ordenada de notas 30041, que contienen el contenido formateado.</p>
+<p>¿Qué significa esto en la práctica? El nuevo event kind 30040 permite tomar cualquier tipo de nota y crear una &quot;colección de notas&quot;, un &quot;libro de notas&quot;, un &quot;diario de notas&quot; o una &quot;revista de notas&quot;. Puede anidarse o incrustarse en otras notas, creando cualquier combinación y jerarquía de notas que se pueda imaginar, limitada únicamente por la capacidad del equipo para procesar las relaciones. El kind 30041 va un paso más allá: permite partir un texto largo en secciones. Capítulos, fragmentos, episodios. Cada uno existe como una nota independiente que puede referenciarse o coleccionarse por separado.<br />
+Juntos, los dos kinds hacen posible algo que Nostr no tenía antes: estructura. No solo notas sueltas flotando en un feed, sino textos con forma, con orden, con partes que se relacionan entre sí.</p>
+<p>Esto es muy diferente a publicar un artículo kind 30023. Esto es distinto. Cada sección existe como un evento separado — citable, enlazable, referenciable por cualquier otro autor. Sin copiar y pegar. Sin perder la autoria.</p>
+<p>Es básicamente un sistema de wiki-linking (como Obsidian o los backlinks de Roam) pero implementado sobre tags de eventos Nostr, lo que le da a Alexandria una capa de conocimiento navegable entre publicaciones distintas.</p>
+<p><img src="https://image.nostr.build/f7e2b0570da125130232c7b41c427d9c2c793338504161a58f950a2286df154b.jpg" alt="image" /></p>
+<h3 id="funcionalidades-actuales">Funcionalidades actuales</h3>
+<p>La versión en desarrollo (v0.0.2, alojada en <a href="https://next-alexandria.gitcitadel.eu/">next-alexandria.gitcitadel.eu</a> ya incorpora un conjunto amplio de funciones, aunque el propio equipo la describe como alpha. Entre lo más relevante:</p>
+<p>Búsqueda: por identificadores únicos (hex, npub, naddr, nevent, note, nprofile, NIP-05), por nombre de perfil, por d-tag y por hashtag.<br />
+Publicación: de cualquier kind de evento, incluyendo publicaciones 30040, secciones 30041 y páginas wiki 30818.<br />
+Interacción: comentarios con kinds 01 y 1111 sobre cualquier evento.<br />
+Infraestructura: monitoreo de relays y detección automática de relays locales.<br />
+Lectura: tabla de contenidos, renderizado de artículos de formato largo, publicaciones modulares, notas y páginas wiki — todo procesado con #NostrMarkup, en AsciiDoc o Markdown según corresponda al kind.<br />
+Acceso: extensión de navegador (NIP-07), El login funciona con extensiones de navegador tipo Nos2x npub-only y Amber sin exponer la clave privada en el navegador.</p>
+<h3 id="una-biblioteca-gutenberg-descentralizada">Una biblioteca Gutenberg descentralizada</h3>
+<p>El equipo de Alexandria ha demostrado la escala de lo que esto permite. Han publicado clásicos completos (de momento todos en inglés) usando notas 30040/30041 —dividida por capítulos, para mostrar con qué rapidez puede cargar un texto de esa extensión. La referencia al proyecto interno como &quot;Gutenberg Edition&quot; no es accidental: la analogía con la imprenta de Gutenberg como democratizador del conocimiento es explícita.<br />
+La idea es que sea posible que puedan ser publicados libros completos en Nostr, navegables como tales, exportables como ePub o PDF. No páginas sueltas — publicaciones con estructura, con índice, con partes que se sostienen juntas. Aunque el catálogo todavía es pequeño.</p>
+<h3 id="para-quin-es-alexandria">¿Para quién es Alexandria?</h3>
+<p>No es la típica plataforma para quien quiere escribir un post de opinión y recibir zaps rápidamente. Es la herramienta para quien quiere publicar en Nostr documentación técnica, libros, manuales, investigación académica, o cualquier corpus de conocimiento estructurado que merezca existir de forma permanente y descentralizada, con una arquitectura donde cada sección puede vivir, evolucionar y ser citada de forma independiente.</p>
+<hr />
+<h3 id="faq---qu-es-y-qu-no-es-alexandria">FAQ - Qué es y qué no es Alexandria</h3>
+<h4 id="es-un-sitio-para-descargar-archivos-de-libros">¿Es un sitio para descargar archivos de libros?</h4>
+<p>No. Es, quizás, lo contrario en términos técnicos y filosóficos. Alexandria no trabaja con archivos alojados — trabaja con eventos Nostr individuales (30040, 30041, 30818) que permanecen atomizados, dispersos entre relays, y se reensamblan solo al momento de leer. No hay un PDF o un EPUB &quot;guardado&quot; en algún lado dentro del sistema; hay piezas de contenido firmadas que se van uniendo.</p>
+<h4 id="entonces-es-como-annas-archive-o-z-library-pero-para-nostr">¿Entonces es como Anna's Archive o Z Library, pero para Nostr?</h4>
+<p>Tampoco. El propio equipo se distancia explícitamente de esa comparación: Anna's Archive indexa a sabiendas material con copyright y por eso vive en pelea constante con registradores de dominio y agencias de vigilancia. Alexandria no busca ser un catálogo de descargas — busca ser algo que ya no dependa de la categoría &quot;descarga&quot; para funcionar.</p>
+<h4 id="reemplaza-a-bittorrent">¿Reemplaza a BitTorrent?</h4>
+<p>No compite con torrents, compite con la idea de usar archivos como unidad de publicación. La diferencia técnica central: un torrent está hasheado pero no firmado — puedes confirmar que dos torrents tienen el mismo contenido, pero no quién lo publicó, así que dependes de índices centralizados para confiar en lo que descargas. Un evento Nostr viene firmado por su autor y es verificable de forma aislada, sin importar por qué canal viajó.</p>
+<h4 id="es-solo-para-e-books">¿Es solo para e-books?</h4>
+<p>Es el uso más visible, pero no el único. También sirve para papers científicos (con AsciiMath y LaTeX), documentación técnica, páginas wiki colaborativas (kind 30818), y artículos de formato largo simple (kind 30023).</p>
+<h4 id="es-un-archivo-permanente-tipo-biblioteca-de-conservacin">¿Es un archivo permanente, tipo biblioteca de conservación?</h4>
+<p>Al revés. Para Alexandria guardar algo como archivo estático es sacarlo de circulación, como meterlo en una caja en el ático. Alexandria apunta a que el contenido quede en la &quot;mesa de luz&quot; — accesible, citable, comentable, vivo — no archivado y quieto.</p>
+<h4 id="puedo-exportar-lo-que-publico-ah-a-pdf-o-epub">¿Puedo exportar lo que publico ahí a PDF o EPUB?</h4>
+<p>Sí, pero no desde Alexandria. Esa función vive en la app hermana, Wikistr, a través de un servidor Asciidoctor propio. Alexandria lee y escribe eventos; Wikistr es quien convierte esos eventos en archivo cuando hace falta.</p>
+<h4 id="por-qu-no-simplemente-subir-el-archivo-completo-ms-simple">¿Por qué no simplemente subir el archivo completo, más simple?</h4>
+<p>Porque el argumento del equipo es justamente que no hay ningún beneficio en dividir algo grande según un índice, transportarlo en piezas y reensamblarlo para usarlo — eso es lo que ya hace cualquier archivo comprimido. La apuesta es dejar todo permanentemente en piezas: comentar piezas, resaltar piezas, compartir piezas, remezclar piezas entre índices distintos. Es más trabajo de diseño, pero es un modelo de uso distinto, no una versión más incómoda del mismo modelo.</p>
+<h4 id="est-terminado-listo-para-usarse-sin-bugs">¿Está terminado, listo para usarse sin bugs?</h4>
+<p>No todavía. Hay dos versiones corriendo en paralelo. Alexandria.gitcitadel.eu es la estable — v0.0.1, funciona bien, pero tiene menos funciones. Next-alexandria.gitcitadel.eu es la otra — v0.0.2, staging, y el propio equipo la describe como &quot;buggy, muy alpha&quot;. Ahí vive todo lo interesante: el buscador con prefijos, el editor AsciiDoc, la tabla de contenidos, la vista de diagrama. Es la versión que todavía se está terminando de perfeccionar.</p>
+<hr />
+<p>Alexandria es un proyecto independiente, con un potencial enorme, y todavía en sostenido por donaciones y por un equipo que documenta en público hasta sus propios errores. Ese estado inacabado todavía se nota en la curva de aprendizaje: alguien que no maneje ya los conceptos básicos de Nostr, la lógica de eventos, y una sintaxis de marcado como AsciiDoc y markdown, se va a topar con más de una pared antes de publicar su primer libro.</p>
+<p>Alexandria tiene la capacidad técnica. El siguiente paso es la documentación — guías claras para usuarios comunes. Sin eso, difícilmente llegue una masa crítica de autores independientes que sostengan la plataforma.</p>
+<p>Si te interesa acompañar el desarrollo, <a href="https://geyser.fund/project/gitcitadel">pueden apoyar el proyecto acá</a></p>
+<p>#resenas #nostrenespanol #BibliotecaDescentralizada #SoberaniaDigital</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/d502fa85979316d8393434e12a9e718f98f805d8f6166e5f1bd9c1c2949144f5.jpg" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Mon, 06 Jul 2026 22:20:04 -0500</pubDate>
+    </item>
+    <item>
+      <title>Hablando de NOSTR para principiantes</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4wfg5umpkxscnsc6x2ep8jwz5f9yxc5zr8qvu5uqj.html</link>
+      <description></description>
+      <content:encoded><![CDATA[<h3 id="hablando-de-nostr-para-principiantes">Hablando de NOSTR para principiantes</h3>
+<h4 id="lleva-tu-identidad-digital-contigo">Lleva tu identidad digital contigo</h4>
+<p>La teoría del Internet Muerto ha llegado más rápido de lo esperado. Un internet lleno de bots, de cuentas falsas con fotos perfectas ya casi imposibles de distinguir de la realidad, (AI slop) de contenido automatizado que nos ahogan en un mar de spam y fake news, de apps y plataformas que no solo nos espían sino también se lucran con nuestros datos.</p>
+<p>Cada vez que inicias sesión en alguna plataforma gubernamental o privada como Google, Facebook o X, debes generar una identidad digital vinculada a tu identidad personal. Este tipo de identidades comparten un mismo problema fundamental: el de la propiedad (¿de quién es realmente?). Siempre existe un Tercero de Confianza (Trusted Third Party), ya sea el gobierno o una entidad privada que certifica y custodia dichas transacciones electrónicas.</p>
+<p>El problema no es solamente que ese perfil no es tuyo ni nunca lo será, sino que pueden vigilarte como quieran, elaborar un perfil detallado sobre ti, clasificarte en categorías y aprovecharse de ello, incluso tomar control de tus cuentas cuando así lo requieran.</p>
+<p>Nadie que posea una cuenta en X o en Facebook es realmente propietario de ella. Estás &quot;alquilando&quot; espacio en un ámbito digital, en un servidor de alguna corporación que tiene su propia agenda.</p>
+<p>Otro problema con este tipo de aplicaciones es que, aunque tengas una identidad social en alguna de estas plataformas, no es compatible con otros sistemas o aplicaciones. No puedes iniciar sesión con tu ID de X en Instagram o viceversa. Estos son los problemas de la propiedad (ownership). A pocas personas en el mundo les importa la propiedad de una realidad intangible como el mundo digital.</p>
+<p>Pero, aunque no te importe, esto conlleva riesgos de seguridad que te afectan, que nos afectan a todos y al resto del mundo. La centralización implica un Punto Único de Fallo (SPOF).</p>
+<p>Un ejemplo claro de honeypot de datos sería el siguiente: ¿Qué es más fácil? ¿Robar los datos de 30 millones de personas sustrayendo individualmente sus teléfonos, accediendo a sus archivos personales y obteniendo toda su información, o hackear de golpe una base de datos que contenga toda la información personal de esas 30 millones de personas? La respuesta es obvia. Posteriormente, toda esa información estará disponible en la dark web al mejor postor. Esto conlleva no solo un robo de datos, sino también el potencial robo de tu dinero, la suplantación de identidad y la pérdida de confianza en las instituciones.</p>
+<p><em><strong>La forma en como interactuamos en internet está ROTA.</strong></em></p>
+<h3 id="nostr-la-ltima-barrera-contra-la-censura">NOSTR: La última barrera contra la censura</h3>
+<p>Todos hemos estado inmersos en esa Matrix y cada vez nos hundimos más en ella, pero hay una forma de salir. Una vez comienzas a seguir la madriguera del conejo, a disfrutar la libertad económica de la autocustodia, te das cuenta que hay otro tipo de libertad, más allá de la libertad económica, me refiero a la libertad de expresión y de comunicarse.</p>
+<p>Es precisamente en este contexto de la lucha contra la censura y la vigilancia, la criptografía y la auto custodia, que surge NOSTR como una alternativa que poco a poco se está haciendo conocer.<br />
+Nostr (<em>Notes and Other Stuff Transmitted by Relays</em>) no es una app ni una red social, es un PROTOCOLO.</p>
+<p>Un protocolo de mensajería descentralizada y código abierto, que va más allá de un simple reemplazo de redes sociales. Un protocolo de comunicación simple y ligero, al mismo tiempo muy resiliente que no depende de servidores centrales. En lugar de almacenar la información en un solo servidor, se distribuye en RELAYS, que funcionan como pequeños servidores no centralizados.</p>
+<p>En Nostr tu identidad no depende de un tercero, tu identidad es solo tuya. Cada usuario es responsable del mensaje que emita, solo tus llaves de acceso garantizarán tu identidad y tus mensajes serán inmutables, inalterables, imborrables.</p>
+<p>La forma más sencilla de explicar NOSTR es como si fuera un correo electrónico. Imagina que mandas un Email desde tu cuenta de Gmail a un Outlook o a PROTONMAIL: diferentes compañías, diferentes operadores, pero cada uno puede recibir y enviar correos a cualquiera de esas compañías. Aunque sea un mal ejemplo con empresas centralizadas, así funciona NOSTR.</p>
+<p><strong>Modelo Centralizado vs Descentralizado</strong></p>
+<p>Sistema tradicional (Centralizado):<br />
+┌─────────┐     ┌──────────────┐     ┌─────────┐<br />
+│ Cliente │ --&gt; │   Servidor   │ --&gt; │ Cliente │<br />
+│  Gmail  │     │ Gmail/Outlook│     │ Outlook │<br />
+└─────────┘     └──────────────┘     └─────────┘<br />
+↑<br />
+(Punto de control)<br />
+Sistema NOSTR (Descentralizado):<br />
+┌─────────┐                          ┌─────────┐<br />
+│ Cliente │                          │ Cliente │<br />
+│  Damus  │                          │Amethyst │<br />
+└────┬────┘                          └────┬────┘<br />
+│ Envía                   Recibe │<br />
+↓                                ↓<br />
+┌───────┐ ←──→ ┌───────┐ ←──→ ┌───────┐ ←──→ ┌───────┐<br />
+│Relay 1│      │Relay 2│      │Relay 3│      │Relay 4│<br />
+└───────┘      └───────┘      └───────┘      └───────┘<br />
+↑              ↑              ↑              ↑<br />
+└──────────────┴──────────────┴──────────────┘<br />
+(Los relays pueden sincronizar mensajes)</p>
+<pre><code>Sin punto único de control
+</code></pre>
+<h3 id="cmo-funciona-nostr-en-3-pasos">¿Cómo funciona NOSTR? En 3 pasos</h3>
+<p><strong>Paso 1: Firma criptográfica</strong><br />
+Cada acción que realizas va firmada. Una firma desde el anonimato. ¿Cómo se firma? Con criptografía. Se utiliza una única llave privada de tu propiedad (Nsec) y también una llave pública (Npub). Una vez firmas, lo transmites a todos los relés. Cada publicación, like o interacción se convierte en un &quot;evento&quot; firmado digitalmente, garantizando que solo el dueño de la identidad puede crear contenido a su nombre.</p>
+<p><strong>Paso 2: Transmisión a los relays</strong><br />
+La aplicación envía estos eventos firmados a múltiples servidores llamados &quot;relays&quot; (repetidores). Son como pequeños servidores que funcionan como islas que permanecen inmutables. Almacenan y retransmiten los eventos, pero no controlan tu identidad ni pueden censurar tu contenido de forma global. Cualquiera de nosotros podría tener uno desde casa.</p>
+<p><strong>Paso 3: Lectura descentralizada</strong><br />
+Otros usuarios se conectan a estos mismos relays desde sus propias aplicaciones para leer los eventos. Cada usuario puede elegir qué relays usar, creando una red resistente a la censura donde ninguna entidad central controla la información.</p>
+<p>Nostr apenas comienza. En un futuro todas las aplicaciones se construirán sobre Nostr, porque a diferencia de las aplicaciones tradicionales que son &quot;silos cerrados&quot;, en Nostr los artefactos de contenido (como una publicación o un resaltado de texto) son <em>eventos portátiles</em> que podrian ser utilizados por cualquier otro desarrollador o aplicación en la red. Esto permitirá aplicaciones más libres, más sofisticadas y ricas en funciones.</p>
+<p><strong>Conclusión</strong></p>
+<p>Quizá todo esto pueda parecer difícil en un principio, pero también lo era el internet en sus inicios. Nostr tiene el potencial de devolverse el poder al usuario, porque pasar de confiar en un tercero a hacernos cargos de nuestra propia soberanía digital, es un cambio de paradigma absoluto.</p>
+<p>#nostrenespanol #NostrEspanol #SoberaniaDigital #Blogindex #Descentralizacion #Libertadigital</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/a893ef9a2bc9289877d74f76a448ecb122b78b8db9a258cda86a661a733f5732.jpg" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Mon, 29 Jun 2026 19:26:32 -0500</pubDate>
+    </item>
+    <item>
+      <title>El blogging en Nostr vs. Plataformas Centralizadas: Por Qué Importa.</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4g9d95cmp0f2kvjtv2a95c6zhgaf953tzxy7suzpm.html</link>
+      <description>El blogging en Nostr vs. Plataformas Centralizadas: Por Qué Importa.</description>
+      <content:encoded><![CDATA[<h2 id="el-blogging-en-nostr-vs-plataformas-centralizadas-por-qu-importa">El blogging en Nostr vs. Plataformas Centralizadas: Por Qué Importa.</h2>
+<p>Los que llevamos años escribiendo y publicando en Google, WordPress, Tumblr etc, y tratamos de hacer difusión en redes como Facebook y Twitter, aprendimos en carne propia qué significa la censura: cuentas eliminadas sin aviso, publicaciones borradas sin explicación, años de trabajo desaparecidos de un día para otro por exponer temas disidentes, compartir material políticamente incorrecto o rozar los límites difusos del copyright.</p>
+<p>De esa trágica experiencia nace una pregunta que no tiene respuesta cómoda: <em>¿A quién le pertenece realmente tu escritura una vez que la publicas?</em></p>
+<p><strong>Medium</strong><br />
+Cuando finalmente se volvió rentable en agosto de 2024 quedó al borde del colapso. El drástico recorte en los pagos y los cambios del algoritmo provocaron la fuga de autores principales hacia plataformas como Substack, generando una crisis continua de confianza en el modelo de monetización, las ganancias se desplomaron, y la plataforma entró en crisis. (1)<br />
+Medium es una plataforma de terceros con sus propias reglas. Si consideran que has violado sus directrices, pueden eliminar tu cuenta y todo lo que has publicado.</p>
+<p><strong>Substack</strong><br />
+Substack se posicionó rápidamente como la alternativa &quot;pro-escritor independiente” a Medium. La realidad ha cambiado. Hace unos 4 años, Substack estaba posicionado como un sitio donde el escritor era la figura central, una comunidad que priorizaba la libertad de expresión y la divulgación de puntos de vista impopulares por la corriente políticamente del establecimiento.<br />
+Ahora Substack está cada vez más lleno de personas que no están particularmente interesadas en escribir sino como una extensión de un Podcast o un canal de Youtube de algún influencer o personalidad de TV.</p>
+<p>Las listas de los boletines más populares están dominadas por cuentas de corte liberal o &quot;woke&quot;, el crecimiento de cuentas de izquierda no es orgánico, sino el resultado de un cambio de estrategia comercial, mientras que los pensadores conservadores e independientes que le dieron su identidad distintiva son cada vez más difíciles de encontrar y reciben menos promoción por parte de la plataforma. (2)</p>
+<p>El problema no es solo ideológico, es algorítmico. Desde una perspectiva monetaria, el atractivo de Substack se ha visto afectado por su cuota del 10% sobre los ingresos, la cual resulta menos competitiva frente a otros servicios de boletines que cobran tarifas menores, además de priorizar el formato de video y podcast sobre la palabra escrita.</p>
+<p><strong>WordPress.</strong><br />
+WordPress.org (auto-hospedado) es muy bueno en términos de propiedad real del contenido, pero tiene sus propias trampas. Es sabido, por ejemplo, que WordPress.com eliminó por completo una publicación completa con enlaces a múltiples archivos filtrados por el hacker Guccifer 2.0, que incluía datos sensibles del que incluía datos internos del Comité Nacional Demócrata (DNC) en el año 2016. (3)<br />
+WordPress es una plataforma flexible que puede escalar desde un simple blog hasta sitios empresariales complejos. Sin embargo, esa flexibilidad tiene un costo real: una modalidad de ciberataque denominada ataque a la cadena de suministro, en la que delincuentes adquieren plugins legítimos de WordPress para introducir código malicioso mediante actualizaciones oficiales. Decenas de herramientas del repositorio oficial fueron comprometidas para inyectar spam oculto y puertas traseras, aprovechando que el sistema no exige firmas criptográficas ni audita los cambios de propiedad. (4)</p>
+<p><strong>Blogspot</strong><br />
+Blogspot (Blogger) el rey de la censura. No hay mucho que decir, todo lo publicado ahí existe bajo las condiciones de servicio de Google, que pueden cambiar sin previo aviso. Google ha cerrado blogs con millones de usuarios sin contemplaciones.</p>
+<hr />
+<h2 id="las-ventajas-reales-de-nostr-para-un-blog">Las ventajas reales de Nostr para un blog</h2>
+<p><strong>1. Propiedad criptográfica del contenido.</strong><br />
+Esta es la diferencia más profunda y la que menos se entiende. Nostr no es una red social o un sitio propiedad de una corporación; es un protocolo descentralizado. Todo lo que se publica en él es un &quot;evento&quot; con un número identificador llamado kind. Esto significa que realmente eres dueño de tu identidad, tu contenido y tu red, asegurados por criptografía, , no por los términos de servicio de nadie.<br />
+En todas las plataformas centralizadas descritas arriba, la plataforma es quien tiene la relación real con tus lectores. En Nostr, tu clave privada es tu cuenta, tu contenido y tu audiencia. Cambias de cliente como cambias de navegador: los datos no se van con él.</p>
+<p><strong>2. Monetización directa sin intermediarios</strong><br />
+Los Zaps son la propuesta de valor única de Nostr: una red monetaria integrada que transforma y remodela la estructura de incentivos en internet mediante micropagos abiertos, Liberando a los creadores de la tiranía del algoritmo y de la viralización.<br />
+En Nostr, los zaps van directamente de la billetera del lector a la tuya, sin ningún intermediario tomando comisión. El modelo económico cambia fundamentalmente: en lugar de que la plataforma monetice tu atención, los lectores te envían valor directamente por encontrar valioso tu contenido.</p>
+<p><strong>3. Publicar en Nostr es publicar en todas partes</strong><br />
+El contenido de otras plataformas de blogging puede sincronizarse de forma totalmente automática en Nostr.  Publicar un artículo en Nostr significa que aparece simultáneamente en Habla.news, YakiHonne, Primal, Highlighter etc, y cualquier cliente que soporte NIP-23. No necesitas gestionar múltiples cuentas en múltiples plataformas.</p>
+<p><strong>4. Resistencia a la censura corporativa.</strong><br />
+El discurso online es solo tan libre como las plataformas que lo hospedan. Cuando puedes ser silenciado con un clic, no posees realmente libertad de expresión. Nostr hace estructuralmente imposible la des-plataformización: nadie puede eliminar tu identidad del protocolo ni borrar tu clave pública. Podrian bloquearte de un relay específico, pero tu contenido sigue existiendo en los demás relays y accesible desde cualquier otro cliente, siempre y cuando el relay realizó la función de espejo del evento.</p>
+<p><strong>5. Importación desde plataformas existentes</strong><br />
+Los posts existentes en otras plataformas de blogging pueden importarse o sincronizarse a Nostr mediante algunas herramientas con algún grado variable de soporte, eliminando la necesidad de recrearlos manualmente. La migración no es un evento traumático como lo es cambiar de WordPress a Ghost: es una operación técnica que preserva todo.</p>
+<p>La realidad es que las plataformas centralizadas, desde Substack hasta Medium, tienen un ciclo y enfrentan una degradación inevitable al priorizar sus propios incentivos por encima de los de sus creadores, lo que compromete la permanencia y el control del contenido a largo plazo. Si bien estas opciones siguen siendo superiores en términos de distribución masiva (SEO) e infraestructura de pagos inmediata, carecen de la solidez estructural necesaria para garantizar que un autor sea el verdadero dueño de su audiencia y de su obra. Ante este escenario, Nostr se presenta no solo como una alternativa técnica, sino como una respuesta filosófica para quienes buscan soberanía digital total; es el único espacio donde el escritor se blinda contra algoritmos, censura o decisiones corporativas, asegurando que cada interacción y cada pago llegue directamente y sin intermediarios. En última instancia, la elección depende de una pregunta fundamental: si tu prioridad es el alcance efímero de una plataforma o la conexión inalienable y duradera con tus lectores.</p>
+<p>(1)	https://medium.com/never-stop-writing/the-rise-and-rapid-fall-of-medium-from-profitability-to-collapse-in-just-months-4d6460e40c36<br />
+(2)	https://alexberenson.substack.com/p/substack-has-lost-its-way<br />
+(3)	https://thehill.com/policy/cybersecurity/291375-wordpress-blocks-latest-guccifer-20-docs/<br />
+(4)	https://ayudawp.com/ataques-cadena-suministro-plugins/</p>
+<p>#nosterespanol #Censura #SoberaniaDigital #Descentralizacion</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/ef8e45ddf4265955fc1a3c9d597adc0cbb3f9f2ff5ba69ca9584c824751c284c.png" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Wed, 17 Jun 2026 20:48:20 -0500</pubDate>
+    </item>
+    <item>
+      <title>Hablando de NOSTR para principiantes</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy88wumn8ghj7mn0wvhxcmmv9uqpqcf4xumkzvnyxp3xxcfjvfjnseqjfl609.html</link>
+      <description>Breve descripción para dummies de que es NOSTR</description>
+      <content:encoded><![CDATA[<p><strong>Lleva tu identidad digital contigo</strong></p>
+<p>La teoría del Internet Muerto ha llegado más rápido de lo esperado. Un internet lleno de bots, de cuentas falsas con fotos perfectas ya casi imposibles de distinguir de la realidad, (AI slop) de contenido automatizado que nos ahogan en un mar de spam y fake news, de apps y plataformas que no solo nos espían sino también se lucran con nuestros datos.<br />
+Cada vez que inicias sesión en alguna plataforma gubernamental o privada como Google, Facebook o X, debes generar una identidad digital vinculada a tu identidad personal. Este tipo de identidades comparten un mismo problema fundamental: el de la propiedad (¿de quién es realmente?). Siempre existe un Tercero de Confianza (Trusted Third Party), ya sea el gobierno o una entidad privada que certifica y custodia dichas transacciones electrónicas.</p>
+<p>El problema no es solamente que ese perfil no es tuyo ni nunca lo será, sino que pueden vigilarte como quieran, elaborar un perfil detallado sobre ti, clasificarte en categorías y aprovecharse de ello, incluso tomar control de tus cuentas cuando así lo requieran.</p>
+<p>Nadie que posea una cuenta en X o en Facebook es realmente propietario de ella. Estás &quot;alquilando&quot; espacio en un ámbito digital, en un servidor de alguna corporación que tiene su propia agenda.</p>
+<p>Otro problema con este tipo de aplicaciones es que, aunque tengas una identidad social en alguna de estas plataformas, no es compatible con otros sistemas o aplicaciones. No puedes iniciar sesión con tu ID de X en Instagram o viceversa. Estos son los problemas de la propiedad (ownership). A pocas personas en el mundo les importa la propiedad de una realidad intangible como el mundo digital.<br />
+Pero, aunque no te importe, esto conlleva riesgos de seguridad que te afectan, que nos afectan a todos y al resto del mundo. La centralización implica un Punto Único de Fallo (SPOF).</p>
+<p>Un ejemplo claro de honeypot de datos sería el siguiente: ¿Qué es más fácil? ¿Robar los datos de 30 millones de personas sustrayendo individualmente sus teléfonos, accediendo a sus archivos personales y obteniendo toda su información, o hackear de golpe una base de datos que contenga toda la información personal de esas 30 millones de personas? La respuesta es obvia. Posteriormente, toda esa información estará disponible en la dark web al mejor postor. Esto conlleva no solo un robo de datos, sino también el potencial robo de tu dinero, la suplantación de identidad y la pérdida de confianza en las instituciones.</p>
+<p>_La forma en como interactuamos en internet está ROTA.</p>
+<p>_<strong>NOSTR: La última barrera contra la censura</strong></p>
+<p>Todos hemos estado inmersos en esa Matrix y cada vez nos hundimos más en ella, pero hay una forma de salir. Una vez comienzas a seguir la madriguera del conejo, a disfrutar la libertad económica de la autocustodia, te das cuenta que hay otro tipo de libertad, más allá de la libertad económica, me refiero a la libertad de expresión y de comunicarse.</p>
+<p>Es precisamente en este contexto de la lucha contra la censura y la vigilancia, la criptografía y la auto custodia, que surge NOSTR como una alternativa que poco a poco se está haciendo conocer.<br />
+Nostr (Notes and Other Stuff Transmitted by Relays) no es una app ni una red social, es un PROTOCOLO.</p>
+<p>Un protocolo de mensajería descentralizada y código abierto, que va más allá de un simple reemplazo de redes sociales. Un protocolo de comunicación simple y ligero, al mismo tiempo muy resiliente que no depende de servidores centrales. En lugar de almacenar la información en un solo servidor, se distribuye en RELAYS, que funcionan como pequeños servidores no centralizados.</p>
+<p>En Nostr tu identidad no depende de un tercero, tu identidad es solo tuya. Cada usuario es responsable del mensaje que emita, solo tus llaves de acceso garantizarán tu identidad y tus mensajes serán inmutables, inalterables, imborrables.</p>
+<p>La forma más sencilla de explicar NOSTR es como si fuera un correo electrónico. Imagina que mandas un Email desde tu cuenta de Gmail a un Outlook o a PROTONMAIL: diferentes compañías, diferentes operadores, pero cada uno puede recibir y enviar correos a cualquiera de esas compañías. Aunque sea un mal ejemplo con empresas centralizadas, así funciona NOSTR.</p>
+<p><strong>Modelo Centralizado vs Descentralizado</strong></p>
+<p>Sistema tradicional (Centralizado):<br />
+┌─────────┐     ┌──────────────┐     ┌─────────┐<br />
+│ Cliente │ --&gt; │   Servidor   │ --&gt; │ Cliente │<br />
+│  Gmail  │     │ Gmail/Outlook│     │ Outlook │<br />
+└─────────┘     └──────────────┘     └─────────┘<br />
+↑<br />
+(Punto de control)<br />
+Sistema NOSTR (Descentralizado):<br />
+┌─────────┐                          ┌─────────┐<br />
+│ Cliente │                          │ Cliente │<br />
+│  Damus  │                          │Amethyst │<br />
+└────┬────┘                          └────┬────┘<br />
+│ Envía                   Recibe │<br />
+↓                                ↓<br />
+┌───────┐ ←──→ ┌───────┐ ←──→ ┌───────┐ ←──→ ┌───────┐<br />
+│Relay 1│      │Relay 2│      │Relay 3│      │Relay 4│<br />
+└───────┘      └───────┘      └───────┘      └───────┘<br />
+↑              ↑              ↑              ↑<br />
+└──────────────┴──────────────┴──────────────┘<br />
+(Los relays pueden sincronizar mensajes)</p>
+<pre><code>          (Sin punto único de control)
+</code></pre>
+<p><strong>¿Cómo funciona NOSTR? En 3 pasos</strong></p>
+<p>Paso 1: Firma criptográfica<br />
+Cada acción que realizas va firmada. Una firma desde el anonimato. ¿Cómo se firma? Con criptografía. Se utiliza una única llave privada de tu propiedad (Nsec) y también una llave pública (Npub). Una vez firmas, lo transmites a todos los relés. Cada publicación, like o interacción se convierte en un &quot;evento&quot; firmado digitalmente, garantizando que solo el dueño de la identidad puede crear contenido a su nombre.</p>
+<p>Paso 2: Transmisión a los relays<br />
+La aplicación envía estos eventos firmados a múltiples servidores llamados &quot;relays&quot; (repetidores). Son como pequeños servidores que funcionan como islas que permanecen inmutables. Almacenan y retransmiten los eventos, pero no controlan tu identidad ni pueden censurar tu contenido de forma global. Cualquiera de nosotros podría tener uno desde casa.</p>
+<p>Paso 3: Lectura descentralizada<br />
+Otros usuarios se conectan a estos mismos relays desde sus propias aplicaciones para leer los eventos. Cada usuario puede elegir qué relays usar, creando una red resistente a la censura donde ninguna entidad central controla la información.</p>
+<p>Nostr apenas comienza. En un futuro todas las aplicaciones se construirán sobre Nostr, porque a diferencia de las aplicaciones tradicionales que son &quot;silos cerrados&quot;, en Nostr los artefactos de contenido (como una publicación o un resaltado de texto) son <em>eventos portátiles</em> que podrian ser utilizados por cualquier otro desarrollador o aplicación en la red. Esto permitirá aplicaciones más libres, más sofisticadas y ricas en funciones.</p>
+<p>Quizá todo esto pueda parecer difícil en un principio, pero también lo era el internet en sus inicios. Nostr tiene el potencial de devolverse el poder al usuario, porque pasar de confiar en un tercero a hacernos cargos de nuestra propia soberanía digital, es un cambio de paradigma absoluto.</p>
+<p>#NostrEspanol #SoberaniaDigital #Blogindex #Descentralizacion #Libertadigital</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/bcfcb07ac189f013e999820c26506db31d9a4661da26d2e589039a64b109a3ed.jpg" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Sat, 07 Mar 2026 20:48:32 -0500</pubDate>
+    </item>
+  </channel>
+</rss>

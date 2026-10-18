@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nostr Libre</title>
+    <link>https://archivaldo66.github.io/nostr-static</link>
+    <description>Nostr Articles Feed</description>
+    <managingEditor> (Nostr Static)</managingEditor>
+    <pubDate>Sat, 08 Aug 2026 23:52:57 -0500</pubDate>
+    <item>
+      <title>Nueva York obliga a que cada impresora 3D venga con un rastreador instalado</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4de4ry6jzd3shwat9wgcrz52h94hxjv2cvs5ym8ke.html</link>
+      <description>Adquirir y usar una impresora 3D es tan importante como volverte tu propio banco o cultivar tu propia comida, no un simple hobby. La libertad no es algo que se celebra una vez al año, con bandera y discurso. Es algo que se construye todos los días.</description>
+      <content:encoded><![CDATA[<p>En aras de una autonomía real, de una libertad que ningún político puede darte porque nunca fue suya para empezar. Adquirir y usar una impresora 3D es tan importante como volverte tu propio banco o cultivar tu propia comida, no un simple hobby. La libertad no es algo que se celebra una vez al año, con bandera y discurso. Es algo que se construye todos los días, cada vez que un sistema centralizado deja de tener autoridad sobre una decisión que era tuya.</p>
+<p>La siguiente nota acaba de recordarnos por qué importa.</p>
+<p>El 7 de mayo, <a href="https://www.governor.ny.gov/news/keeping-new-yorkers-safe-governor-hochul-signs-legislation-strengthen-public-safety-and-make">la gobernadora Kathy Hochul anunció que el presupuesto del Año Fiscal 2027 de Nueva York convertirá al estado en el primero de Estados Unidos en exigir por ley software de vigilancia dentro de cada impresora 3D vendida en su territorio</a>. Poseer o compartir un archivo imprimible en 3D capaz de producir un componente de arma de fuego pasará a ser delito grave de Clase E. Toda impresora vendida en Nueva York deberá venir con algoritmos de bloqueo que escaneen cada trabajo en tiempo real y rechacen lo que el algoritmo marque como sospechoso.</p>
+<p>El argumento de venta son las &quot;armas fantasma&quot;. El mecanismo es una puerta de permisos dentro de una máquina que ya pagaste. Las pruebas piloto del algoritmo propuesto, realizadas por un equipo de firmware abierto, activaron el bloqueo en el 17% de las impresiones que no eran armas. Soportes que se parecen a gatillos. Cilindros que se parecen a cañones. Un enganche de tren de juguete. Un destapador. El algoritmo no distingue. Rechazará la impresión y dejará el intento registrado en el servidor que el fabricante esté obligado a mantener.</p>
+<p>Es la misma aritmética que usaron los licenciadores de imprentas en 1660. La misma que usó la Stationers' Company para marcar al hijo de un impresor por distribuir panfletos que la Corona no había aprobado. La misma que usó la primera generación de DRM para convertir el copiar un DVD en delito federal en 1998. Una herramienta que compraste, en un cuarto que es tuyo, con electricidad que pagaste, se vuelve agente del estado en el momento de la compra y lo sigue siendo mientras dure el aparato.</p>
+<p>Cualquier cosa que tome un archivo de diseño digital y produzca un objeto físico queda ahora al alcance de un estado que ha decidido que le corresponde a él la pregunta de qué objetos físicos te está permitido traer al mundo dentro de tu propia casa. La cerca lleva cuarenta años moviéndose hacia adentro. Primero alrededor de la canción. Luego de la página. Luego del cifrado. Luego del rollo de fotos. Ahora, por fin, alrededor del banco de trabajo. Al estado se le acabó el territorio digital por cercar y empezó a cercar los átomos.</p>
+<p>Quien esta noche imprima un soporte para arreglar una lavadora comete, técnicamente, el mismo acto que la ley busca impedir. El algoritmo no sabrá la diferencia. No está diseñado para saberla. Está diseñado para fallar cerrado: rechazar primero y dejar que el humano apele hacia arriba por el canal burocrático que el fabricante decida habilitar, si acaso, en el plazo que el fabricante elija, con el rastro de papeleo que el fabricante le adjunte a la solicitud. Permiso para imprimir: denegado. Abra un ticket. Espere.</p>
+<p>Por desgracia para Nueva York, y por suerte para nosotros, el firmware de prácticamente toda impresora 3D de consumo es abierto o casi abierto. Todas son bifurcables, todas son flasheables, todas están ya instaladas en millones de máquinas fuera del alcance de cualquier certificado de cumplimiento que Nueva York invente en el futuro. Los archivos CAD en cuestión son descripciones matemáticas de geometría que se replicarán en mil discos duros en mil jurisdicciones distintas antes de que se seque la tinta de la ley. El estado no puede atar la geometría. Solo puede atar a quienes acepten dejarse atar.</p>
+<p>Dentro de cuarenta años nadie recordará el argumento de las armas fantasma. Recordarán el año en que un gobierno estatal decidió que la producción física de una máquina privada era asunto suyo desde el mismo momento de fabricarla.</p>
+<p>Enlaces de interes<br />
+<a href="https://3dprintergobrrr.com/">https://3dprintergobrrr.com/</a><br />
+<a href="https://morethan3d.com/">https://morethan3d.com/</a></p>
+<p>#noticias #3DPrint #Descentralizacion #OpenHardware</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/c8b4c7cfb8715edbf16e46efbe3bad25eee2546d8dda8ceb8395d065ac5ac802.jpg" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Sat, 08 Aug 2026 23:52:57 -0500</pubDate>
+    </item>
+  </channel>
+</rss>

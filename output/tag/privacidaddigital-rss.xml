@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nostr Libre</title>
+    <link>https://archivaldo66.github.io/nostr-static</link>
+    <description>Nostr Articles Feed</description>
+    <managingEditor> (Nostr Static)</managingEditor>
+    <pubDate>Mon, 17 Aug 2026 20:32:43 -0500</pubDate>
+    <item>
+      <title>GrapheneOS el sistema operativo telefónico más seguro del mundo</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4gfrrgemkde3nqjz2v9u526nnfetryn228ynp03c0.html</link>
+      <description>GrapheneOS es la mejor combinación de hardware y software para quien se toma en serio la amenaza de la vigilancia cotidiana, no solo por marketing, sino porque es de los pocos proyectos que documenta qué protege y qué no.</description>
+      <content:encoded><![CDATA[<h2 id="grapheneos-el-sistema-operativo-telefnico-ms-seguro-del-mundo">GrapheneOS el sistema operativo telefónico más seguro del mundo</h2>
+<p>Llevo un par de semanas usando un Pixel 8 Pro (Reacondicionado) con <a href="https://grapheneos.org/">GrapheneOS</a> y esta es mi reseña como normie; sin conocimientos previos de desarrollo Android ni experiencia con ROMs alternativas, solo la perspectiva de alguien que decidió probarlo.</p>
+<p>Y hasta donde he podido comparar, es la mejor combinación de hardware y software para quien se toma en serio la amenaza de la vigilancia cotidiana, no solo por marketing, sino porque es de los pocos proyectos que documenta qué protege y qué no.</p>
+<p>Inmersos como estamos en el Mercado de la Atención en el que ya estamos hasta el cuello, los celulares modernos —o sea, computadoras de bolsillo— son pieza clave de este entramado algorítmico.</p>
+<p>La publicidad se inyecta en cada rincón posible de nuestra experiencia sensorial despierta. La atención ha sido monetizada a extremos impensables, creando un ecosistema de información de manipulación psicológica que nos dice que pensar y que consumir, apelando a nuestros instintos más bajos.</p>
+<p>Por ello, deberíamos, al menos, ser capaces de ser los dueños de nuestros espacios digitales. Si el celular es la mayor herramienta de distracción y control jamás creada, y no somos capaces de abandonarlo, al menos podríamos intentar un mínimo control sobre ese aparato que nos destruye poco a poco la independencia cognitiva.</p>
+<p><img src="https://image.nostr.build/6d66815181b55854727e6643fa1d6d4ad1a631f30fead4001f1409bf7267df0f.jpg" alt="image" /></p>
+<p>Empezaré haciendo la distinción entre el celular Pixel y sus distintos modelos, y el sistema operativo GrapheneOS como entidades separadas.</p>
+<p>Todo lo que normalmente se usa, desde apps de mensajería como Signal, WhatsApp y Telegram, funcionan perfectamente. Para redes sociales, apps como X, Instagram, TikTok, y Youtube funcionan normalmente.</p>
+<p>En cuanto a la conectividad Bluetooth, funciona bastante bien, sin problemas más allá de los habituales errores menores y retrasos que cualquier dispositivo inalámbrico tiene en cualquier sistema.</p>
+<p>También he probado algunos juegos. todo se ejecuta normalmente porque el SO no consume recursos en segundo plano. Diría que incluso funciona mejor que Android de fábrica por eso.</p>
+<p>Aunado a lo anterior, siento que la duración de la batería dura más desde que se instaló GrapheneOS. En un uso intensivo fácilmente sobrevive un día completo sin descargarse. La carga es un poco lenta, pero solo porque uso un cargador de 35W genérico que me llegó con el celular.</p>
+<p>La calidad de fotos y videos es buena tanto con la cámara de GrapheneOS como con la de Pixel.</p>
+<p>la diferencia aparece en condiciones de poca luz, donde el procesamiento multi-frame de HDR+/Night Sight de Google sigue dando resultados más limpios. Uso principalmente la cámara de Pixel, sin Google Play services en sandbox y con acceso a la red desactivado, precisamente para aprovechar ese procesamiento sin abrir ningún canal de datos hacia Google. Lo que realmente valoro de la cámara nativa de GrapheneOS es que entrega la imagen mucho más cercana a lo que capta el sensor, sin el procesamiento computacional agresivo de Google, captura la escena tal cual es, sin que el algoritmo o la IA decida por mí como debería verse mejor.</p>
+<p>La biometría funciona normalmente bajo GrapheneOS. Inicialmente habían eliminado el desbloqueo facial básico, aunque recientemente se terminó integrando una versión más robusta y segura del desbloqueo facial, pero el escáner de huellas va perfectamente bien.</p>
+<p>La calidad de las llamadas funciona como debería. Probado con un chip que no requiere registro (De momento no he probado servicios de eSIM anónimos)</p>
+<p>La mayoría de apps bancarias y gubernamentales están mayormente bien. Omito las billeteras de cripto porque la mayoría ya están enfocadas en la privacidad y funcionan sin problemas en GrapheneOS. En cuanto a los bancos, <a href="https://www.redeszone.net/noticias/seguridad/revolut-usuarios-grapheneos-bloqueo-aplicacion/">Revolut recientemente bloqueó GrapheneOS</a>. Algunas aún tienen problemas, aunque la mayoría funcionan. <a href="https://privsec.dev/posts/android/banking-applications-compatibility-with-grapheneos/">Hay un sitio web que lista qué apps bancarias funcionan por país en GrapheneOS.</a> Google Pay obviamente no funciona, ni siquiera con servicios de Google Play en sandbox.</p>
+<p>La personalización es un punto débil porque GrapheneOS prioriza la seguridad y privacidad reduciendo la superficie de ataque. No es altamente personalizable, pero ese es el intercambio por una mejor privacidad y control sobre tus datos y tu atención cognitiva.</p>
+<h3 id="por-qu-grapheneos-solo-soporta-telfonos-pixel">¿Por qué GrapheneOS solo soporta teléfonos Pixel?</h3>
+<p>A primera vista, pensar en usar hardware de Google para evitar la vigilancia parece un sin sentido, ¿O sea, para rebelarte contra Google tienes que darle dinero a Google? Un nivel de ironía que ni el mejor guionista de Black Mirror se atrevería a describir…</p>
+<p>Aplicando la formula esotérica oriental de <em>Cabalgar el tigre</em> se trataría de, frente a la circunstancia actual, aplicar, en el terreno político e informático, la misma lógica del yudo en la vida privada, usar la fuerza y los propios recursos tecnológicos del enemigo para revertir su impulso y neutralizarlo, para combatirlo e incluso destruirlo.</p>
+<h4 id="1-chip-de-seguridad-titan">1. CHIP DE SEGURIDAD TITAN</h4>
+<p>Pero es porque los Pixels incluyen un chip de seguridad dedicado llamado <strong>Titan M</strong></p>
+<p>Maneja:</p>
+<ul>
+<li>encriptación respaldada por hardware</li>
+<li>almacenamiento seguro de claves</li>
+<li>protección contra fuerza bruta</li>
+<li>arranque verificado</li>
+<li>Protección física contra ataques de canal lateral y manipulación directa del chip</li>
+<li>Certificación criptográfica de identidad/dispositivo</li>
+<li>Independencia total del procesador principal.</li>
+<li>Verificación biométrica sin exponer los datos.</li>
+</ul>
+<p>La mayoría de los teléfonos Android no tienen nada cercano a esto.</p>
+<h4 id="2-el-arranque-verificado-realmente-funciona">2. EL ARRANQUE VERIFICADO REALMENTE FUNCIONA</h4>
+<p>En muchos teléfonos Android:</p>
+<ul>
+<li>Desbloquear el bootloader debilita la seguridad inmediatamente.</li>
+<li>Los Pixels son diferentes: permiten grabar una clave de confianza propia en vez de depender solo de la de Google.</li>
+<li>GrapheneOS puede usar protecciones fuertes de arranque verificado, durante la instalación graba sus propias claves en el chip Titan M2 y vuelve a bloquear el bootloader bajo ellas, manteniendo protecciones fuertes de arranque verificado incluso en un SO personalizado.</li>
+</ul>
+<p>El resultado es un sistema operativo personalizado que queda tan protegido por hardware como el Android de fábrica. La única diferencia está en quién valida esa seguridad: en lugar de Google, la verificación corre a cargo de GrapheneOS.</p>
+<h4 id="3-los-pixels-soportan-etiquetado-de-memoria-por-hardware">3. LOS PIXELS SOPORTAN ETIQUETADO DE MEMORIA POR HARDWARE</h4>
+<p>Los Pixels más nuevos incluyen ARM MTE. Es una función de seguridad construida directamente en el procesador.</p>
+<p>Esto ayuda a detectar:</p>
+<ul>
+<li>corrupción de la memoria</li>
+<li>exploits de uso después de liberar</li>
+<li>desbordamientos de búfer</li>
+</ul>
+<p>GrapheneOS usa esto agresivamente para la protección contra exploits. Esto solo está disponible desde Pixel 8 en adelante, por el soporte de 7 años garantizado y las funciones ARM MTE.</p>
+<h4 id="4-grapheneos-est-extremadamente-endurecido">4. GRAPHENEOS ESTÁ EXTREMADAMENTE ENDURECIDO</h4>
+<p>Las características incluyen:</p>
+<ul>
+<li>malloc endurecido.</li>
+<li>Google Play en sandbox: corre sin privilegios de sistema, con permisos revocables como cualquier otra app.</li>
+<li>Aislamiento estricto de apps: sandbox reforzado por app, con controles granulares como el permiso de Red y de Sensores por app — inexistentes en Android stock.</li>
+<li>Protección USB: acceso deshabilitado por defecto con el teléfono bloqueado, cerrando la puerta a herramientas forenses de extracción física.</li>
+<li>Mitigaciones avanzadas contra exploits.</li>
+</ul>
+<h4 id="5-la-mayora-de-los-oems-rompen-la-seguridad-para-roms-personalizados">5. LA MAYORÍA DE LOS OEMS ROMPEN LA SEGURIDAD PARA ROMS PERSONALIZADOS</h4>
+<p>OEM es la sigla en inglés de Original Equipment Manufacturer — &quot;fabricante de equipo original&quot;.</p>
+<p>Samsung es un buen ejemplo.</p>
+<p>Si desbloqueas el bootloader:</p>
+<ul>
+<li>Knox se rompe</li>
+<li>la atestación se debilita</li>
+<li>las características de seguridad desaparecen</li>
+<li>El dispositivo quedaría marcado como &quot;tampered&quot; (manipulado) de forma irreversible, y esto desactiva permanentemente servicios fundamentales del celular.</li>
+</ul>
+<p>¿Y entonces por qué GrapheneOS solo funciona en Pixels? Pues porque Google es el único que, al fabricar su hardware, ha tenido en cuenta que alguien quiera instalar otro sistema operativo sin que salte la alarma de seguridad. Los demás fabricantes ni lo contemplan.</p>
+<h4 id="6-el-proyecto-prioriza-la-seguridad-sobre-la-popularidad">6. EL PROYECTO PRIORIZA LA SEGURIDAD SOBRE LA POPULARIDAD</h4>
+<p>GrapheneOS ha dicho muchas veces:</p>
+<ul>
+<li>Soportar hardware inseguro elimina el propósito entero del proyecto.</li>
+<li>Su objetivo no es la adopción máxima.</li>
+<li>Su objetivo es la seguridad máxima.</li>
+</ul>
+<p><a href="https://www.makeuseof.com/grapheneos-expanding-supported-devices-motorola/">GrapheneOS anunció una asociación con Motorola para dispositivos futuros a partir de alrededor de 2027.</a> Y una colaboración confirmada con un OEM mayor (Snapdragon) para hardware de próxima generación.</p>
+<p>Así que la exclusividad de Pixel podría cambiar eventualmente.</p>
+<p>Pero SOLO si el hardware cumple con los estándares de seguridad de GrapheneOS.</p>
+<p>Esa es la parte importante.</p>
+<p>La mayoría de las nuevas versiones Android están diseñadas alrededor de características y marketing.</p>
+<p>GrapheneOS está diseñado para sobrevivir ataques del mundo real y esta seguridad endurecida y la ausencia de servicios de Google lo convierten en una de las mejores opciones de privacidad disponibles.</p>
+<p>La vigilancia masiva no está por llegar.</p>
+<p>Ya está aquí.</p>
+<p><a href="https://www.telemundo.com/noticias/noticias-telemundo/inmigracion/ice-reconocimiento-facial-dhs-camaras-calles-celulares-migrantes-rcna257606">El reconocimiento facial con IA se está extendiendo en las cámaras.</a> Los bancos rastrean cada transacción. Las apps venden tus datos. Las grandes tecnológicas y los gobiernos están construyendo el panóptico en tiempo real.</p>
+<p>Android está a punto de volverse un sistema cerrado como Apple.</p>
+<p>Probablemente no puedas detener la máquina de la noche a la mañana.</p>
+<p>Pero puedes hacerte extremadamente costoso y molesto de vigilar.</p>
+<p><strong>¡Deja de ser un producto!</strong></p>
+<p>#resenas #GrapheneOS #PrivacidadDigital #SoberaníaDigital #AnonimatoDigital #VigilanciaMasiva</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/bc8baf94aa19d55ccdaf44f74f02b15faf9c692ddc621df1ebacf6fec391dfa6.jpg" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Mon, 17 Aug 2026 20:32:43 -0500</pubDate>
+    </item>
+  </channel>
+</rss>

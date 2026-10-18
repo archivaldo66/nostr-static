@@ -1,0 +1,816 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="icon" href="favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg&#43;xml">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="El blogging en Nostr vs. Plataformas Centralizadas: Por Qué Importa.">
+    <meta property="og:description" content="El blogging en Nostr vs. Plataformas Centralizadas: Por Qué Importa.">
+    <meta property="og:url" content="https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4g9d95cmp0f2kvjtv2a95c6zhgaf953tzxy7suzpm">
+    <meta property="og:image" content="https://image.nostr.build/ef8e45ddf4265955fc1a3c9d597adc0cbb3f9f2ff5ba69ca9584c824751c284c.png">
+    <title>
+      El blogging en Nostr vs. Plataformas Centralizadas: Por Qué Importa.
+    </title>
+    <style>
+       
+      body {
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+          line-height: 1.6;
+          max-width: 800px;
+      	margin: 0 auto;
+      	padding: 20px;
+      	font-size: 16px;
+          color: #333;
+          background-color: #fff;
+      }
+      
+       
+      body.light {
+          background-color: #ffffff;
+          color: #333333;
+      }
+      
+      body.dark {
+          background-color: #1a1a1a;
+          color: #e0e0e0;
+      }
+      
+       
+      .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+      }
+      
+       
+      a {
+          color: #0066cc;
+          text-decoration: none;
+      }
+      
+      body.light a {
+          color: #0066cc;
+      }
+      
+      body.dark a {
+          color: #4a9eff;
+      }
+      
+      a:hover {
+          text-decoration: underline;
+      }
+      
+       
+      ul, ol {
+          padding-left: 2em;
+      }
+      
+       
+      pre {
+          background-color: #f5f5f5;
+          padding: 1em;
+          border-radius: 4px;
+          overflow-x: auto;
+      }
+      
+      body.dark pre {
+          background-color: #2d2d2d;
+      }
+      
+      code {
+          font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+          font-size: 0.9em;
+      }
+      
+       
+      blockquote {
+          margin: 1em 0;
+          padding: 0.5em 1em;
+          border-left: 4px solid #ddd;
+          background-color: #f9f9f9;
+      }
+      
+      body.dark blockquote {
+          border-left-color: #404040;
+          background-color: #2d2d2d;
+      }
+      
+       
+      table {
+          border-collapse: collapse;
+          width: 100%;
+          margin: 1em 0;
+      }
+      
+      th, td {
+          padding: 0.5em;
+          border: 1px solid #ddd;
+      }
+      
+      body.dark th, body.dark td {
+          border-color: #404040;
+      }
+      
+      th {
+          background-color: #f5f5f5;
+      }
+      
+      body.dark th {
+          background-color: #2d2d2d;
+      }
+      
+       
+      hr {
+          border: none;
+          border-top: 1px solid #ddd;
+          margin: 2em 0;
+      }
+      
+      body.dark hr {
+          border-top-color: #404040;
+      }
+      
+       
+      .theme-toggle {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          padding: 8px 16px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 14px;
+          transition: background-color 0.3s;
+      }
+      
+      body.light .theme-toggle {
+          background-color: #f0f0f0;
+          color: #333;
+      }
+      
+      body.dark .theme-toggle {
+          background-color: #404040;
+          color: #fff;
+      }
+      
+      .theme-toggle:hover {
+          opacity: 0.9;
+      }
+      
+       
+      @media (max-width: 600px) {
+          .container {
+              padding: 10px;
+          }
+          
+          .theme-toggle {
+              top: 10px;
+              right: 10px;
+          }
+      }
+      
+      body.article .logo-container {
+      	margin-top: 0;
+      }
+      
+      body.article .page-container {
+      	display: flex;
+      	align-items: flex-start;
+      	max-width: 1200px;
+      	margin: 0 auto;
+      }
+      
+      body.article .main-content {
+      	flex: 1;
+      	max-width: 800px;
+      }
+      
+      body.article img {
+      	max-width: 100%;
+      	height: auto;
+      }
+      
+      body.article pre {
+      	background-color: #f5f5f5;
+      	padding: 15px;
+      	border-radius: 5px;
+      	overflow-x: auto;
+      }
+      
+      body.article code {
+      	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      }
+      
+      body.article .article-header {
+      	margin-bottom: 2em;
+      }
+      
+      body.article .article-header h1 {
+      	margin-bottom: 0.5em;
+      }
+      
+      body.article article {
+      	word-wrap: break-word;
+      	overflow-wrap: break-word;
+      	hyphens: auto;
+      }
+      
+      body.article article p {
+      	max-width: 100%;
+      	overflow-wrap: break-word;
+      	word-wrap: break-word;
+      	word-break: break-word;
+      }
+      
+      .page-container {
+      	display: flex;
+      	align-items: flex-start;
+      	max-width: 1200px;
+      	margin: 0 auto;
+      }
+      
+      .main-content {
+      	flex: 1;
+      	max-width: 800px;
+      }
+      
+      img {
+      	max-width: 100%;
+      	height: auto;
+      }
+      
+      pre {
+      	background-color: #f5f5f5;
+      	padding: 15px;
+      	border-radius: 5px;
+      	overflow-x: auto;
+      }
+      code {
+      	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      }
+      
+      .article-header {
+      	margin-bottom: 2em;
+      }
+      
+      .article-header h1 {
+      	margin-bottom: 0.5em;
+      }
+      
+      article {
+      	word-wrap: break-word;
+      	overflow-wrap: break-word;
+      	hyphens: auto;
+      }
+      
+      article p {
+      	max-width: 100%;
+      	overflow-wrap: break-word;
+      	word-wrap: break-word;
+      	word-break: break-word;
+      }
+      
+      .tags {
+      	margin-bottom: 1em;
+      }
+      		
+      @media (max-width: 768px) {
+      	.article-header {
+      		display: flex;
+      		flex-direction: column;
+      		align-items: baseline;
+      		margin-top: 15px;
+      	}
+      }
+      
+      .article-header-top {
+      	display: flex;
+      	justify-content: space-between;
+      	align-items: center;
+      	margin-bottom: 1em;
+      }
+      
+      .recommended-articles-title {
+          font-size: 1.5em;
+          font-weight: 600;
+      		margin-top: 1em;
+          margin-bottom: 1em;
+          color: #c99;
+      }
+      
+      .tag-discovery-items {
+          display: flex;
+          overflow-x: auto;
+          gap: 2em;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: thin;
+          scrollbar-color: #666 #f0f0f0;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar {
+          height: 8px;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar-track {
+          background: #f0f0f0;
+          border-radius: 4px;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar-thumb {
+          background: #666;
+          border-radius: 4px;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar-thumb:hover {
+          background: #888;
+      }
+      
+      .tag-discovery-item {
+          flex: 0 0 300px;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5em;
+      }
+      
+      .tag-image-link {
+          display: block;
+          text-decoration: none;
+          width: 100%;
+          height: 200px;
+          overflow: hidden;
+          border-radius: 4px;
+      }
+      
+      .tag-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+      
+      .tag-image-placeholder {
+          width: 100%;
+          height: 100%;
+          background-color: #f0f0f0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #999;
+          font-size: 0.9em;
+      }
+      
+      .tag-author-section {
+          display: flex;
+          align-items: center;
+          gap: 0.5em;
+      }
+      
+      .tag-author-picture {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          object-fit: cover;
+      }
+      
+      .tag-author {
+          font-size: 0.85em;
+          color: #666;
+          text-decoration: none;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+      }
+      
+      .tag-author:hover {
+          color: #333;
+      }
+      
+      .tag-title {
+          font-size: 1.2em;
+          font-weight: 600;
+          color: #333;
+          text-decoration: none;
+          display: block;
+          line-height: 1.3;
+      }
+      
+      .tag-title:hover {
+          color: #666;
+      }
+      
+      .tag-summary {
+          font-size: 0.9em;
+          color: #666;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          line-height: 1.4;
+      }
+      
+      @media (max-width: 768px) {
+          .tag-discovery-item {
+              flex: 0 0 260px;
+          }
+          
+          .tag-image-link {
+              height: 180px;
+          }
+          
+          .tag-author-picture {
+              width: 20px;
+              height: 20px;
+          }
+          
+          .tag-author {
+              font-size: 0.8em;
+          }
+      }
+      
+          @media (max-width: 768px) {
+              body {
+                  font-size: 18px;
+                  padding: 15px;
+              }
+      
+              .page-container {
+                  flex-direction: column;
+              }
+      
+              .main-content {
+                  width: 100%;
+              }
+      
+              .article-card {
+                  padding: 15px;
+              }
+          }
+      
+      .dropdown {
+      	position: relative;
+      	display: inline-block;
+      }
+      
+      .dropdown-button {
+      	background-color: #f0f0f0;
+      	border: none;
+      	border-radius: 50%;
+      	width: 20px;
+      	height: 20px;
+      	margin-left: 10px;
+      	display: flex;
+      	align-items: center;
+      	justify-content: center;
+      	font-size: 0.8em;
+      	cursor: pointer;
+      	color: #666;
+      	transition: background-color 0.2s;
+      }
+      
+      .dropdown-button:hover {
+      	background-color: #e0e0e0;
+      }
+      
+      .dropdown-content {
+      	display: none;
+      	position: absolute;
+      	right: -10px;
+      	top: 100%;
+      	background-color: white;
+      	min-width: 180px;
+      	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+      	z-index: 1;
+      	border-radius: 8px;
+      	margin-top: 8px;
+      	border: 1px solid #eee;
+      }
+      
+      .dropdown.show .dropdown-content {
+      	display: block;
+      }
+      
+      .dropdown-content a {
+      	font-size: 0.8em;
+      	color: #333;
+      	padding: 12px 16px;
+      	text-decoration: none;
+      	display: block;
+      	transition: background-color 0.2s;
+      	border-bottom: 1px solid #eee;
+      	border-radius: 8px;
+      }
+      
+      .dropdown-content a:last-child {
+      	border-bottom: none;
+      }
+      
+      .dropdown-content a:hover {
+      	background-color: #f5f5f5;
+      }
+      
+      .logo {
+          text-align: center;
+      }
+      
+      .logo img {
+          max-height: 100px;
+          width: auto;
+      }
+      
+      .logo-container {
+          margin-top: 20px;
+          margin-right: 20px;
+      }
+      
+      .logo-container img {
+          max-height: 50px;
+          width: auto;
+      }
+      
+      .compact-profile {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+      }
+      
+      .compact-profile-link {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: inherit;
+          gap: 8px;
+      }
+      
+      .compact-profile-ago {
+          margin-bottom: 1px;
+          font-size: 0.8em;
+      }
+      
+      .compact-profile-picture {
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          object-fit: cover;
+      }
+      
+      .compact-profile-name {
+          font-size: 0.9em;
+          font-weight: 500;
+      }
+      
+       
+      body.light .compact-profile-link {
+          color: #000000;
+      }
+      
+      body.light .compact-profile-link:hover {
+          color: #0066cc;
+      }
+      
+      body.dark .compact-profile-link {
+          color: #e0e0e0;
+      }
+      
+      body.dark .compact-profile-link:hover {
+          color: #4a9eff;
+      }
+      
+      .time-ago {
+          display: inline-block;
+          min-width: 70px;
+      }
+      
+      .feed-links {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5em;
+          padding: 1em;
+      }
+      
+      .feed-icon {
+          width: 16px;
+          height: 16px;
+      }
+      
+      .tags {
+      	display: flex;
+      	flex-wrap: wrap;
+      	gap: 0 8px;
+      	margin-top: 1em;
+      	margin-bottom: 1em;
+      }
+      
+      .tag {
+      	display: inline-block;
+      	padding: 4px 8px;
+      	border-radius: 4px;
+      	margin-bottom: 8px;
+      	font-size: 0.9em;
+      }
+      
+      .tag a {
+      	text-decoration: none;
+      	color: inherit;
+      }
+      
+      body.light .tag {
+      	background-color: #f0f0f0;
+      	border: 1px solid #dee2e6;
+      }	
+      
+      body.dark .tag {
+      	background-color: #1a1a1a;
+      	border: 1px solid #404040;
+      }
+      
+      .footer {
+          margin-top: 2em;
+          padding-top: 1em;
+          border-top: 1px solid #eee;
+          text-align: center;
+          font-size: 0.9em;
+          color: #666;
+      }
+      
+      body.dark .footer {
+          border-top-color: #333;
+          color: #999;
+      }
+      
+      .footer a {
+          text-decoration: none;
+      }
+      
+      body.light .footer a {
+          color: #0066cc;
+      }
+      
+      body.dark .footer a {
+          color: #4a9eff;
+      }
+      
+      .image-container {
+          margin: 20px 0;
+          text-align: center;
+      }
+      
+      .image-container img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      
+      body.dark .image-container img {
+          box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      }
+      
+    </style>
+  </head>
+  <body class="dark article">
+    <div class="page-container">
+      <div class="logo-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="logo.png" alt="Logo">
+          </a>
+        </div>
+      </div>
+      <div class="main-content">
+        <article>
+          <div class="article-header">
+            <div class="article-header-top">
+              <div class="compact-profile">
+                <a href="profile/nprofile1qqsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5spz3mhxue69uhhyetvv9ujuerpd46hxtnfduq32amnwvaz7tmjv4kxz7fwd4hhxarj9ec82cslh9s0q.html" class="compact-profile-link">
+                  <img src="https://cdn.nostrcheck.me/94541465094a859adea9bcacbb0704a3f8a3c77cd182901df02473ef75be6b2b/5904c263bc7fbbc4111a98284c2ce5afa9246400b3005cb0dee5c6fd7e93673c.webp" alt="Archivero" class="compact-profile-picture">
+                  <span class="compact-profile-name">
+                    Archivero
+                  </span>
+                </a>
+                <a href="naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4g9d95cmp0f2kvjtv2a95c6zhgaf953tzxy7suzpm.html" class="compact-profile-ago">
+                  <span class="time-ago" data-timestamp="1781747300">
+                  </span>
+                </a>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-button" type="button">
+                  ⋯
+                </button>
+                <div class="dropdown-content">
+                  <a href="https://njump.me/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4g9d95cmp0f2kvjtv2a95c6zhgaf953tzxy7suzpm" class="nostr-link" target="_blank">
+                    Open Article in Nostr
+                  </a>
+                  <a href="https://njump.me/nprofile1qqsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5spz3mhxue69uhhyetvv9ujuerpd46hxtnfduq32amnwvaz7tmjv4kxz7fwd4hhxarj9ec82cslh9s0q" class="nostr-link" target="_blank">
+                    Open Author in Nostr
+                  </a>
+                </div>
+              </div>
+            </div>
+            <h1>
+              El blogging en Nostr vs. Plataformas Centralizadas: Por Qué Importa.
+            </h1>
+            <p class="summary">
+              El blogging en Nostr vs. Plataformas Centralizadas: Por Qué Importa.
+            </p>
+            <div class="tags">
+              <span class="tag">
+                <a href="tag/nosterespanol.html">
+                  nosterespanol
+                </a>
+              </span>
+              <span class="tag">
+                <a href="tag/censura.html">
+                  Censura
+                </a>
+              </span>
+              <span class="tag">
+                <a href="tag/soberaniadigital.html">
+                  SoberaniaDigital
+                </a>
+              </span>
+              <span class="tag">
+                <a href="tag/descentralizacion.html">
+                  Descentralizacion
+                </a>
+              </span>
+            </div>
+            <div class="image-container">
+              <a href="naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4g9d95cmp0f2kvjtv2a95c6zhgaf953tzxy7suzpm.html">
+                <img src="https://image.nostr.build/ef8e45ddf4265955fc1a3c9d597adc0cbb3f9f2ff5ba69ca9584c824751c284c.png" alt="El blogging en Nostr vs. Plataformas Centralizadas: Por Qué Importa.">
+              </a>
+            </div>
+          </div><h2 id="el-blogging-en-nostr-vs-plataformas-centralizadas-por-qu-importa">El blogging en Nostr vs. Plataformas Centralizadas: Por Qué Importa.</h2>
+          <p>Los que llevamos años escribiendo y publicando en Google, WordPress, Tumblr etc, y tratamos de hacer difusión en redes como Facebook y Twitter, aprendimos en carne propia qué significa la censura: cuentas eliminadas sin aviso, publicaciones borradas sin explicación, años de trabajo desaparecidos de un día para otro por exponer temas disidentes, compartir material políticamente incorrecto o rozar los límites difusos del copyright.</p>
+          <p>De esa trágica experiencia nace una pregunta que no tiene respuesta cómoda: <em>¿A quién le pertenece realmente tu escritura una vez que la publicas?</em></p>
+          <p><strong>Medium</strong><br />
+          Cuando finalmente se volvió rentable en agosto de 2024 quedó al borde del colapso. El drástico recorte en los pagos y los cambios del algoritmo provocaron la fuga de autores principales hacia plataformas como Substack, generando una crisis continua de confianza en el modelo de monetización, las ganancias se desplomaron, y la plataforma entró en crisis. (1)<br />
+          Medium es una plataforma de terceros con sus propias reglas. Si consideran que has violado sus directrices, pueden eliminar tu cuenta y todo lo que has publicado.</p>
+          <p><strong>Substack</strong><br />
+          Substack se posicionó rápidamente como la alternativa &quot;pro-escritor independiente” a Medium. La realidad ha cambiado. Hace unos 4 años, Substack estaba posicionado como un sitio donde el escritor era la figura central, una comunidad que priorizaba la libertad de expresión y la divulgación de puntos de vista impopulares por la corriente políticamente del establecimiento.<br />
+          Ahora Substack está cada vez más lleno de personas que no están particularmente interesadas en escribir sino como una extensión de un Podcast o un canal de Youtube de algún influencer o personalidad de TV.</p>
+          <p>Las listas de los boletines más populares están dominadas por cuentas de corte liberal o &quot;woke&quot;, el crecimiento de cuentas de izquierda no es orgánico, sino el resultado de un cambio de estrategia comercial, mientras que los pensadores conservadores e independientes que le dieron su identidad distintiva son cada vez más difíciles de encontrar y reciben menos promoción por parte de la plataforma. (2)</p>
+          <p>El problema no es solo ideológico, es algorítmico. Desde una perspectiva monetaria, el atractivo de Substack se ha visto afectado por su cuota del 10% sobre los ingresos, la cual resulta menos competitiva frente a otros servicios de boletines que cobran tarifas menores, además de priorizar el formato de video y podcast sobre la palabra escrita.</p>
+          <p><strong>WordPress.</strong><br />
+          WordPress.org (auto-hospedado) es muy bueno en términos de propiedad real del contenido, pero tiene sus propias trampas. Es sabido, por ejemplo, que WordPress.com eliminó por completo una publicación completa con enlaces a múltiples archivos filtrados por el hacker Guccifer 2.0, que incluía datos sensibles del que incluía datos internos del Comité Nacional Demócrata (DNC) en el año 2016. (3)<br />
+          WordPress es una plataforma flexible que puede escalar desde un simple blog hasta sitios empresariales complejos. Sin embargo, esa flexibilidad tiene un costo real: una modalidad de ciberataque denominada ataque a la cadena de suministro, en la que delincuentes adquieren plugins legítimos de WordPress para introducir código malicioso mediante actualizaciones oficiales. Decenas de herramientas del repositorio oficial fueron comprometidas para inyectar spam oculto y puertas traseras, aprovechando que el sistema no exige firmas criptográficas ni audita los cambios de propiedad. (4)</p>
+          <p><strong>Blogspot</strong><br />
+          Blogspot (Blogger) el rey de la censura. No hay mucho que decir, todo lo publicado ahí existe bajo las condiciones de servicio de Google, que pueden cambiar sin previo aviso. Google ha cerrado blogs con millones de usuarios sin contemplaciones.</p>
+          <hr />
+          <h2 id="las-ventajas-reales-de-nostr-para-un-blog">Las ventajas reales de Nostr para un blog</h2>
+          <p><strong>1. Propiedad criptográfica del contenido.</strong><br />
+          Esta es la diferencia más profunda y la que menos se entiende. Nostr no es una red social o un sitio propiedad de una corporación; es un protocolo descentralizado. Todo lo que se publica en él es un &quot;evento&quot; con un número identificador llamado kind. Esto significa que realmente eres dueño de tu identidad, tu contenido y tu red, asegurados por criptografía, , no por los términos de servicio de nadie.<br />
+          En todas las plataformas centralizadas descritas arriba, la plataforma es quien tiene la relación real con tus lectores. En Nostr, tu clave privada es tu cuenta, tu contenido y tu audiencia. Cambias de cliente como cambias de navegador: los datos no se van con él.</p>
+          <p><strong>2. Monetización directa sin intermediarios</strong><br />
+          Los Zaps son la propuesta de valor única de Nostr: una red monetaria integrada que transforma y remodela la estructura de incentivos en internet mediante micropagos abiertos, Liberando a los creadores de la tiranía del algoritmo y de la viralización.<br />
+          En Nostr, los zaps van directamente de la billetera del lector a la tuya, sin ningún intermediario tomando comisión. El modelo económico cambia fundamentalmente: en lugar de que la plataforma monetice tu atención, los lectores te envían valor directamente por encontrar valioso tu contenido.</p>
+          <p><strong>3. Publicar en Nostr es publicar en todas partes</strong><br />
+          El contenido de otras plataformas de blogging puede sincronizarse de forma totalmente automática en Nostr.  Publicar un artículo en Nostr significa que aparece simultáneamente en Habla.news, YakiHonne, Primal, Highlighter etc, y cualquier cliente que soporte NIP-23. No necesitas gestionar múltiples cuentas en múltiples plataformas.</p>
+          <p><strong>4. Resistencia a la censura corporativa.</strong><br />
+          El discurso online es solo tan libre como las plataformas que lo hospedan. Cuando puedes ser silenciado con un clic, no posees realmente libertad de expresión. Nostr hace estructuralmente imposible la des-plataformización: nadie puede eliminar tu identidad del protocolo ni borrar tu clave pública. Podrian bloquearte de un relay específico, pero tu contenido sigue existiendo en los demás relays y accesible desde cualquier otro cliente, siempre y cuando el relay realizó la función de espejo del evento.</p>
+          <p><strong>5. Importación desde plataformas existentes</strong><br />
+          Los posts existentes en otras plataformas de blogging pueden importarse o sincronizarse a Nostr mediante algunas herramientas con algún grado variable de soporte, eliminando la necesidad de recrearlos manualmente. La migración no es un evento traumático como lo es cambiar de WordPress a Ghost: es una operación técnica que preserva todo.</p>
+          <p>La realidad es que las plataformas centralizadas, desde Substack hasta Medium, tienen un ciclo y enfrentan una degradación inevitable al priorizar sus propios incentivos por encima de los de sus creadores, lo que compromete la permanencia y el control del contenido a largo plazo. Si bien estas opciones siguen siendo superiores en términos de distribución masiva (SEO) e infraestructura de pagos inmediata, carecen de la solidez estructural necesaria para garantizar que un autor sea el verdadero dueño de su audiencia y de su obra. Ante este escenario, Nostr se presenta no solo como una alternativa técnica, sino como una respuesta filosófica para quienes buscan soberanía digital total; es el único espacio donde el escritor se blinda contra algoritmos, censura o decisiones corporativas, asegurando que cada interacción y cada pago llegue directamente y sin intermediarios. En última instancia, la elección depende de una pregunta fundamental: si tu prioridad es el alcance efímero de una plataforma o la conexión inalienable y duradera con tus lectores.</p>
+          <p>(1)	https://medium.com/never-stop-writing/the-rise-and-rapid-fall-of-medium-from-profitability-to-collapse-in-just-months-4d6460e40c36<br />
+          (2)	https://alexberenson.substack.com/p/substack-has-lost-its-way<br />
+          (3)	https://thehill.com/policy/cybersecurity/291375-wordpress-blocks-latest-guccifer-20-docs/<br />
+          (4)	https://ayudawp.com/ataques-cadena-suministro-plugins/</p>
+          <p>#nosterespanol #Censura #SoberaniaDigital #Descentralizacion</p>
+          
+        </article><zap-threads 
+        		anchor="naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4g9d95cmp0f2kvjtv2a95c6zhgaf953tzxy7suzpm" 
+        		relays="wss://relay.damus.io,wss://nostr.wine,wss://relay.nostr.band,wss://nos.lol,wss://relay.primal.net,wss://nostr-01.yakihonne.com,wss://nostr-02.yakihonne.com,wss://purplepag.es,wss://nostr.mom,wss://relay.0xchat.com,wss://relay.gitcitadel.eu,wss://relay.damus.io,wss://relay.snort.social,wss://offchain.pub,wss://relay.nostr.wirednet.jp,wss://wot.nostr.party,wss://wot.utxo.one,wss://lang.relays.land/es"
+        		urls="naddr:njump.me/,npub:njump.me/,nprofile:njump.me/,nevent:njump.me/,note:njump.me/,tag:snort.social/t/"
+        		disable="replyAnonymously" />
+      </div>
+    </div>
+    
+    <div class="footer">
+      Built with 
+      <a href="https://github.com/dhalsim/nostr-static" target="_blank">
+        nostr-static
+      </a>
+    </div>
+    <script src="/static/js/time-ago.js">
+      ""
+    </script>
+    		<script>
+    			window.wnjParams = {
+    				position: 'bottom',
+    				startHidden: true,
+    				compactMode: true,
+    				disableOverflowFix: true,
+    			}
+    		</script>
+    		<script src="https://cdn.jsdelivr.net/npm/window.nostr.js/dist/window.nostr.min.js"></script>
+    		<script type="text/javascript" src="https://unpkg.com/zapthreads/dist/zapthreads.iife.js"></script>
+    	
+    <script src="/static/js/dropdown.js">
+      ""
+    </script>
+  </body>
+</html>

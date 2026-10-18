@@ -1,0 +1,839 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="icon" href="favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg&#43;xml">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Hablando de NOSTR para principiantes">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4wfg5umpkxscnsc6x2ep8jwz5f9yxc5zr8qvu5uqj">
+    <meta property="og:image" content="https://image.nostr.build/a893ef9a2bc9289877d74f76a448ecb122b78b8db9a258cda86a661a733f5732.jpg">
+    <title>
+      Hablando de NOSTR para principiantes
+    </title>
+    <style>
+       
+      body {
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+          line-height: 1.6;
+          max-width: 800px;
+      	margin: 0 auto;
+      	padding: 20px;
+      	font-size: 16px;
+          color: #333;
+          background-color: #fff;
+      }
+      
+       
+      body.light {
+          background-color: #ffffff;
+          color: #333333;
+      }
+      
+      body.dark {
+          background-color: #1a1a1a;
+          color: #e0e0e0;
+      }
+      
+       
+      .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+      }
+      
+       
+      a {
+          color: #0066cc;
+          text-decoration: none;
+      }
+      
+      body.light a {
+          color: #0066cc;
+      }
+      
+      body.dark a {
+          color: #4a9eff;
+      }
+      
+      a:hover {
+          text-decoration: underline;
+      }
+      
+       
+      ul, ol {
+          padding-left: 2em;
+      }
+      
+       
+      pre {
+          background-color: #f5f5f5;
+          padding: 1em;
+          border-radius: 4px;
+          overflow-x: auto;
+      }
+      
+      body.dark pre {
+          background-color: #2d2d2d;
+      }
+      
+      code {
+          font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+          font-size: 0.9em;
+      }
+      
+       
+      blockquote {
+          margin: 1em 0;
+          padding: 0.5em 1em;
+          border-left: 4px solid #ddd;
+          background-color: #f9f9f9;
+      }
+      
+      body.dark blockquote {
+          border-left-color: #404040;
+          background-color: #2d2d2d;
+      }
+      
+       
+      table {
+          border-collapse: collapse;
+          width: 100%;
+          margin: 1em 0;
+      }
+      
+      th, td {
+          padding: 0.5em;
+          border: 1px solid #ddd;
+      }
+      
+      body.dark th, body.dark td {
+          border-color: #404040;
+      }
+      
+      th {
+          background-color: #f5f5f5;
+      }
+      
+      body.dark th {
+          background-color: #2d2d2d;
+      }
+      
+       
+      hr {
+          border: none;
+          border-top: 1px solid #ddd;
+          margin: 2em 0;
+      }
+      
+      body.dark hr {
+          border-top-color: #404040;
+      }
+      
+       
+      .theme-toggle {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          padding: 8px 16px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 14px;
+          transition: background-color 0.3s;
+      }
+      
+      body.light .theme-toggle {
+          background-color: #f0f0f0;
+          color: #333;
+      }
+      
+      body.dark .theme-toggle {
+          background-color: #404040;
+          color: #fff;
+      }
+      
+      .theme-toggle:hover {
+          opacity: 0.9;
+      }
+      
+       
+      @media (max-width: 600px) {
+          .container {
+              padding: 10px;
+          }
+          
+          .theme-toggle {
+              top: 10px;
+              right: 10px;
+          }
+      }
+      
+      body.article .logo-container {
+      	margin-top: 0;
+      }
+      
+      body.article .page-container {
+      	display: flex;
+      	align-items: flex-start;
+      	max-width: 1200px;
+      	margin: 0 auto;
+      }
+      
+      body.article .main-content {
+      	flex: 1;
+      	max-width: 800px;
+      }
+      
+      body.article img {
+      	max-width: 100%;
+      	height: auto;
+      }
+      
+      body.article pre {
+      	background-color: #f5f5f5;
+      	padding: 15px;
+      	border-radius: 5px;
+      	overflow-x: auto;
+      }
+      
+      body.article code {
+      	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      }
+      
+      body.article .article-header {
+      	margin-bottom: 2em;
+      }
+      
+      body.article .article-header h1 {
+      	margin-bottom: 0.5em;
+      }
+      
+      body.article article {
+      	word-wrap: break-word;
+      	overflow-wrap: break-word;
+      	hyphens: auto;
+      }
+      
+      body.article article p {
+      	max-width: 100%;
+      	overflow-wrap: break-word;
+      	word-wrap: break-word;
+      	word-break: break-word;
+      }
+      
+      .page-container {
+      	display: flex;
+      	align-items: flex-start;
+      	max-width: 1200px;
+      	margin: 0 auto;
+      }
+      
+      .main-content {
+      	flex: 1;
+      	max-width: 800px;
+      }
+      
+      img {
+      	max-width: 100%;
+      	height: auto;
+      }
+      
+      pre {
+      	background-color: #f5f5f5;
+      	padding: 15px;
+      	border-radius: 5px;
+      	overflow-x: auto;
+      }
+      code {
+      	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      }
+      
+      .article-header {
+      	margin-bottom: 2em;
+      }
+      
+      .article-header h1 {
+      	margin-bottom: 0.5em;
+      }
+      
+      article {
+      	word-wrap: break-word;
+      	overflow-wrap: break-word;
+      	hyphens: auto;
+      }
+      
+      article p {
+      	max-width: 100%;
+      	overflow-wrap: break-word;
+      	word-wrap: break-word;
+      	word-break: break-word;
+      }
+      
+      .tags {
+      	margin-bottom: 1em;
+      }
+      		
+      @media (max-width: 768px) {
+      	.article-header {
+      		display: flex;
+      		flex-direction: column;
+      		align-items: baseline;
+      		margin-top: 15px;
+      	}
+      }
+      
+      .article-header-top {
+      	display: flex;
+      	justify-content: space-between;
+      	align-items: center;
+      	margin-bottom: 1em;
+      }
+      
+      .recommended-articles-title {
+          font-size: 1.5em;
+          font-weight: 600;
+      		margin-top: 1em;
+          margin-bottom: 1em;
+          color: #c99;
+      }
+      
+      .tag-discovery-items {
+          display: flex;
+          overflow-x: auto;
+          gap: 2em;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: thin;
+          scrollbar-color: #666 #f0f0f0;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar {
+          height: 8px;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar-track {
+          background: #f0f0f0;
+          border-radius: 4px;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar-thumb {
+          background: #666;
+          border-radius: 4px;
+      }
+      
+      .tag-discovery-items::-webkit-scrollbar-thumb:hover {
+          background: #888;
+      }
+      
+      .tag-discovery-item {
+          flex: 0 0 300px;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5em;
+      }
+      
+      .tag-image-link {
+          display: block;
+          text-decoration: none;
+          width: 100%;
+          height: 200px;
+          overflow: hidden;
+          border-radius: 4px;
+      }
+      
+      .tag-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+      
+      .tag-image-placeholder {
+          width: 100%;
+          height: 100%;
+          background-color: #f0f0f0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #999;
+          font-size: 0.9em;
+      }
+      
+      .tag-author-section {
+          display: flex;
+          align-items: center;
+          gap: 0.5em;
+      }
+      
+      .tag-author-picture {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          object-fit: cover;
+      }
+      
+      .tag-author {
+          font-size: 0.85em;
+          color: #666;
+          text-decoration: none;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+      }
+      
+      .tag-author:hover {
+          color: #333;
+      }
+      
+      .tag-title {
+          font-size: 1.2em;
+          font-weight: 600;
+          color: #333;
+          text-decoration: none;
+          display: block;
+          line-height: 1.3;
+      }
+      
+      .tag-title:hover {
+          color: #666;
+      }
+      
+      .tag-summary {
+          font-size: 0.9em;
+          color: #666;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          line-height: 1.4;
+      }
+      
+      @media (max-width: 768px) {
+          .tag-discovery-item {
+              flex: 0 0 260px;
+          }
+          
+          .tag-image-link {
+              height: 180px;
+          }
+          
+          .tag-author-picture {
+              width: 20px;
+              height: 20px;
+          }
+          
+          .tag-author {
+              font-size: 0.8em;
+          }
+      }
+      
+          @media (max-width: 768px) {
+              body {
+                  font-size: 18px;
+                  padding: 15px;
+              }
+      
+              .page-container {
+                  flex-direction: column;
+              }
+      
+              .main-content {
+                  width: 100%;
+              }
+      
+              .article-card {
+                  padding: 15px;
+              }
+          }
+      
+      .dropdown {
+      	position: relative;
+      	display: inline-block;
+      }
+      
+      .dropdown-button {
+      	background-color: #f0f0f0;
+      	border: none;
+      	border-radius: 50%;
+      	width: 20px;
+      	height: 20px;
+      	margin-left: 10px;
+      	display: flex;
+      	align-items: center;
+      	justify-content: center;
+      	font-size: 0.8em;
+      	cursor: pointer;
+      	color: #666;
+      	transition: background-color 0.2s;
+      }
+      
+      .dropdown-button:hover {
+      	background-color: #e0e0e0;
+      }
+      
+      .dropdown-content {
+      	display: none;
+      	position: absolute;
+      	right: -10px;
+      	top: 100%;
+      	background-color: white;
+      	min-width: 180px;
+      	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+      	z-index: 1;
+      	border-radius: 8px;
+      	margin-top: 8px;
+      	border: 1px solid #eee;
+      }
+      
+      .dropdown.show .dropdown-content {
+      	display: block;
+      }
+      
+      .dropdown-content a {
+      	font-size: 0.8em;
+      	color: #333;
+      	padding: 12px 16px;
+      	text-decoration: none;
+      	display: block;
+      	transition: background-color 0.2s;
+      	border-bottom: 1px solid #eee;
+      	border-radius: 8px;
+      }
+      
+      .dropdown-content a:last-child {
+      	border-bottom: none;
+      }
+      
+      .dropdown-content a:hover {
+      	background-color: #f5f5f5;
+      }
+      
+      .logo {
+          text-align: center;
+      }
+      
+      .logo img {
+          max-height: 100px;
+          width: auto;
+      }
+      
+      .logo-container {
+          margin-top: 20px;
+          margin-right: 20px;
+      }
+      
+      .logo-container img {
+          max-height: 50px;
+          width: auto;
+      }
+      
+      .compact-profile {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+      }
+      
+      .compact-profile-link {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: inherit;
+          gap: 8px;
+      }
+      
+      .compact-profile-ago {
+          margin-bottom: 1px;
+          font-size: 0.8em;
+      }
+      
+      .compact-profile-picture {
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          object-fit: cover;
+      }
+      
+      .compact-profile-name {
+          font-size: 0.9em;
+          font-weight: 500;
+      }
+      
+       
+      body.light .compact-profile-link {
+          color: #000000;
+      }
+      
+      body.light .compact-profile-link:hover {
+          color: #0066cc;
+      }
+      
+      body.dark .compact-profile-link {
+          color: #e0e0e0;
+      }
+      
+      body.dark .compact-profile-link:hover {
+          color: #4a9eff;
+      }
+      
+      .time-ago {
+          display: inline-block;
+          min-width: 70px;
+      }
+      
+      .feed-links {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5em;
+          padding: 1em;
+      }
+      
+      .feed-icon {
+          width: 16px;
+          height: 16px;
+      }
+      
+      .tags {
+      	display: flex;
+      	flex-wrap: wrap;
+      	gap: 0 8px;
+      	margin-top: 1em;
+      	margin-bottom: 1em;
+      }
+      
+      .tag {
+      	display: inline-block;
+      	padding: 4px 8px;
+      	border-radius: 4px;
+      	margin-bottom: 8px;
+      	font-size: 0.9em;
+      }
+      
+      .tag a {
+      	text-decoration: none;
+      	color: inherit;
+      }
+      
+      body.light .tag {
+      	background-color: #f0f0f0;
+      	border: 1px solid #dee2e6;
+      }	
+      
+      body.dark .tag {
+      	background-color: #1a1a1a;
+      	border: 1px solid #404040;
+      }
+      
+      .footer {
+          margin-top: 2em;
+          padding-top: 1em;
+          border-top: 1px solid #eee;
+          text-align: center;
+          font-size: 0.9em;
+          color: #666;
+      }
+      
+      body.dark .footer {
+          border-top-color: #333;
+          color: #999;
+      }
+      
+      .footer a {
+          text-decoration: none;
+      }
+      
+      body.light .footer a {
+          color: #0066cc;
+      }
+      
+      body.dark .footer a {
+          color: #4a9eff;
+      }
+      
+      .image-container {
+          margin: 20px 0;
+          text-align: center;
+      }
+      
+      .image-container img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      
+      body.dark .image-container img {
+          box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      }
+      
+    </style>
+  </head>
+  <body class="dark article">
+    <div class="page-container">
+      <div class="logo-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="logo.png" alt="Logo">
+          </a>
+        </div>
+      </div>
+      <div class="main-content">
+        <article>
+          <div class="article-header">
+            <div class="article-header-top">
+              <div class="compact-profile">
+                <a href="profile/nprofile1qqsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5spz3mhxue69uhhyetvv9ujuerpd46hxtnfduq32amnwvaz7tmjv4kxz7fwd4hhxarj9ec82cslh9s0q.html" class="compact-profile-link">
+                  <img src="https://cdn.nostrcheck.me/94541465094a859adea9bcacbb0704a3f8a3c77cd182901df02473ef75be6b2b/5904c263bc7fbbc4111a98284c2ce5afa9246400b3005cb0dee5c6fd7e93673c.webp" alt="Archivero" class="compact-profile-picture">
+                  <span class="compact-profile-name">
+                    Archivero
+                  </span>
+                </a>
+                <a href="naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4wfg5umpkxscnsc6x2ep8jwz5f9yxc5zr8qvu5uqj.html" class="compact-profile-ago">
+                  <span class="time-ago" data-timestamp="1782779192">
+                  </span>
+                </a>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-button" type="button">
+                  ⋯
+                </button>
+                <div class="dropdown-content">
+                  <a href="https://njump.me/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4wfg5umpkxscnsc6x2ep8jwz5f9yxc5zr8qvu5uqj" class="nostr-link" target="_blank">
+                    Open Article in Nostr
+                  </a>
+                  <a href="https://njump.me/nprofile1qqsxxrewqrdhfg7nf6jzljwd6uxs6ezg84q05xs5j3jwj29kr23gg5spz3mhxue69uhhyetvv9ujuerpd46hxtnfduq32amnwvaz7tmjv4kxz7fwd4hhxarj9ec82cslh9s0q" class="nostr-link" target="_blank">
+                    Open Author in Nostr
+                  </a>
+                </div>
+              </div>
+            </div>
+            <h1>
+              Hablando de NOSTR para principiantes
+            </h1>
+            
+            <div class="tags">
+              <span class="tag">
+                <a href="tag/nostrenespanol.html">
+                  nostrenespanol
+                </a>
+              </span>
+              <span class="tag">
+                <a href="tag/nostrespanol.html">
+                  NostrEspanol
+                </a>
+              </span>
+              <span class="tag">
+                <a href="tag/soberaniadigital.html">
+                  SoberaniaDigital
+                </a>
+              </span>
+              <span class="tag">
+                <a href="tag/blogindex.html">
+                  Blogindex
+                </a>
+              </span>
+              <span class="tag">
+                <a href="tag/descentralizacion.html">
+                  Descentralizacion
+                </a>
+              </span>
+              <span class="tag">
+                <a href="tag/libertadigital.html">
+                  Libertadigital
+                </a>
+              </span>
+            </div>
+            <div class="image-container">
+              <a href="naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4wfg5umpkxscnsc6x2ep8jwz5f9yxc5zr8qvu5uqj.html">
+                <img src="https://image.nostr.build/a893ef9a2bc9289877d74f76a448ecb122b78b8db9a258cda86a661a733f5732.jpg" alt="Hablando de NOSTR para principiantes">
+              </a>
+            </div>
+          </div><h3 id="hablando-de-nostr-para-principiantes">Hablando de NOSTR para principiantes</h3>
+          <h4 id="lleva-tu-identidad-digital-contigo">Lleva tu identidad digital contigo</h4>
+          <p>La teoría del Internet Muerto ha llegado más rápido de lo esperado. Un internet lleno de bots, de cuentas falsas con fotos perfectas ya casi imposibles de distinguir de la realidad, (AI slop) de contenido automatizado que nos ahogan en un mar de spam y fake news, de apps y plataformas que no solo nos espían sino también se lucran con nuestros datos.</p>
+          <p>Cada vez que inicias sesión en alguna plataforma gubernamental o privada como Google, Facebook o X, debes generar una identidad digital vinculada a tu identidad personal. Este tipo de identidades comparten un mismo problema fundamental: el de la propiedad (¿de quién es realmente?). Siempre existe un Tercero de Confianza (Trusted Third Party), ya sea el gobierno o una entidad privada que certifica y custodia dichas transacciones electrónicas.</p>
+          <p>El problema no es solamente que ese perfil no es tuyo ni nunca lo será, sino que pueden vigilarte como quieran, elaborar un perfil detallado sobre ti, clasificarte en categorías y aprovecharse de ello, incluso tomar control de tus cuentas cuando así lo requieran.</p>
+          <p>Nadie que posea una cuenta en X o en Facebook es realmente propietario de ella. Estás &quot;alquilando&quot; espacio en un ámbito digital, en un servidor de alguna corporación que tiene su propia agenda.</p>
+          <p>Otro problema con este tipo de aplicaciones es que, aunque tengas una identidad social en alguna de estas plataformas, no es compatible con otros sistemas o aplicaciones. No puedes iniciar sesión con tu ID de X en Instagram o viceversa. Estos son los problemas de la propiedad (ownership). A pocas personas en el mundo les importa la propiedad de una realidad intangible como el mundo digital.</p>
+          <p>Pero, aunque no te importe, esto conlleva riesgos de seguridad que te afectan, que nos afectan a todos y al resto del mundo. La centralización implica un Punto Único de Fallo (SPOF).</p>
+          <p>Un ejemplo claro de honeypot de datos sería el siguiente: ¿Qué es más fácil? ¿Robar los datos de 30 millones de personas sustrayendo individualmente sus teléfonos, accediendo a sus archivos personales y obteniendo toda su información, o hackear de golpe una base de datos que contenga toda la información personal de esas 30 millones de personas? La respuesta es obvia. Posteriormente, toda esa información estará disponible en la dark web al mejor postor. Esto conlleva no solo un robo de datos, sino también el potencial robo de tu dinero, la suplantación de identidad y la pérdida de confianza en las instituciones.</p>
+          <p><em><strong>La forma en como interactuamos en internet está ROTA.</strong></em></p>
+          <h3 id="nostr-la-ltima-barrera-contra-la-censura">NOSTR: La última barrera contra la censura</h3>
+          <p>Todos hemos estado inmersos en esa Matrix y cada vez nos hundimos más en ella, pero hay una forma de salir. Una vez comienzas a seguir la madriguera del conejo, a disfrutar la libertad económica de la autocustodia, te das cuenta que hay otro tipo de libertad, más allá de la libertad económica, me refiero a la libertad de expresión y de comunicarse.</p>
+          <p>Es precisamente en este contexto de la lucha contra la censura y la vigilancia, la criptografía y la auto custodia, que surge NOSTR como una alternativa que poco a poco se está haciendo conocer.<br />
+          Nostr (<em>Notes and Other Stuff Transmitted by Relays</em>) no es una app ni una red social, es un PROTOCOLO.</p>
+          <p>Un protocolo de mensajería descentralizada y código abierto, que va más allá de un simple reemplazo de redes sociales. Un protocolo de comunicación simple y ligero, al mismo tiempo muy resiliente que no depende de servidores centrales. En lugar de almacenar la información en un solo servidor, se distribuye en RELAYS, que funcionan como pequeños servidores no centralizados.</p>
+          <p>En Nostr tu identidad no depende de un tercero, tu identidad es solo tuya. Cada usuario es responsable del mensaje que emita, solo tus llaves de acceso garantizarán tu identidad y tus mensajes serán inmutables, inalterables, imborrables.</p>
+          <p>La forma más sencilla de explicar NOSTR es como si fuera un correo electrónico. Imagina que mandas un Email desde tu cuenta de Gmail a un Outlook o a PROTONMAIL: diferentes compañías, diferentes operadores, pero cada uno puede recibir y enviar correos a cualquiera de esas compañías. Aunque sea un mal ejemplo con empresas centralizadas, así funciona NOSTR.</p>
+          <p><strong>Modelo Centralizado vs Descentralizado</strong></p>
+          <p>Sistema tradicional (Centralizado):<br />
+          ┌─────────┐     ┌──────────────┐     ┌─────────┐<br />
+          │ Cliente │ --&gt; │   Servidor   │ --&gt; │ Cliente │<br />
+          │  Gmail  │     │ Gmail/Outlook│     │ Outlook │<br />
+          └─────────┘     └──────────────┘     └─────────┘<br />
+          ↑<br />
+          (Punto de control)<br />
+          Sistema NOSTR (Descentralizado):<br />
+          ┌─────────┐                          ┌─────────┐<br />
+          │ Cliente │                          │ Cliente │<br />
+          │  Damus  │                          │Amethyst │<br />
+          └────┬────┘                          └────┬────┘<br />
+          │ Envía                   Recibe │<br />
+          ↓                                ↓<br />
+          ┌───────┐ ←──→ ┌───────┐ ←──→ ┌───────┐ ←──→ ┌───────┐<br />
+          │Relay 1│      │Relay 2│      │Relay 3│      │Relay 4│<br />
+          └───────┘      └───────┘      └───────┘      └───────┘<br />
+          ↑              ↑              ↑              ↑<br />
+          └──────────────┴──────────────┴──────────────┘<br />
+          (Los relays pueden sincronizar mensajes)</p>
+          <pre><code>Sin punto único de control
+          </code></pre>
+          <h3 id="cmo-funciona-nostr-en-3-pasos">¿Cómo funciona NOSTR? En 3 pasos</h3>
+          <p><strong>Paso 1: Firma criptográfica</strong><br />
+          Cada acción que realizas va firmada. Una firma desde el anonimato. ¿Cómo se firma? Con criptografía. Se utiliza una única llave privada de tu propiedad (Nsec) y también una llave pública (Npub). Una vez firmas, lo transmites a todos los relés. Cada publicación, like o interacción se convierte en un &quot;evento&quot; firmado digitalmente, garantizando que solo el dueño de la identidad puede crear contenido a su nombre.</p>
+          <p><strong>Paso 2: Transmisión a los relays</strong><br />
+          La aplicación envía estos eventos firmados a múltiples servidores llamados &quot;relays&quot; (repetidores). Son como pequeños servidores que funcionan como islas que permanecen inmutables. Almacenan y retransmiten los eventos, pero no controlan tu identidad ni pueden censurar tu contenido de forma global. Cualquiera de nosotros podría tener uno desde casa.</p>
+          <p><strong>Paso 3: Lectura descentralizada</strong><br />
+          Otros usuarios se conectan a estos mismos relays desde sus propias aplicaciones para leer los eventos. Cada usuario puede elegir qué relays usar, creando una red resistente a la censura donde ninguna entidad central controla la información.</p>
+          <p>Nostr apenas comienza. En un futuro todas las aplicaciones se construirán sobre Nostr, porque a diferencia de las aplicaciones tradicionales que son &quot;silos cerrados&quot;, en Nostr los artefactos de contenido (como una publicación o un resaltado de texto) son <em>eventos portátiles</em> que podrian ser utilizados por cualquier otro desarrollador o aplicación en la red. Esto permitirá aplicaciones más libres, más sofisticadas y ricas en funciones.</p>
+          <p><strong>Conclusión</strong></p>
+          <p>Quizá todo esto pueda parecer difícil en un principio, pero también lo era el internet en sus inicios. Nostr tiene el potencial de devolverse el poder al usuario, porque pasar de confiar en un tercero a hacernos cargos de nuestra propia soberanía digital, es un cambio de paradigma absoluto.</p>
+          <p>#nostrenespanol #NostrEspanol #SoberaniaDigital #Blogindex #Descentralizacion #Libertadigital</p>
+          
+        </article><zap-threads 
+        		anchor="naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4wfg5umpkxscnsc6x2ep8jwz5f9yxc5zr8qvu5uqj" 
+        		relays="wss://relay.damus.io,wss://nostr.wine,wss://relay.nostr.band,wss://nos.lol,wss://relay.primal.net,wss://nostr-01.yakihonne.com,wss://nostr-02.yakihonne.com,wss://purplepag.es,wss://nostr.mom,wss://relay.0xchat.com,wss://relay.gitcitadel.eu,wss://relay.damus.io,wss://relay.snort.social,wss://offchain.pub,wss://relay.nostr.wirednet.jp,wss://wot.nostr.party,wss://wot.utxo.one,wss://lang.relays.land/es"
+        		urls="naddr:njump.me/,npub:njump.me/,nprofile:njump.me/,nevent:njump.me/,note:njump.me/,tag:snort.social/t/"
+        		disable="replyAnonymously" />
+      </div>
+    </div>
+    
+    <div class="footer">
+      Built with 
+      <a href="https://github.com/dhalsim/nostr-static" target="_blank">
+        nostr-static
+      </a>
+    </div>
+    <script src="/static/js/time-ago.js">
+      ""
+    </script>
+    		<script>
+    			window.wnjParams = {
+    				position: 'bottom',
+    				startHidden: true,
+    				compactMode: true,
+    				disableOverflowFix: true,
+    			}
+    		</script>
+    		<script src="https://cdn.jsdelivr.net/npm/window.nostr.js/dist/window.nostr.min.js"></script>
+    		<script type="text/javascript" src="https://unpkg.com/zapthreads/dist/zapthreads.iife.js"></script>
+    	
+    <script src="/static/js/dropdown.js">
+      ""
+    </script>
+  </body>
+</html>

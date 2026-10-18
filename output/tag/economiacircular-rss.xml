@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nostr Libre</title>
+    <link>https://archivaldo66.github.io/nostr-static</link>
+    <description>Nostr Articles Feed</description>
+    <managingEditor> (Nostr Static)</managingEditor>
+    <pubDate>Mon, 29 Jun 2026 19:47:49 -0500</pubDate>
+    <item>
+      <title>¿QUÉ SON LOS ZAPS? -   El sistema de propinas que puede revolucionar internet.</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4x93xykjdwek5v7j82a29snth0f4h24ryv5uds8p0.html</link>
+      <description>¿QUÉ SON LOS ZAPS? -   El sistema de propinas que puede revolucionar internet.</description>
+      <content:encoded><![CDATA[<h2 id="el-sistema-de-propinas-que-est-cambiando-internet">El sistema de propinas que está cambiando internet.</h2>
+<h3 id="qu-es-un-zap">¿Qué es un Zap?</h3>
+<p>Un Zap es una propina instantánea en Bitcoin (Satoshis) enviada directamente a otra persona dentro de la red Nostr. Es tan simple como hacer clic en un botón con forma de rayo ⚡ debajo de una publicación que te gustó, y en segundos el creador recibe dinero real en su billetera.</p>
+<p>Imagina poder darle una propina directa a alguien cuyo post te hizo reír, te enseñó algo valioso, o simplemente te alegró el día. Sin intermediarios. Sin comisiones absurdas. Sin esperar días para que &quot;se procese el pago&quot;. Instantáneo.</p>
+<h3 id="-sobre-qu-red-funcionan">¿ Sobre Qué Red Funcionan?</h3>
+<p>Los Zaps funcionan sobre la Red Lightning de Bitcoin, una tecnología que permite enviar cantidades muy pequeñas de Bitcoin (desde 1 satoshi = $0.0001 USD) de forma instantánea y prácticamente gratis. Después hablaremos de ello.</p>
+<p>En sus inicios, implicaba la conexión de una billetera externa usando una tecnología llamada Nostr Wallet Connect , la cual aún se usa y es bastante prometedora para varias implementaciones diferentes.<br />
+Fue una excelente manera para que los bitcoineros que ya estaban familiarizados con Bitcoin y que son entusiastas que ya saben cómo manejar billeteras, pudieran conectar el cliente Nostr con sus wallets e integrarlas en un solo flujo de trabajo.</p>
+<p>En términos simples: Si Bitcoin es como enviar un paquete por correo (toma tiempo, tiene costo), Lightning es como enviar un mensaje de texto (instantáneo, casi gratis). Los Zaps usan Lightning para que puedas enviar propinas tan fácil como dar &quot;like&quot;.</p>
+<h3 id="nostr-es-un-caballo-de-troya-de-bitcoin">Nostr es un caballo de Troya de Bitcoin.</h3>
+<p>Y estas son excelentes noticias que no deberían alarmar a nadie. Nostr y Bitcoin son bastante simbióticos en el sentido de que cada protocolo se sostiene por sí mismo. Bitcoin podría obviamente funcionar perfectamente sin Nostr. Y Nostr puede funcionar sin Zaps.<br />
+Pero cada uno de estos protocolos hace al otro mejor y más fuerte.</p>
+<p><strong>En síntesis:</strong><br />
+Bitcoin ofrece a Nostr: Una red monetaria nativa que permite remodelar los incentivos de la web. Ya no necesitas anuncios, algoritmos manipuladores, o vender tus datos para monetizar contenido.</p>
+<p>Nostr le da a Bitcoin: Un directorio público de Lightning, permitiendo buscar a las personas por su nombre de usuario para enviarles dinero de forma sencilla y sin permisos ni intermediarios.</p>
+<h3 id="la-propuesta-de-valor-de-los-zaps">La Propuesta de Valor de los Zaps</h3>
+<p>Los Zaps son la propuesta de valor única de Nostr: una red monetaria integrada que transforma y remodela la estructura de incentivos en internet mediante micropagos abiertos, algo que los cypherpunks habían buscado durante décadas.</p>
+<p>Queremos crear economías circulares con bitcoin. Y los Zaps y LIGHTNING hacen de bitcoin un medio de intercambio, haciendo que los pagos sean irreversibles e instantáneos.</p>
+<p><strong>¿Por Qué Importan los Zaps?</strong><br />
+Liberan a los creadores de la tiranía del algoritmo<br />
+Ya no necesitas &quot;viralizar&quot; para ganar dinero. Un post con 10 lectores comprometidos que te envían Zaps puede valer más que uno con 10,000 vistas vacías.</p>
+<p><strong>Eliminan intermediarios</strong></p>
+<p><a href="https://yakihonne.com/article/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqythwumn8ghj7un9d3shjt3s0p3ksct59e3k7mf0qq256v6f2p54ge66ggu4w3rcf4mxx3rgt9trx2fx8tf">En YouTube, la plataforma se queda con 45% de lo que ganas. En Patreon, se llevan 5-12%.</a> Con Zaps, recibes el 100% (menos una comisión minúscula de la red Lightning, usualmente menos de 1%).</p>
+<p><strong>Permiten micropagos reales</strong><br />
+Puedes enviar $0.10 (100 satoshis) como propina. Esto era imposible con tarjetas de crédito (comisión mínima = $0.30). Los Zaps hacen viable recompensar contenido de forma granular.</p>
+<p><strong>Crean una cultura de valor directo</strong><br />
+En lugar de &quot;likes&quot; que no significan nada, los Zaps son &quot;votos económicos&quot;. Esto crea incentivos más alineados: buen contenido = recompensas reales.</p>
+<p><strong>¿Es todo esto un Experimento Social?</strong><br />
+Los Zaps son un &quot;experimento social&quot; fascinante. Ya que estamos redescubriendo algo que internet perdió: la capacidad de compensar directamente el valor que recibes.</p>
+<p>En la web tradicional, todo es &quot;gratis&quot; (pero pagas con tu atención, tus datos, tu privacidad).</p>
+<p>En Nostr con Zaps, el modelo es diferente: si algo te aporta valor, puedes devolverle valor directo al creador. Simple. Honesto. Humano.</p>
+<p><strong>¿Cuánto es un Zap?</strong><br />
+Los Zaps varían desde cantidades simbólicas hasta propinas generosas:<br />
+21 sats ( $0.02): El Zap simbólico. Un &quot;gracias&quot; digital. 100 sats ( $0.10): El Zap estándar. Muestra aprecio genuino.<br />
+1,000 sats ( $1): El Zap generoso. &quot;Esto realmente me ayudó&quot;. 10,000+ sats ( $10+): El Zap épico. &quot;Esto cambió mi perspectiva&quot;.<br />
+La cultura en torno a Nostr valora mucho los pequeños Zaps. No se trata de hacerse rico, sino de crear un ecosistema económico donde los buenos creadores puedan ser recompensados directamente por su audiencia. Un Zap de 21 sats puede significar más que 1000 likes sin valor.</p>
+<p><strong>Zaps vs. Sistemas Tradicionales</strong><br />
+Los Zaps no son como:<br />
+❌ Patreon/Ko-fi: No hay suscripciones mensuales obligatorias. Los Zaps son espontáneos, por post.<br />
+❌ Super Thanks de YouTube: No hay plataforma que se quede con la mitad. El dinero va directo al creador.<br />
+❌ Propinas de Twitch: No necesitas PayPal, tarjeta de crédito, o cuenta bancaria. Solo Bitcoin.<br />
+❌ Monedas virtuales de redes sociales: Los Zaps son dinero real (Bitcoin), no puntos que &quot;quizá&quot; puedas canjear algún día.</p>
+<p><strong>¿Necesito Ser Experto en Bitcoin o en Nostr?</strong><br />
+No.</p>
+<p>Si bien los Zaps funcionan sobre Bitcoin Lightning, hoy en día clientes como Primal han hecho el proceso tan simple como usar cualquier app de pago. No necesitas entender criptografía, nodos, o canales de liquidez.</p>
+<p><strong>Solo necesitas:</strong><br />
+-Una cuenta de Nostr (que ya deberías tener si me has leído)</p>
+<p>-Una billetera compatible que puede ser Custodial o No custodial.</p>
+<p>-Unos pocos satochis para empezar a enviar Zaps</p>
+<p>Ahora que entiendes QUÉ son los Zaps y POR QUÉ son importantes, el siguiente paso es aprender a usarlos en la práctica. Pero es algo que pronto explicaremos.</p>
+<p>¿Te animas a darme mis primeros Zaps?</p>
+<p>#nostrenespanol #BitcoinEspañol #NostrEspañol #EconomiaCircular #Zaps</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/09c00fdaffe64f51752fa2dfb78eee1e455b1d5cce8fe8848fdeea8a9384a2cf.jpg" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Mon, 29 Jun 2026 19:47:49 -0500</pubDate>
+    </item>
+    <item>
+      <title> LA MENTIRA DE LA ECONOMÍA CREADORA</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4f5e5j5rf23n45s3e2az8sntkvdzxsk2kxv7e2gtx.html</link>
+      <description>La mentira de la Economía Creadora y el robo de las plataformas streaming.</description>
+      <content:encoded><![CDATA[<p>/</p>
+<h1 id="la-llamaron-economa-creadora-pero-quin-realmente-cobr">La llamaron Economía Creadora. ¿Pero quién realmente cobró?</h1>
+<p>Hubo una promesa que circuló allá por 2015. Quizás la escuchaste en un anuncio de YouTube, o en un artículo de Medium compartido por alguien que acababa de renunciar a su trabajo. La promesa decía algo así: internet finalmente ha democratizado el dinero. Cualquiera con una cámara, una voz o una historia podía cobrar por su trabajo. Sin intermediarios. Sin sellos discográficos, editoriales ni estudios interponiéndose entre el creador y su audiencia.</p>
+<p>La llamaron Economía Creadora.</p>
+<p>Era una mentira. No del todo, pero sí lo suficiente como para importar.</p>
+<h2 id="las-matemticas-de-las-que-nadie-habla">Las matemáticas de las que nadie habla</h2>
+<p>Veamos qué produjo realmente la Economía Creadora.</p>
+<p>YouTube, la nave insignia del sueño de &quot;cualquiera puede lograrlo&quot;, paga a través de su Programa de Socios. Para calificar, necesitas 1.000 suscriptores y 4.000 horas de reproducción al año. Según datos recientes, menos del 10% de todos los canales de YouTube llega alguna vez a ese umbral. De los que lo alcanzan, el creador pequeño promedio gana entre 2 y 5 dólares por cada 1.000 reproducciones. Publica tres videos a la semana durante un año, trabaja sin descanso para construir audiencia, y quizás logres lo justo para pagar la factura del celular.</p>
+<p>Spotify es peor. La plataforma paga entre 0,003 y 0,005 dólares por reproducción. Un artista independiente necesita aproximadamente 250.000 streams al mes solo para ganar el salario mínimo, en la ciudad más barata de Estados Unidos. Más del 90% de los artistas en Spotify gana menos de 1.000 dólares al año en la plataforma.</p>
+<p>¿Instagram y TikTok? Los fondos para creadores que ambas plataformas lanzaron con gran fanfarria pagaban fracciones de centavo por vista. TikTok reestructuró silenciosamente su fondo después de que los creadores se rebelaron ante ganancias tan ridículas que rozaban la parodia. Algunos reportaron haber ganado 20 dólares por un video que acumuló un millón de vistas.</p>
+<p>Las cifras cuentan una historia coherente: el 99% de los creadores no gana nada significativo en las plataformas sobre las que construyen.</p>
+<h2 id="quin-realmente-cobr">Quién realmente cobró</h2>
+<p>Las plataformas.</p>
+<p>YouTube generó más de 31.000 millones de dólares en ingresos publicitarios en 2023. Spotify reportó más de 600 millones de usuarios. La maquinaria publicitaria de Meta, alimentada casi en su totalidad por contenido generado por usuarios, imprime miles de millones cada trimestre.</p>
+<p>El modelo nunca fue &quot;nosotros les pagamos a los creadores&quot;. El modelo fue: &quot;los creadores atraen usuarios, los usuarios atraen anunciantes, los anunciantes nos pagan a nosotros&quot;. Los creadores eran el producto, envuelto en el lenguaje del emprendimiento.</p>
+<p>El 1% superior de los creadores —los MrBeast, las Charli D'Amelio, los PewDiePie— sí cobraron. Y muy bien. Pero cumplen una función: son la prueba de concepto. Son los ganadores de la lotería que se exhiben para que el otro 99% siga comprando boletos.</p>
+<p>Cada hora que un creador en apuros pasa produciendo contenido gratis es una hora de trabajo que la plataforma captura a costo cero.</p>
+<h2 id="la-diferencia-de-nostr">La diferencia de Nostr</h2>
+<p>Entonces apareció algo distinto.</p>
+<p>Nostr es un protocolo descentralizado —no una plataforma, un protocolo— construido sobre claves criptográficas y relays abiertos. Sin algoritmo. Sin ingresos publicitarios. Sin ninguna empresa en el medio extrayendo valor de cada interacción.</p>
+<p>En Nostr, los creadores reciben zaps.</p>
+<p><a href="https://archiveroprohibido.npub.pro/post/42f330c2eb7c3194/">Un zap es un pago directo a través de Bitcoin Lightning</a>, enviado de una persona a otra, al instante y con comisiones mínimas. Lees algo que te mueve y le envías al creador 100 satoshis. Escuchas una canción y le mandas un zap al artista. Encuentras un artículo que te ahorra una hora de investigación y envías valor directamente, de inmediato, sin que ninguna plataforma se quede con el 45%.</p>
+<p>La economía es estructuralmente diferente:</p>
+<ul>
+<li><em>Sin mínimo de seguidores.</em> Un creador con 12 seguidores puede recibir zaps de los 12 desde su primera publicación.</li>
+<li><em>Sin algoritmo que decida el alcance.</em> Tu contenido llega a tus seguidores. Punto.</li>
+<li><em>Sin reparto de ingresos.</em> El 100% del zap va al creador. El protocolo no se queda con nada.</li>
+<li><em>Sin desmonetización.</em> No hay autoridad central que pueda cortarte los ingresos porque dijiste algo que no les gustó.</li>
+</ul>
+<p>Esto no es un fondo para creadores. No es una función de propinas añadida a un modelo publicitario como gesto de relaciones públicas. Es un intercambio de valor directo, sin permisos y resistente a la censura, entre personas.</p>
+<h2 id="por-qu-esto-importa">Por qué esto importa</h2>
+<p>La promesa de la Economía Creadora fracasó no porque la gente no sea creativa ni porque las audiencias no sean generosas. Fracasó porque la arquitectura fue diseñada para extraer, no para distribuir.</p>
+<p>Las plataformas necesitaban que los creadores fueran lo suficientemente pobres como para seguir creando gratis, pero lo suficientemente exitosos como concepto para que nuevos creadores siguieran registrándose. El sistema funcionó exactamente como estaba previsto: para las plataformas.</p>
+<p>Nostr no corrige la naturaleza humana. Seguirá habiendo creadores que luchen por encontrar audiencia. Pero el robo estructural desaparece. Cuando alguien valora tu trabajo, puede pagarte por él directamente. Sin intermediarios. Sin pedir permiso. Sin que un algoritmo decida que tu contenido es demasiado de nicho, demasiado político o demasiado honesto para monetizarse.</p>
+<p>La Economía Creadora te dijo que estabas construyendo un negocio.</p>
+<p>Estabas construyendo el negocio de otro.</p>
+<p>Nostr te da las herramientas para construir el tuyo.</p>
+<p><em>Publicado originalmente por YakiHonne</em></p>
+<p>#nostrenespanol #BitcoinEspañol #NostrEspañol #EconomiaCircular #Zaps</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/e9bb328b1f7db5bd924fb4ca725da1527aefd617e22dc02483f91fe77d68ffa7.png" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Wed, 03 Jun 2026 13:02:56 -0500</pubDate>
+    </item>
+  </channel>
+</rss>

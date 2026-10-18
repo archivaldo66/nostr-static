@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nostr Libre</title>
+    <link>https://archivaldo66.github.io/nostr-static</link>
+    <description>Nostr Articles Feed</description>
+    <managingEditor> (Nostr Static)</managingEditor>
+    <pubDate>Mon, 17 Aug 2026 20:32:43 -0500</pubDate>
+    <item>
+      <title>GrapheneOS el sistema operativo telefónico más seguro del mundo</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4gfrrgemkde3nqjz2v9u526nnfetryn228ynp03c0.html</link>
+      <description>GrapheneOS es la mejor combinación de hardware y software para quien se toma en serio la amenaza de la vigilancia cotidiana, no solo por marketing, sino porque es de los pocos proyectos que documenta qué protege y qué no.</description>
+      <content:encoded><![CDATA[<h2 id="grapheneos-el-sistema-operativo-telefnico-ms-seguro-del-mundo">GrapheneOS el sistema operativo telefónico más seguro del mundo</h2>
+<p>Llevo un par de semanas usando un Pixel 8 Pro (Reacondicionado) con <a href="https://grapheneos.org/">GrapheneOS</a> y esta es mi reseña como normie; sin conocimientos previos de desarrollo Android ni experiencia con ROMs alternativas, solo la perspectiva de alguien que decidió probarlo.</p>
+<p>Y hasta donde he podido comparar, es la mejor combinación de hardware y software para quien se toma en serio la amenaza de la vigilancia cotidiana, no solo por marketing, sino porque es de los pocos proyectos que documenta qué protege y qué no.</p>
+<p>Inmersos como estamos en el Mercado de la Atención en el que ya estamos hasta el cuello, los celulares modernos —o sea, computadoras de bolsillo— son pieza clave de este entramado algorítmico.</p>
+<p>La publicidad se inyecta en cada rincón posible de nuestra experiencia sensorial despierta. La atención ha sido monetizada a extremos impensables, creando un ecosistema de información de manipulación psicológica que nos dice que pensar y que consumir, apelando a nuestros instintos más bajos.</p>
+<p>Por ello, deberíamos, al menos, ser capaces de ser los dueños de nuestros espacios digitales. Si el celular es la mayor herramienta de distracción y control jamás creada, y no somos capaces de abandonarlo, al menos podríamos intentar un mínimo control sobre ese aparato que nos destruye poco a poco la independencia cognitiva.</p>
+<p><img src="https://image.nostr.build/6d66815181b55854727e6643fa1d6d4ad1a631f30fead4001f1409bf7267df0f.jpg" alt="image" /></p>
+<p>Empezaré haciendo la distinción entre el celular Pixel y sus distintos modelos, y el sistema operativo GrapheneOS como entidades separadas.</p>
+<p>Todo lo que normalmente se usa, desde apps de mensajería como Signal, WhatsApp y Telegram, funcionan perfectamente. Para redes sociales, apps como X, Instagram, TikTok, y Youtube funcionan normalmente.</p>
+<p>En cuanto a la conectividad Bluetooth, funciona bastante bien, sin problemas más allá de los habituales errores menores y retrasos que cualquier dispositivo inalámbrico tiene en cualquier sistema.</p>
+<p>También he probado algunos juegos. todo se ejecuta normalmente porque el SO no consume recursos en segundo plano. Diría que incluso funciona mejor que Android de fábrica por eso.</p>
+<p>Aunado a lo anterior, siento que la duración de la batería dura más desde que se instaló GrapheneOS. En un uso intensivo fácilmente sobrevive un día completo sin descargarse. La carga es un poco lenta, pero solo porque uso un cargador de 35W genérico que me llegó con el celular.</p>
+<p>La calidad de fotos y videos es buena tanto con la cámara de GrapheneOS como con la de Pixel.</p>
+<p>la diferencia aparece en condiciones de poca luz, donde el procesamiento multi-frame de HDR+/Night Sight de Google sigue dando resultados más limpios. Uso principalmente la cámara de Pixel, sin Google Play services en sandbox y con acceso a la red desactivado, precisamente para aprovechar ese procesamiento sin abrir ningún canal de datos hacia Google. Lo que realmente valoro de la cámara nativa de GrapheneOS es que entrega la imagen mucho más cercana a lo que capta el sensor, sin el procesamiento computacional agresivo de Google, captura la escena tal cual es, sin que el algoritmo o la IA decida por mí como debería verse mejor.</p>
+<p>La biometría funciona normalmente bajo GrapheneOS. Inicialmente habían eliminado el desbloqueo facial básico, aunque recientemente se terminó integrando una versión más robusta y segura del desbloqueo facial, pero el escáner de huellas va perfectamente bien.</p>
+<p>La calidad de las llamadas funciona como debería. Probado con un chip que no requiere registro (De momento no he probado servicios de eSIM anónimos)</p>
+<p>La mayoría de apps bancarias y gubernamentales están mayormente bien. Omito las billeteras de cripto porque la mayoría ya están enfocadas en la privacidad y funcionan sin problemas en GrapheneOS. En cuanto a los bancos, <a href="https://www.redeszone.net/noticias/seguridad/revolut-usuarios-grapheneos-bloqueo-aplicacion/">Revolut recientemente bloqueó GrapheneOS</a>. Algunas aún tienen problemas, aunque la mayoría funcionan. <a href="https://privsec.dev/posts/android/banking-applications-compatibility-with-grapheneos/">Hay un sitio web que lista qué apps bancarias funcionan por país en GrapheneOS.</a> Google Pay obviamente no funciona, ni siquiera con servicios de Google Play en sandbox.</p>
+<p>La personalización es un punto débil porque GrapheneOS prioriza la seguridad y privacidad reduciendo la superficie de ataque. No es altamente personalizable, pero ese es el intercambio por una mejor privacidad y control sobre tus datos y tu atención cognitiva.</p>
+<h3 id="por-qu-grapheneos-solo-soporta-telfonos-pixel">¿Por qué GrapheneOS solo soporta teléfonos Pixel?</h3>
+<p>A primera vista, pensar en usar hardware de Google para evitar la vigilancia parece un sin sentido, ¿O sea, para rebelarte contra Google tienes que darle dinero a Google? Un nivel de ironía que ni el mejor guionista de Black Mirror se atrevería a describir…</p>
+<p>Aplicando la formula esotérica oriental de <em>Cabalgar el tigre</em> se trataría de, frente a la circunstancia actual, aplicar, en el terreno político e informático, la misma lógica del yudo en la vida privada, usar la fuerza y los propios recursos tecnológicos del enemigo para revertir su impulso y neutralizarlo, para combatirlo e incluso destruirlo.</p>
+<h4 id="1-chip-de-seguridad-titan">1. CHIP DE SEGURIDAD TITAN</h4>
+<p>Pero es porque los Pixels incluyen un chip de seguridad dedicado llamado <strong>Titan M</strong></p>
+<p>Maneja:</p>
+<ul>
+<li>encriptación respaldada por hardware</li>
+<li>almacenamiento seguro de claves</li>
+<li>protección contra fuerza bruta</li>
+<li>arranque verificado</li>
+<li>Protección física contra ataques de canal lateral y manipulación directa del chip</li>
+<li>Certificación criptográfica de identidad/dispositivo</li>
+<li>Independencia total del procesador principal.</li>
+<li>Verificación biométrica sin exponer los datos.</li>
+</ul>
+<p>La mayoría de los teléfonos Android no tienen nada cercano a esto.</p>
+<h4 id="2-el-arranque-verificado-realmente-funciona">2. EL ARRANQUE VERIFICADO REALMENTE FUNCIONA</h4>
+<p>En muchos teléfonos Android:</p>
+<ul>
+<li>Desbloquear el bootloader debilita la seguridad inmediatamente.</li>
+<li>Los Pixels son diferentes: permiten grabar una clave de confianza propia en vez de depender solo de la de Google.</li>
+<li>GrapheneOS puede usar protecciones fuertes de arranque verificado, durante la instalación graba sus propias claves en el chip Titan M2 y vuelve a bloquear el bootloader bajo ellas, manteniendo protecciones fuertes de arranque verificado incluso en un SO personalizado.</li>
+</ul>
+<p>El resultado es un sistema operativo personalizado que queda tan protegido por hardware como el Android de fábrica. La única diferencia está en quién valida esa seguridad: en lugar de Google, la verificación corre a cargo de GrapheneOS.</p>
+<h4 id="3-los-pixels-soportan-etiquetado-de-memoria-por-hardware">3. LOS PIXELS SOPORTAN ETIQUETADO DE MEMORIA POR HARDWARE</h4>
+<p>Los Pixels más nuevos incluyen ARM MTE. Es una función de seguridad construida directamente en el procesador.</p>
+<p>Esto ayuda a detectar:</p>
+<ul>
+<li>corrupción de la memoria</li>
+<li>exploits de uso después de liberar</li>
+<li>desbordamientos de búfer</li>
+</ul>
+<p>GrapheneOS usa esto agresivamente para la protección contra exploits. Esto solo está disponible desde Pixel 8 en adelante, por el soporte de 7 años garantizado y las funciones ARM MTE.</p>
+<h4 id="4-grapheneos-est-extremadamente-endurecido">4. GRAPHENEOS ESTÁ EXTREMADAMENTE ENDURECIDO</h4>
+<p>Las características incluyen:</p>
+<ul>
+<li>malloc endurecido.</li>
+<li>Google Play en sandbox: corre sin privilegios de sistema, con permisos revocables como cualquier otra app.</li>
+<li>Aislamiento estricto de apps: sandbox reforzado por app, con controles granulares como el permiso de Red y de Sensores por app — inexistentes en Android stock.</li>
+<li>Protección USB: acceso deshabilitado por defecto con el teléfono bloqueado, cerrando la puerta a herramientas forenses de extracción física.</li>
+<li>Mitigaciones avanzadas contra exploits.</li>
+</ul>
+<h4 id="5-la-mayora-de-los-oems-rompen-la-seguridad-para-roms-personalizados">5. LA MAYORÍA DE LOS OEMS ROMPEN LA SEGURIDAD PARA ROMS PERSONALIZADOS</h4>
+<p>OEM es la sigla en inglés de Original Equipment Manufacturer — &quot;fabricante de equipo original&quot;.</p>
+<p>Samsung es un buen ejemplo.</p>
+<p>Si desbloqueas el bootloader:</p>
+<ul>
+<li>Knox se rompe</li>
+<li>la atestación se debilita</li>
+<li>las características de seguridad desaparecen</li>
+<li>El dispositivo quedaría marcado como &quot;tampered&quot; (manipulado) de forma irreversible, y esto desactiva permanentemente servicios fundamentales del celular.</li>
+</ul>
+<p>¿Y entonces por qué GrapheneOS solo funciona en Pixels? Pues porque Google es el único que, al fabricar su hardware, ha tenido en cuenta que alguien quiera instalar otro sistema operativo sin que salte la alarma de seguridad. Los demás fabricantes ni lo contemplan.</p>
+<h4 id="6-el-proyecto-prioriza-la-seguridad-sobre-la-popularidad">6. EL PROYECTO PRIORIZA LA SEGURIDAD SOBRE LA POPULARIDAD</h4>
+<p>GrapheneOS ha dicho muchas veces:</p>
+<ul>
+<li>Soportar hardware inseguro elimina el propósito entero del proyecto.</li>
+<li>Su objetivo no es la adopción máxima.</li>
+<li>Su objetivo es la seguridad máxima.</li>
+</ul>
+<p><a href="https://www.makeuseof.com/grapheneos-expanding-supported-devices-motorola/">GrapheneOS anunció una asociación con Motorola para dispositivos futuros a partir de alrededor de 2027.</a> Y una colaboración confirmada con un OEM mayor (Snapdragon) para hardware de próxima generación.</p>
+<p>Así que la exclusividad de Pixel podría cambiar eventualmente.</p>
+<p>Pero SOLO si el hardware cumple con los estándares de seguridad de GrapheneOS.</p>
+<p>Esa es la parte importante.</p>
+<p>La mayoría de las nuevas versiones Android están diseñadas alrededor de características y marketing.</p>
+<p>GrapheneOS está diseñado para sobrevivir ataques del mundo real y esta seguridad endurecida y la ausencia de servicios de Google lo convierten en una de las mejores opciones de privacidad disponibles.</p>
+<p>La vigilancia masiva no está por llegar.</p>
+<p>Ya está aquí.</p>
+<p><a href="https://www.telemundo.com/noticias/noticias-telemundo/inmigracion/ice-reconocimiento-facial-dhs-camaras-calles-celulares-migrantes-rcna257606">El reconocimiento facial con IA se está extendiendo en las cámaras.</a> Los bancos rastrean cada transacción. Las apps venden tus datos. Las grandes tecnológicas y los gobiernos están construyendo el panóptico en tiempo real.</p>
+<p>Android está a punto de volverse un sistema cerrado como Apple.</p>
+<p>Probablemente no puedas detener la máquina de la noche a la mañana.</p>
+<p>Pero puedes hacerte extremadamente costoso y molesto de vigilar.</p>
+<p><strong>¡Deja de ser un producto!</strong></p>
+<p>#resenas #GrapheneOS #PrivacidadDigital #SoberaníaDigital #AnonimatoDigital #VigilanciaMasiva</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/bc8baf94aa19d55ccdaf44f74f02b15faf9c692ddc621df1ebacf6fec391dfa6.jpg" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Mon, 17 Aug 2026 20:32:43 -0500</pubDate>
+    </item>
+    <item>
+      <title>&#34;ZapTrax, streaming descentralizado sobre Nostr</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4xvu92sj4ve94ssjrtfk82wzktqe5gs2tfqqvd4ty.html</link>
+      <description>ZapTrax, música streaming descentralizada sobre Nostr</description>
+      <content:encoded><![CDATA[<p>ZapTrax es un reproductor y plataforma descentralizada de música independiente construida sobre el protocolo Nostr, que combina el streaming de Wavlake con funciones de pagos Lightning y gestión de playlists descentralizada. Es open source, desarrollado por un usuario de GitHub conocido como <a href="https://github.com/derekross/zaptrax">Derek Rossy</a> publicado en <a href="https://zaptrax.app/">zaptrax.app</a></p>
+<h3 id="cmo-funciona">¿Cómo funciona?</h3>
+<p>1.<strong>La música proviene de Wavlake.</strong></p>
+<p><a href="https://wavlake.com/">Wavlake</a> la plataforma que está detrás del catálogo que utiliza ZapTrax. Es un streaming de música y podcasts basada en Bitcoin, pensada como una alternativa a Spotify/SoundClound, pero pensada para que cualquiera pudiera descubrir y apoyar directamente al artista. Ahora combinando Bitcoin Lightning Network, Podcasting 2.0 (RSS) y Nostr.<br />
+Así que ZapTrax no aloja música — consume la API de Wavlake para streaming y metadatos, mientras usa audio HTML5 nativo del navegador para la reproducción. O sea: Wavlake es el catálogo, ZapTrax es un cliente alternativo para consumirlo con más funciones sociales.</p>
+<p><strong>2. Identidad y login vía Nostr.</strong><br />
+No hay usuario/contraseña. Puedes Iniciar sesión con una extensión de navegador Nostr (NIP-07) como nos2x o Alby, puedes editar tu perfil y metadatos, y soporta múltiples cuentas.</p>
+<p><strong>3. Todo lo social se publica como eventos Nostr firmados</strong><br />
+•	Comentarios en tracks: notas de texto kind 1<br />
+•	Likes: reacciones NIP-25<br />
+•	Playlists: se construyen usando bookmark sets de NIP-51, y se comparten mediante direcciones Nostr (naddr)<br />
+•	Estado de &quot;escuchando ahora&quot;: se transmite usando NIP-38<br />
+•	Zaps a tracks/artistas → NIP-57, con soporte WebLN como modelo de &quot;valor por valor&quot; (value-for-value) para micropagos.</p>
+<p>Esto es lo que hace que sea interoperable con otros clientes: si le das like o comentas un track en ZapTrax, ese evento vive en los relays y cualquier otro cliente Nostr que lea esos kinds lo puede mostrar.</p>
+<p>Cabe antes aclarar que es para artistas independientes que tienen los derechos originales sobre su obra, (también se podría hacer la comparativa con Bandcamp en modalidad y filosofía) Comparten el espíritu anti-sello-discográfico, pero Bandcamp vende archivos digitales y Wavlake sería una radio de artistas independientes con micropagos.</p>
+<p>Queda por verse si este &quot;Spotify social descentralizado&quot; llega a despegar y tener el éxito de Bandcamp. Apelar a la soberanía del creador frente a cualquier intermediario —en este caso, el mundo de los sellos discográficos— despierta cada vez más entusiasmo, pero el entusiasmo no basta. Falta difusión, y concienciación al usuario sobre la importancia de alternativas libres y los protocolos descentralizados</p>
+<p>Y sin embargo, de manera personal. La mejor forma de combatir el monopolio de las plataformas de streaming y la música en la nube —donde cualquier pista o artista puede desaparecer de un día para otro— sigue siendo la más antigua: tener tu propio reproductor de música (DAP) con soporte para archivos MP3/FLAC de alta calidad, conectado a unos audífonos de cable jack de 3.5mm que transmitan el sonido tal como es, sin intermediario que decida si esa canción sigue existiendo mañana.</p>
+<p>#resenas #nostrespanol #Musicadescentralizada #ZapTrax #Wavlake</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/7fda7bc01e4b7604ce7e8df60bcfa2ea6a10d53f33ae8dba0e94b3b242fc72e7.jpg" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Mon, 20 Jul 2026 22:01:56 -0500</pubDate>
+    </item>
+    <item>
+      <title>Inkan: identidad permanente sobre Nostr</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy88wumn8ghj7mn0wvhxcmmv9uqp2k238ptrqktgxgm4gvnj0945g4zsdar5z6c8wyp40.html</link>
+      <description>Inkan es un sistema de identidad para Nostr con la clave maestra en frío permanente</description>
+      <content:encoded><![CDATA[<p>Entre las muchas discusiones que surgen en torno a Nostr y sus obstáculos y soluciones hay una en particular que quizá no atraiga tanta atención como debería tener debido a su importancia, y es lo relativo a la fragilidad de las identidades. Si perder una clave privada significa perder 100, 1000 p cien mil seguidores, nadie con algo serio que construir va a querer apostar su reputación en Nostr.</p>
+<p>Porque si perder tu frase semilla en una billetera implica una grave pérdida económica, perder la clave privada en Nostr o que te la roben significa perder la capacidad de retener automáticamente las publicaciones y a los propios seguidores. El resultado son patrones de uso poco serios y efímeros, con contenido de calidad relativamente baja. Es decir, baja confianza en el protocolo.</p>
+<p>Como dijimos, si pierdes tu nsec, pierdes todo lo que construiste sobre él. Seguidores, reputación, historial. No hay recuperación posible. Para cuentas con decenas de miles de seguidores, eso no es un problema menor que pueda resolver una plataforma centralizada: es un desincentivo suficiente para no invertir en serio en una presencia basada en Nostr. El resultado son patrones de uso poco serios y efímeros, con contenido de calidad relativamente baja. Es decir, baja confianza en el protocolo.</p>
+<p><a href="https://www.inkan.cc">Inkan</a> es una propuesta para atacar ese problema desde la raíz. Porque Inkan es algo bastante más sofisticado que un simple fork de Jumble.</p>
+<h3 id="nostr-ms-delegacin">Nostr más delegación</h3>
+<p>La descripción más precisa podría ser: Inkan es Nostr más delegación. Una capa de identidad que se asienta sobre el protocolo sin modificarlo. Los eventos siguen siendo eventos Nostr. Los relays siguen siendo relays. Lo que cambia es la relación entre una identidad y la clave que firma en su nombre.</p>
+<h3 id="inkan-es-un-sistema-de-identidad-para-nostr-con-la-clave-maestra-en-fro-permanente">Inkan es un sistema de identidad para Nostr con la clave maestra en frío permanente</h3>
+<p>Inkan permite identidades en línea cuya clave privada puede crearse en almacenamiento en frío y permanecer allí de forma permanente. La clave nunca tiene que tocar un dispositivo conectado a internet ni tiene que estar a mano. La identidad en sí, sin embargo, puede usarse fácilmente para autenticación cotidiana en línea: publicar, responder, enviar mensajes o iniciar sesión en servicios.</p>
+<p>La arquitectura central es una cadena de delegación: <strong>master → intermedias → firmante</strong>. La clave maestra es la identidad permanente, el objeto al que los seguidores deben vincularse. La clave firmante es la que trabaja en el día a día —publica notas, responde, interactúa. Si esa clave se pierde o se compromete, se revoca desde la clave inmediatamente superior y se genera una nueva. La identidad maestra no se toca. No necesita tocar nada.</p>
+<p>Lo que hace posible esto es que las delegaciones no viven en Nostr sino en Ethereum. Cada declaración —de delegación, de revocación, de invalidación permanente— se registra on-chain. Eso las hace auditables e independientes de cualquier relay. Un cliente Inkan lee esas declaraciones desde la blockchain y puede reconstruir, para cualquier clave pública y cualquier momento pasado, el mapa completo de delegaciones directas e indirectas vigentes en ese instante.</p>
+<p>Inkan te permite revocar y reemplazar pares de claves en caso de pérdida o robo de tu clave privada. También puedes realizar rotaciones periódicas de claves de forma preventiva. Todo esto se realiza de manera descentralizada. De esta forma, Inkan te proporciona una identidad en línea permanente que solo tú controlas y que puedes mantener con total seguridad a largo plazo.</p>
+<p><img src="https://image.nostr.build/7afd5b58c0a5526379d130eefb85b0d10a26c64915b24959a29ad1044b309d00.jpg" alt="image" /></p>
+<p><strong>&quot;Get write access to Inkan relay&quot;</strong></p>
+<p>Las dos opciones que te muestra son las formas estándar de conectar tu identidad Nostr:<br />
+<strong>NIP-07</strong> es una extensión de navegador —nos2x, Alby, o similar— que guarda tu clave y firma eventos sin exponerla. Es la opción más común para escritorio.<br />
+<strong>NIP-46</strong> es firma remota, donde la clave vive en otro dispositivo —por ejemplo Amber en Android— y el navegador le pide permiso para firmar.</p>
+<p><strong>&quot;Sponsored on-chain transaction&quot;</strong></p>
+<p>Esta opción es para quien quiere crear una identidad Inkan pero no tiene ETH para pagar el gas de Ethereum. (En todo caso las transacciones no son caras. Oscilan entre los 0,40 y 0,80 dólares por delegación o revocación.)</p>
+<p>Lo que implica: envías tu transacción de creación de identidad ya firmada —generada offline con la Utilidad de Gestión— a un patrocinador, que la publica en Ethereum pagando el gas. En ningún momento el patrocinador ve tus claves privadas. Solo recibe la transacción firmada lista para difundir.</p>
+<h3 id="prubalo-t-mismo">Pruébalo tú mismo</h3>
+<p>Un camino rápido:</p>
+<ol>
+<li>
+<p>Descarga la Utilidad de Gestión de Inkan. <a href="https://www.inkan.cc/settings/inkan-management-utility">https://www.inkan.cc/settings/inkan-management-utility</a></p>
+</li>
+<li>
+<p>Ejecuta el AppImage en un sistema Linux actual, idealmente con air gap. Probado en Ubuntu 24.04 y Tails 7.7.2. El camino más rápido en la utilidad es &quot;Configuración rápida de identidad&quot;.</p>
+</li>
+<li>
+<p>Almacena de forma segura las claves privadas maestra e intermedias que produce la utilidad. Transfiere el par de claves firmante a tu sistema habitual (conectado a internet).</p>
+</li>
+<li>
+<p>Lleva la transacción de creación de identidad a Ethereum mediante un patrocinador que cubra el gas y la difunda por ti, o pagando y difundiéndola tú mismo desde la utilidad.</p>
+</li>
+<li>
+<p>Una vez confirmada la transacción, inicia sesión en <a href="http://www.inkan.cc">www.inkan.cc</a> con NIP-07 y sigue el asistente de configuración.</p>
+</li>
+<li>
+<p>Configura el sellado de tiempo en Bitcoin para tus eventos. Por ahora esto implica usar el relay y el servidor de sellado de tiempo de Inkan. Escribe a <a href="mailto:contact@inkan.cc">contact@inkan.cc</a> para solicitar acceso. Las opciones de autoalojamiento están en desarrollo.</p>
+</li>
+</ol>
+<h3 id="por-qu-vale-la-pena">¡Por qué vale la pena?</h3>
+<p>Inkan no es para el usuario casual ni básico de Nostr. Todo el proceso requiere conocimiento técnico, algo de experiencia y Linux y disposición para entender qué se está firmando y por qué. Pero plantea algo que el ecosistema necesita y que nadie más ha resuelto con esta coherencia: una identidad que puede vivir décadas, sobrevivir claves comprometidas, y estar en cold storage mientras firma eventos todos los días.</p>
+<p>Si Nostr va a ser una plataforma seria para creadores, periodistas o cualquier disidente que construya reputación a largo plazo, el problema de la seguridad y permanencia total de identidad tiene que resolverse. Inkan es hasta ahora la propuesta más articulada para hacerlo.</p>
+<p>#resenas #herramientas #nostrespanol #Inkan</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/27461481eb28df67bc4c4a7bf5eab8bf6e3e0b9b174662bf0ecb83c3d340696e.jpg" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Mon, 13 Jul 2026 00:57:50 -0500</pubDate>
+    </item>
+    <item>
+      <title>Alexandria (GitCitadel) — La biblioteca descentralizada de Nostr</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy88wumn8ghj7mn0wvhxcmmv9uqp2ae4xf99s7nev3rk6cm2tge5z7zrfdphgjqs4c6qs.html</link>
+      <description>Alexandria — La biblioteca descentralizada de Nostr</description>
+      <content:encoded><![CDATA[<h2 id="alexandria-gitcitadel--la-biblioteca-descentralizada-de-nostr">Alexandria (GitCitadel) — La biblioteca descentralizada de Nostr</h2>
+<p>Alexandria es un proyecto de <a href="https://geyser.fund/hero/gitcitadel">GitCitadel</a>, un ecosistema más amplio que incluye también un cliente Git descentralizado sobre Nostr y un relay propio. Este breve contexto es importante saberlo pues comparte infraestructura y filosofía con ese proyecto mayor: la soberanía total del software, la documentación y el código sobre el protocolo Nostr.</p>
+<p>Alexandria tiene un potencial enorme y pretende convertirse en la mayor biblioteca pública del conocimiento humano, para contenido largo y estructurado, descentralizado e incensurable basado en Nostr.<br />
+Accesible en <a href="https://next-alexandria.gitcitadel.eu/about">next-alexandria.gitcitadel.eu</a> y solamente teniendo ya tus llaves Nostr, no busca competir con las plataformas de microblogging ni con los editores de artículos comunes. Alexandria está orientada a quienes buscan publicar contenido más largo y complejo, —como publicar ahí su propio libro— y por eso su diseño ha sido despojado de elementos innecesarios.</p>
+<h3 id="el-formato-modular-ms-all-del-kind-30023">El formato modular: más allá del kind 30023</h3>
+<p>La innovación central de Alexandria no está en la interfaz, sino en los tipos de eventos que propone. La especialidad de este cliente es la capacidad de mostrar artículos de formato largo, particularmente del tipo modular: los event kinds 30040 y 30041. Los artículos modulares se conocen frecuentemente como el formato eBook de Nostr: los eventos 30040 contienen los metadatos y la lista ordenada de notas 30041, que contienen el contenido formateado.</p>
+<p>¿Qué significa esto en la práctica? El nuevo event kind 30040 permite tomar cualquier tipo de nota y crear una &quot;colección de notas&quot;, un &quot;libro de notas&quot;, un &quot;diario de notas&quot; o una &quot;revista de notas&quot;. Puede anidarse o incrustarse en otras notas, creando cualquier combinación y jerarquía de notas que se pueda imaginar, limitada únicamente por la capacidad del equipo para procesar las relaciones. El kind 30041 va un paso más allá: permite partir un texto largo en secciones. Capítulos, fragmentos, episodios. Cada uno existe como una nota independiente que puede referenciarse o coleccionarse por separado.<br />
+Juntos, los dos kinds hacen posible algo que Nostr no tenía antes: estructura. No solo notas sueltas flotando en un feed, sino textos con forma, con orden, con partes que se relacionan entre sí.</p>
+<p>Esto es muy diferente a publicar un artículo kind 30023. Esto es distinto. Cada sección existe como un evento separado — citable, enlazable, referenciable por cualquier otro autor. Sin copiar y pegar. Sin perder la autoria.</p>
+<p>Es básicamente un sistema de wiki-linking (como Obsidian o los backlinks de Roam) pero implementado sobre tags de eventos Nostr, lo que le da a Alexandria una capa de conocimiento navegable entre publicaciones distintas.</p>
+<p><img src="https://image.nostr.build/f7e2b0570da125130232c7b41c427d9c2c793338504161a58f950a2286df154b.jpg" alt="image" /></p>
+<h3 id="funcionalidades-actuales">Funcionalidades actuales</h3>
+<p>La versión en desarrollo (v0.0.2, alojada en <a href="https://next-alexandria.gitcitadel.eu/">next-alexandria.gitcitadel.eu</a> ya incorpora un conjunto amplio de funciones, aunque el propio equipo la describe como alpha. Entre lo más relevante:</p>
+<p>Búsqueda: por identificadores únicos (hex, npub, naddr, nevent, note, nprofile, NIP-05), por nombre de perfil, por d-tag y por hashtag.<br />
+Publicación: de cualquier kind de evento, incluyendo publicaciones 30040, secciones 30041 y páginas wiki 30818.<br />
+Interacción: comentarios con kinds 01 y 1111 sobre cualquier evento.<br />
+Infraestructura: monitoreo de relays y detección automática de relays locales.<br />
+Lectura: tabla de contenidos, renderizado de artículos de formato largo, publicaciones modulares, notas y páginas wiki — todo procesado con #NostrMarkup, en AsciiDoc o Markdown según corresponda al kind.<br />
+Acceso: extensión de navegador (NIP-07), El login funciona con extensiones de navegador tipo Nos2x npub-only y Amber sin exponer la clave privada en el navegador.</p>
+<h3 id="una-biblioteca-gutenberg-descentralizada">Una biblioteca Gutenberg descentralizada</h3>
+<p>El equipo de Alexandria ha demostrado la escala de lo que esto permite. Han publicado clásicos completos (de momento todos en inglés) usando notas 30040/30041 —dividida por capítulos, para mostrar con qué rapidez puede cargar un texto de esa extensión. La referencia al proyecto interno como &quot;Gutenberg Edition&quot; no es accidental: la analogía con la imprenta de Gutenberg como democratizador del conocimiento es explícita.<br />
+La idea es que sea posible que puedan ser publicados libros completos en Nostr, navegables como tales, exportables como ePub o PDF. No páginas sueltas — publicaciones con estructura, con índice, con partes que se sostienen juntas. Aunque el catálogo todavía es pequeño.</p>
+<h3 id="para-quin-es-alexandria">¿Para quién es Alexandria?</h3>
+<p>No es la típica plataforma para quien quiere escribir un post de opinión y recibir zaps rápidamente. Es la herramienta para quien quiere publicar en Nostr documentación técnica, libros, manuales, investigación académica, o cualquier corpus de conocimiento estructurado que merezca existir de forma permanente y descentralizada, con una arquitectura donde cada sección puede vivir, evolucionar y ser citada de forma independiente.</p>
+<hr />
+<h3 id="faq---qu-es-y-qu-no-es-alexandria">FAQ - Qué es y qué no es Alexandria</h3>
+<h4 id="es-un-sitio-para-descargar-archivos-de-libros">¿Es un sitio para descargar archivos de libros?</h4>
+<p>No. Es, quizás, lo contrario en términos técnicos y filosóficos. Alexandria no trabaja con archivos alojados — trabaja con eventos Nostr individuales (30040, 30041, 30818) que permanecen atomizados, dispersos entre relays, y se reensamblan solo al momento de leer. No hay un PDF o un EPUB &quot;guardado&quot; en algún lado dentro del sistema; hay piezas de contenido firmadas que se van uniendo.</p>
+<h4 id="entonces-es-como-annas-archive-o-z-library-pero-para-nostr">¿Entonces es como Anna's Archive o Z Library, pero para Nostr?</h4>
+<p>Tampoco. El propio equipo se distancia explícitamente de esa comparación: Anna's Archive indexa a sabiendas material con copyright y por eso vive en pelea constante con registradores de dominio y agencias de vigilancia. Alexandria no busca ser un catálogo de descargas — busca ser algo que ya no dependa de la categoría &quot;descarga&quot; para funcionar.</p>
+<h4 id="reemplaza-a-bittorrent">¿Reemplaza a BitTorrent?</h4>
+<p>No compite con torrents, compite con la idea de usar archivos como unidad de publicación. La diferencia técnica central: un torrent está hasheado pero no firmado — puedes confirmar que dos torrents tienen el mismo contenido, pero no quién lo publicó, así que dependes de índices centralizados para confiar en lo que descargas. Un evento Nostr viene firmado por su autor y es verificable de forma aislada, sin importar por qué canal viajó.</p>
+<h4 id="es-solo-para-e-books">¿Es solo para e-books?</h4>
+<p>Es el uso más visible, pero no el único. También sirve para papers científicos (con AsciiMath y LaTeX), documentación técnica, páginas wiki colaborativas (kind 30818), y artículos de formato largo simple (kind 30023).</p>
+<h4 id="es-un-archivo-permanente-tipo-biblioteca-de-conservacin">¿Es un archivo permanente, tipo biblioteca de conservación?</h4>
+<p>Al revés. Para Alexandria guardar algo como archivo estático es sacarlo de circulación, como meterlo en una caja en el ático. Alexandria apunta a que el contenido quede en la &quot;mesa de luz&quot; — accesible, citable, comentable, vivo — no archivado y quieto.</p>
+<h4 id="puedo-exportar-lo-que-publico-ah-a-pdf-o-epub">¿Puedo exportar lo que publico ahí a PDF o EPUB?</h4>
+<p>Sí, pero no desde Alexandria. Esa función vive en la app hermana, Wikistr, a través de un servidor Asciidoctor propio. Alexandria lee y escribe eventos; Wikistr es quien convierte esos eventos en archivo cuando hace falta.</p>
+<h4 id="por-qu-no-simplemente-subir-el-archivo-completo-ms-simple">¿Por qué no simplemente subir el archivo completo, más simple?</h4>
+<p>Porque el argumento del equipo es justamente que no hay ningún beneficio en dividir algo grande según un índice, transportarlo en piezas y reensamblarlo para usarlo — eso es lo que ya hace cualquier archivo comprimido. La apuesta es dejar todo permanentemente en piezas: comentar piezas, resaltar piezas, compartir piezas, remezclar piezas entre índices distintos. Es más trabajo de diseño, pero es un modelo de uso distinto, no una versión más incómoda del mismo modelo.</p>
+<h4 id="est-terminado-listo-para-usarse-sin-bugs">¿Está terminado, listo para usarse sin bugs?</h4>
+<p>No todavía. Hay dos versiones corriendo en paralelo. Alexandria.gitcitadel.eu es la estable — v0.0.1, funciona bien, pero tiene menos funciones. Next-alexandria.gitcitadel.eu es la otra — v0.0.2, staging, y el propio equipo la describe como &quot;buggy, muy alpha&quot;. Ahí vive todo lo interesante: el buscador con prefijos, el editor AsciiDoc, la tabla de contenidos, la vista de diagrama. Es la versión que todavía se está terminando de perfeccionar.</p>
+<hr />
+<p>Alexandria es un proyecto independiente, con un potencial enorme, y todavía en sostenido por donaciones y por un equipo que documenta en público hasta sus propios errores. Ese estado inacabado todavía se nota en la curva de aprendizaje: alguien que no maneje ya los conceptos básicos de Nostr, la lógica de eventos, y una sintaxis de marcado como AsciiDoc y markdown, se va a topar con más de una pared antes de publicar su primer libro.</p>
+<p>Alexandria tiene la capacidad técnica. El siguiente paso es la documentación — guías claras para usuarios comunes. Sin eso, difícilmente llegue una masa crítica de autores independientes que sostengan la plataforma.</p>
+<p>Si te interesa acompañar el desarrollo, <a href="https://geyser.fund/project/gitcitadel">pueden apoyar el proyecto acá</a></p>
+<p>#resenas #nostrenespanol #BibliotecaDescentralizada #SoberaniaDigital</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/d502fa85979316d8393434e12a9e718f98f805d8f6166e5f1bd9c1c2949144f5.jpg" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Mon, 06 Jul 2026 22:20:04 -0500</pubDate>
+    </item>
+    <item>
+      <title>Cómo publicar en Nostr: Tipos de Contenido y Plataformas de Blogging.</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4xgk5wd2kddny53jjvdfk26n8fph4z46gtgze94kz.html</link>
+      <description>Herramientas del blogging descentralizado</description>
+      <content:encoded><![CDATA[<p>Teniendo de base que Nostr no es una red social, es un protocolo descentralizado tenemos que tener muy en cuenta que en Nostr todo es un evento con un número identificador llamado kind. no hay mensajes, posts, perfiles ni reacciones como entidades separadas.</p>
+<p>El kind (tipo) es un número entero que le dice a los clientes y relays qué tipo de información contiene el evento y cómo debe interpretarse. Es básicamente el &quot;tipo&quot; o &quot;esquema&quot; del evento.</p>
+<p>En resumen: los eventos son el cómo se empaqueta y autentica la información, y los kinds son el qué significa esa información. Juntos forman un protocolo minimalista pero increíblemente extensible.</p>
+<p>Hagamos un repaso de los kinds y NIPS relativos a las publicaciones tipo bloggin.</p>
+<p><strong>Alerta de mucho texto.</strong> pero es necesario para que sepamos que vamos a publicar y las posibilidades que se tienen.</p>
+<p><strong>Kind 1 — La nota corta (el Twitter de Nostr)</strong></p>
+<p>El Kind 1 es una nota de texto básica en el protocolo Nostr, que sirve de base para las publicaciones de texto al estilo de las redes sociales. Permite a los usuarios publicar contenido de texto plano, responder a otras publicaciones, crear conversaciones encadenadas y mencionar o citar otros eventos. Este tipo es fundamental para la comunicación social en la red Nostr.<br />
+Son efímeras, inmediatas y no tienen estructura formal. Puedes escribir un hilo concatenando varias notas kind 1, o simplemente soltar un pensamiento. Cualquier cliente de Nostr (Damus, Primal, Amethyst, Snort) las muestra por defecto.</p>
+<p><strong>NIP-05 — La identidad verificable del blogger</strong>~~<br />
+El NIP-05 permite que un usuario de Nostr sea identificado por un nombre legible en lugar de una clave pública larga. Las URLs de NIP-05 se parecen a los correos electrónicos: <a href="mailto:bob@example.com">bob@example.com</a>.<br />
+El NIP-05 está diseñado principalmente para ayudar a compartir información de contacto y realizar búsquedas. Para personas o entidades asociadas con un dominio de buena reputación —como una empresa o un proyecto, estableciendo así un grado de confianza.</p>
+<p><strong>Kind 30023 — El artículo largo (blogging nativo)</strong><br />
+Los eventos de contenido extenso (tipo 30023) permiten a los usuarios publicar artículos, entradas de blog, ensayos o cualquier texto que exceda los límites de las notas habituales. Estos eventos están diseñados para ser editables y utilizan el formato Markdown para garantizar una visualización uniforme en diferentes clientes.<br />
+Este tipo de evento es &quot;direccionable&quot; — lo que significa que puede ser actualizado sin crear un nuevo ID.  Un artículo kind 30023 incluye metadatos estructurados como título, imagen de portada, etiquetas temáticas (t tags), la fecha de primera publicación (published_at) y un identificador único (d tag) que permite actualizarlo sin perder su dirección en la red. No necesitas saber programar para publicar este tipo de evento; existen clientes de blogging con interfaces visuales que hacen todo el trabajo por ti.</p>
+<p><strong>Kind 7 — Reacciones y likes</strong><br />
+Los eventos de reacción (tipo 7) permiten a los usuarios expresar respuestas sencillas a otros eventos, similares a los &quot;me gusta&quot;, &quot;no me gusta&quot; o las reacciones con emojis en otras plataformas. Ofrecen una forma sencilla de interactuar con el contenido sin necesidad de escribir una respuesta completa. A diferencia de las plataformas centralizadas, nadie puede falsificar una reacción en Nostr: está firmada con tu llave única.</p>
+<p><strong>Kind 6 y 16 — Reposts y Quotes</strong><br />
+El NIP-18 define el estándar para repostear contenido de otros usuarios, con o sin comentario adicional. El kind 6 es el repost simple (boost). El kind 16 es el &quot;generic repost&quot; para tipos de eventos distintos al kind 1. Los quote posts permiten añadir tu perspectiva sobre la nota de otro usuario, generando una conversación en capas que se puede seguir desde cualquier cliente compatible.</p>
+<p><strong>Zaps — Valor por valor (NIP-57)</strong><br />
+Aunque técnicamente los zaps son eventos kind 9735, merecen mención especial. El NIP-57 define cómo enviar pagos en Bitcoin por Lightning directamente a eventos y usuarios de Nostr, integrando pagos de valor a valor directamente en el protocolo.<br />
+Los zaps no son propinas ni &quot;likes costosos&quot; — son una nueva forma de expresar valor con escasez perfecta, tokens de apreciación basados en satoshis imposibles de falsificar. Un artículo que recibes sats directamente en tu billetera. Sin intermediarios, sin plataforma cobrando comisión.</p>
+<p><strong>Nutzaps (NIP-61) — La alternativa a los zaps Lightning</strong><br />
+Existe una alternativa emergente a (NIP-57). El NIP-61 define los Nutzaps: pagos usando tokens Cashu (ecash) en lugar de Lightning. La diferencia práctica para un blogger es que los Nutzaps no requieren que el receptor tenga una billetera Lightning activa ni una Lightning Address configurada.</p>
+<p><strong>Kind 40-44 — Canales y Comunidades Públicas</strong></p>
+<p>El NIP-28 define canales de chat público usando kind 40 para la creación del canal, kind 41 para sus metadatos, y kind 42 para los mensajes dentro de él. Es el equivalente a canales de Telegram o Discord, pero descentralizado.<br />
+Para comunidades más estructuradas (tipo Reddit), existe el NIP-72 que define Moderated Communities. Habla, por ejemplo, soporta comunidades que permiten la creación de grupos temáticos donde puedes publicar tu artículo directamente dentro de una comunidad relevante.</p>
+<p><strong>Kind 30818 (NIP-54) — El Wikipedia descentralizado</strong><br />
+El NIP-54 define el kind 30818, un evento direccionable para descripciones o entradas enciclopédicas sobre temas particulares. Se espera que múltiples personas escriban artículos sobre exactamente los mismos temas, con variaciones pequeñas o contenido completamente independiente.<br />
+El cliente más activo para este tipo de contenido es <a href="wikifreedia.xyz">Wikifreedia</a>, un cliente NIP-54 con vista multi-artículo. La implicación para bloggers es interesante pues puedes escribir un artículo wiki sobre tu área de conocimiento, y ese artículo existir en la red Nostr permanentemente, actualizable, citable por otros, y coexistente con versiones de otros autores sobre el mismo tema.<br />
+Fuentes:<br />
+<a href="https://github.com/nostr-protocol/nips">https://github.com/nostr-protocol/nips</a><br />
+<a href="https://nips.nostr.com/">https://nips.nostr.com/</a></p>
+<h2 id="escribir-en-nostr-la-gua-de-herramientas-que-nadie-public">Escribir en Nostr: la guía de herramientas que nadie publicó</h2>
+<p>El ecosistema de Nostr ha madurado hasta el punto de ofrecer una herramienta para cada tipo de escritor y cada estilo de trabajo. Nostr ya no es territorio exclusivo de desarrolladores y entusiastas de la criptografía.  En los últimos años el ecosistema ha producido una generación de herramientas diseñadas para escritores, periodistas, bloggers y creadores de contenido que quieren recuperar la soberanía sobre su trabajo sin renunciar a una experiencia de usuario digna. Editores web, gestores de medios, lectores de feeds, sitios personales autogenerados, suites editoriales para equipos.</p>
+<p>A continuación, presentamos una selección de los clientes, editores y servicios web más relevantes para quien quiere hacer del protocolo Nostr su plataforma de publicación principal.</p>
+<h3 id="yakihonne--el-mejor-para-mvil-y-pchttpsyakihonnecom"><a href="https://yakihonne.com/">YakiHonne — El mejor para móvil y PC</a></h3>
+<p>YakiHonne es un cliente web y móvil de Nostr diseñado para publicar y explorar contenido de formato largo. A diferencia de muchos clientes que se enfocan en interacciones cortas tipo Twitter, YakiHonne está orientado a creadores y lectores que quieren una plataforma para artículos, blogs y discusiones en profundidad. Disponible en iOS, Android y como app web, combina accesibilidad con una experiencia de usuario pulida.</p>
+<p>Como uno de los primeros clientes de Nostr en ofrecer apps móviles con capacidades completas de edición de artículos, YakiHonne cubre un vacío que muchos otros clientes ignoran. Escribir o editar en movimiento se siente fluido; la app sincroniza rápidamente con los relays y el rendimiento es ágil incluso en conexiones lentas.<br />
+YakiHonne incluye una billetera integrada sin KYC y Smart Widgets, lo que permite monetizar desde el mismo cliente sin configuración externa.</p>
+<h3 id="highlightercom--para-lectores-que-destacan-y-comentanhttpshighlightercom"><a href="https://highlighter.com/">Highlighter.com — Para lectores que destacan y comentan</a></h3>
+<p>Highlighter es un cliente enfocado en la lectura y el resaltado de contenido de formato largo. Permite a los lectores seleccionar fragmentos del texto, destacarlos y comentarlos directamente en el protocolo Nostr —todo firmado criptográficamente. Los usuarios pueden resaltar, zapear y comentar los fragmentos destacados de tus artículos.</p>
+<h3 id="makimono--un-editor-minimalista-que-no-distraehttpsmakimonolumilumiapp"><a href="https://makimono.lumilumi.app/">Makimono — Un editor minimalista que no distrae</a></h3>
+<p>El nombre lo dice todo. Makimono (巻物) significa &quot;rollo de pergamino&quot; en japonés —La elección no es accidental: esta herramienta tiene la misma filosofía. Sin adornos, sin funciones innecesarias. Solo tú, el texto, y el protocolo.</p>
+<p>Makimono es un editor web para artículos largos en Nostr. Lo desarrolla TsukemonoGit, una desarrolladora japonesa que también mantiene Lumilumi, un cliente web de Nostr.</p>
+<p>Implementa NIP-23, así que todo lo que publicas genera un evento kind 30023 estándar. Eso significa que tu artículo aparece automáticamente en cualquier cliente que soporte ese formato: Habla.news, YakiHonne, Primal, Highlighter.<br />
+La propuesta es simple: una ventana limpia, Markdown, y publicar en Nostr sin fricción. Para el escritor que ya tiene su flujo de trabajo resuelto y no necesita que el editor le complique la vida.</p>
+<h3 id="hablanews--el-ms-completo-para-lectores-y-escritores-de-momento-est-cadohttpshablanews"><a href="https://habla.news/">Habla.news — El más completo para lectores y escritores (De momento está caído)</a></h3>
+<p>Habla es una plataforma construida sobre Nostr para leer, escribir post de formato largo y recibir zaps directamente por tu contenido.<br />
+De todos los clientes que soportan artículos largos, es el más completo (O lo era). Puedes mencionar npubs dentro del artículo de forma interactiva, publicar directamente en comunidades temáticas —algo parecido a Reddit, pero sobre Nostr—, y configurar múltiples relays desde el mismo editor.</p>
+<p>El editor soporta Markdown completo, portadas y etiquetas. Las URLs siguen el formato habla.news/tu-npub/slug-del-articulo, que los buscadores pueden indexar.</p>
+<h3 id="oracolo--tu-blog-de-nostr-en-un-solo-archivo-htmlhttpsoracolome"><a href="https://oracolo.me/">Oracolo — Tu blog de Nostr en un solo archivo HTML</a></h3>
+<p>Hay una idea al fondo de Oracolo que cuesta un poco procesar la primera vez que la escuchas.<br />
+Tu sitio web personal. Con todas tus entradas, tus notas, tus imágenes. Actualizado en tiempo real desde Nostr. En un solo archivo de 500 kilobytes que puedes mandarte por email.</p>
+<p>Oracolo es un blog minimalista impulsado por Nostr que consiste en un solo archivo HTML. Puedes usar cualquier cliente de Nostr que soporte formato largo para escribir tus artículos y tu blog personal se actualiza automáticamente. También puedes publicar notas e imágenes.</p>
+<p>Con Oracolo no requiere que inicies sesión para crear tu sitio. Te autentificas con tu npub que es tu clave pública o con NIP-05 es tu identidad verificada con formato de email. El wizard configura el archivo, lo descargas, y ya. El sitio vive en ese HTML, no en un servidor que alguien más controla.</p>
+<p>Oracolo es para quien quiere un blog en Nostr en diez minutos. Sin cuentas adicionales. Sin servidor. Sin nada que mantener después.</p>
+<p>Pero hay un caso de uso que lo describe mejor que cualquier otro: la página de presentación personal. Alguien te encuentra, busca tu nombre, abre el archivo — y ve quién eres, tus artículos recientes, tus notas, tu foto. Todo alimentado en tiempo real desde tu actividad en Nostr. Todo dentro de algo que cabrías en un email adjunto.</p>
+<p>En el ecosistema de blogging de Nostr, si npub.pro es tu sitio web profesional con SEO y dominio propio, Oracolo es tu tarjeta de presentación digital — liviana, portable, y elegantemente simple.<br />
+Ejemplo:<br />
+<img src="https://image.nostr.build/0f0cf2597c397cfef63de26baa0fc4d8d9898d92162f0d431c2455fcd6e27ac8.jpg" alt="image" /></p>
+<h3 id="npubpro--tu-blog-de-nostr-visible-para-todo-el-mundohttpsnpubpro"><a href="https://npub.pro/">Npub.pro — Tu blog de Nostr visible para todo el mundo</a></h3>
+<p>Tarde o temprano todo autor en Nostr se hace la misma pregunta: ¿cómo le muestro lo que hago a alguien que no está en Nostr?<br />
+Un <strong>npub</strong> no le dice nada a nadie fuera del protocolo. La curva de aprendizaje puede tomar su tiempo en algunas personas. Lo que esa persona necesita es una URL normal, una página con tu nombre, tu trabajo, una foto. Algo que no requiera explicación.</p>
+<p>Npub.pro resuelve ese problema. Y hasta ahora, ninguna otra herramienta en el ecosistema lo ha resuelto con la misma elegancia.</p>
+<p>La mayoría de las herramientas de blogging en Nostr son clientes: lugares donde vas a leer y escribir dentro del protocolo. Npub.pro es otra cosa.</p>
+<p>Toma tu contenido de Nostr y lo convierte en un sitio web. Sin duplicar trabajo, sin mantener dos presencias. ¿Ya publicaste en Nostr? Tu contenido ya está ahí esperando. Tú solo eliges qué mostrar.</p>
+<p>Hay algo que los usuarios descubren con cierta sorpresa la primera vez: cuando creas el sitio, tus posts y tu perfil ya están adentro. No hay migración. No hay formularios de importación. No hay nada que configurar. El contenido vive en los relays — Npub.pro simplemente le pone una puerta.</p>
+<p>Npub.pro permite a los usuarios crear sitios web personales a partir de su contenido de Nostr. Es gratuito para empezar, de código abierto y auto-hospedable. No almacena tu información: solo hospeda el código para convertir eventos de Nostr en páginas web.</p>
+<p>#nostrespanol #resenas #ContraLaCensura #Descentralizacion #Nosterspanol #BlogginNostr</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/0006b143d1486837fa72f3cb86435365a5dd1989ed952ebf715f8892a46b8d74.png" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Wed, 24 Jun 2026 22:41:35 -0500</pubDate>
+    </item>
+    <item>
+      <title>Gossip: el cliente Nostr para quienes se toman en serio sus claves.</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy2hwumn8ghj7un9d3shjtnyv9kh2uewd9hj7qq4d5u5zutcg4q4vet2wfxkcajf89xj65rrfgdk6jdk.html</link>
+      <description>El cliente Nostr para quienes se toman en serio sus claves y privacidad,</description>
+      <content:encoded><![CDATA[<h2 id="gossip-el-cliente-nostr-para-quienes-se-toman-en-serio-sus-claves">Gossip: el cliente Nostr para quienes se toman en serio sus claves.</h2>
+<p><a href="https://github.com/mikedilger/gossip">Gossip</a> es un cliente atípico de escritorio para Nostr. No es un cliente para usuarios principiantes. Su enfoque es claro: prioriza seguridad, soberanía del usuario y rendimiento por encima de la estética o la facilidad de uso. Estos son sus pilares de diferenciación de otros programas.</p>
+<p>Desarrollado por Mike Dilger, un neozelandés-estadounidense cuyo npub es público en Nostr. El proyecto acumula 853 estrellas en GitHub, tiene 30 contribuidores y está escrito en *<em>99.4% Rust</em>.</p>
+<h3 id="1-el-gossip-model-nip-65">*1. El &quot;Gossip Model&quot; (NIP-65)</h3>
+<p>El Gossip Model fue nombrado así por este cliente, porque desde el primer día intentó encontrar las publicaciones de las personas que sigues donde sea más probable que estén, basándose en las listas de relays de esas personas y media docena de heurísticas adicionales. Hoy múltiples clientes usan un modelo similar, centrado en NIP-65. Gossip se conecta a todos los relays necesarios para cubrir a todos tus seguidos, intentando al mismo tiempo escuchar el mínimo número de relays necesario para lograrlo, y se ajusta dinámicamente cuando un relay cae o se desconecta. <a href="https://github.com/mikedilger/gossip">GitHub</a><br />
+Esto es conceptualmente distinto a simplemente suscribirse a una lista fija de relays como hacen Amethyst o Damus.</p>
+<h3 id="2-manejo-seguro-de-claves-privadas">*2. Manejo seguro de claves privadas</h3>
+<p>Gossip maneja las claves privadas de la forma más segura razonable (sin llegar a hardware tokens): las mantiene cifradas bajo una contraseña en disco, requiere esa contraseña al inicio, y pone a cero la memoria antes de liberarla. <a href="https://github.com/mikedilger/gossip">GitHub</a> Esto lo distingue de clientes web donde la clave privada ha sido robada en casos reales.</p>
+<h3 id="3-evita-tecnologas-de-navegador"><em>3. Evita tecnologías de navegador</em></h3>
+<p>Gossip evita las tecnologías web (salvo HTTP GET y WebSockets, necesarias para Nostr). El stack web es enorme, complejo y probablemente lleno de vulnerabilidades no descubiertas, representando una superficie de ataque masiva. Esto incluye JavaScript, HTML, CSS y todo lo accesible vía navegador. En su lugar usa renderizado estilo OpenGL. No es tan bonito, pero cumple su función. <a href="https://github.com/mikedilger/gossip">GitHub</a></p>
+<h3 id="4-rendimiento"><em>4. Rendimiento</em></h3>
+<p>Gossip apunta a alto rendimiento usando la base de datos LMDB, el lenguaje Rust y arquitecturas de código diseñadas siempre con el rendimiento en mente. A menos que tengas hardware muy antiguo, la red será probablemente tu cuello de botella. <a href="https://github.com/mikedilger/gossip">GitHub</a></p>
+<h3 id="5-control-del-usuario"><em>5. Control del usuario</em></h3>
+<p>Gossip tiene (al momento de escribir esto) 70 configuraciones distintas. Cuando el valor correcto es incierto, se elige un valor por defecto razonable y se le da al usuario el mecanismo para cambiarlo. <a href="https://github.com/mikedilger/gossip">GitHub</a></p>
+<h3 id="6-privacidad-y-tor"><em>6. Privacidad y Tor</em></h3>
+<p>Para quien desee permanecer anónimo, Gossip puede usarse sobre Tor. Soporta certificados TLS nativos para configurar confianza en sitios .onion, y ofrece opciones como no cargar avatares, no cargar imágenes, y no compartir necesariamente a quién sigues. <a href="https://github.com/mikedilger/gossip">GitHub</a></p>
+<h3 id="moderacin-de-contenido">Moderación de contenido</h3>
+<p>Gossip ofrece listas de personas, muteado, descarte de hilos, advertencias de contenido, un script de filtrado de spam programable en Rhai, designación de relays como &quot;SpamSafe&quot;, y feeds globales efímeros que desaparecen al cerrar el cliente. <a href="https://github.com/mikedilger/gossip">GitHub</a></p>
+<h3 id="historial-de-releases">Historial de releases</h3>
+<p>La versión más reciente es la <em>0.14.0</em> (marzo 2025), con 21 releases totales. La 0.13.0 introdujo soporte para adjuntar imágenes y videos via servidores Blossom, soporte de metadatos imeta, y búsqueda por relay. En releases anteriores se mejoró la velocidad de carga de imágenes/video, se corrigió la carga de hilos, y se añadió soporte limitado para kind-20 (imágenes). <a href="https://github.com/mikedilger/gossip/releases">GitHub</a></p>
+<p><img src="https://image.nostr.build/9dd62dba4ddf8433ecc0af44e9fc689196888000cc6ff252733f45cda23d342e.png" alt="image" /><br />
+Create a New Nostr Account — genera un par de claves nuevo desde cero<br />
+I Already have a Nostr Account — importas tu nsec o ncryptsec existente<br />
+Just follow people (no account) — modo lectura, sin clave privada.</p>
+<p><img src="https://image.nostr.build/6ded4f0ca09201a96d44f3683006383867d23f34e30d1ddabbc5c0eea49e368a.png" alt="image" /></p>
+<p>Aquí es donde Gossip implementa lo que mencionamos sobre el manejo seguro de claves: tu nsec nunca se guarda en texto plano, sino cifrada bajo una contraseña local.<br />
+Tienes tres campos:</p>
+<p><strong>Enter your private key</strong> — pega tu nsec1... (o en formato hex). Usa Ctrl+V como dice el aviso al pie, el clic derecho probablemente no funcione.</p>
+<p><strong>Enter a passphrase</strong> — esta contraseña NO es tu nsec ni tu contraseña de Nostr. Es una contraseña nueva que Gossip usa para cifrar tu clave privada en el disco local. Puedes poner lo que quieras, pero no la olvides: te la pedirá cada vez que abras Gossip.</p>
+<p><img src="https://image.nostr.build/540b1aefc8be14de3cc54276a2e48c7ee2bb29805c5f7638b1f14eed7233a1f0.png" alt="image" /></p>
+<p>aquí se ve el Gossip Model en acción por primera vez.</p>
+<p><strong>Relay List:</strong> Found (verde) — Gossip encontró tu lista de relays publicada (NIP-65). Esto es lo que mencioné en la reseña: el cliente sabe dónde encontrarte sin que tú le digas nada manualmente.<br />
+<strong>Metadata:</strong> Missing — tu perfil (kind:0, nombre, foto, bio) no lo ha cargado aún.<br />
+<strong>Contact List:</strong> Missing — tu lista de seguidos tampoco.<br />
+Gossip encontró tu perfil en varios relays y te pregunta desde cuál quieres cargarlo.</p>
+<p>Presiona Load en cualquiera de los relays listados. Te recomiendo probar primero con wss://nos.lol/ o wss://nostr.mom/ — son relays públicos estables y generalmente rápidos. Gossip cargará tu metadata (nombre, foto, bio) y contact list desde ahí.<br />
+<img src="https://image.nostr.build/926ac1667a04a048ae7e3d8055a23bd9a5ff277c9c4ff5089e8589e87fcc4fe4.png" alt="image" /></p>
+<hr />
+<p><img src="https://image.nostr.build/22174ed624d6942818a14533596605c14626317a23935ec2cf000fd0be59b785.png" alt="image" /><br />
+Esta es la pantalla &quot;Setup Relays&quot;. Aquí se configura el NIP-65, la pieza central de la arquitectura de Gossip.</p>
+<p>Las tres columnas:<br />
+<strong>OUTBOX</strong>  — los relays donde tú publicas. Gossip enviará tus notas a todos estos. Los que ves ya son los que tenías configurados en tu perfil.<br />
+<strong>INBOX</strong>  — los relays donde otros pueden enviarte mensajes y menciones.<br />
+<strong>DISCOVERY</strong> — relays usados para descubrir perfiles y eventos. Gossip sugiere agregar 4 más.</p>
+<p>#guias #NostrEspanol #AnonimatoDigital #resenas #ClientesNostr</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/22f560d35af255cd3a992de906aa67cb8ef5c8d55fd33078876966499bf7e5f4.png" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Thu, 04 Jun 2026 15:21:36 -0500</pubDate>
+    </item>
+  </channel>
+</rss>

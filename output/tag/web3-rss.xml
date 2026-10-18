@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nostr Libre</title>
+    <link>https://archivaldo66.github.io/nostr-static</link>
+    <description>Nostr Articles Feed</description>
+    <managingEditor> (Nostr Static)</managingEditor>
+    <pubDate>Sun, 17 May 2026 23:00:51 -0500</pubDate>
+    <item>
+      <title>¿Que tan privado es Nostr realmente?</title>
+      <link>https://archivaldo66.github.io/nostr-static/naddr1qvzqqqr4gupzqcc09cqdka9r6d82gt7fehts6rtyfq75p7s6zj2xf6fgkcd29pzjqy88wumn8ghj7mn0wvhxcmmv9uqpqcnp8yekvwpsxcukvdeexqunvvc0t4r2c.html</link>
+      <description>¿Que tan privado y anónimo puede ser Nostr?</description>
+      <content:encoded><![CDATA[<p>Se ha definido la Web3 o Web 3.0 como el internet de la soberanía individual, donde el usuario tiene autonomía y control total sobre sus propios datos, basada en la descentralización.</p>
+<p>Aunque ha sido denostada como una simple moda pasajera por plutócratas como Elon Musk y Jack Dorsey, y asociada con estafas tipo ponzi y proyectos sin valor real, Nostr destaca por encima de esa reputación y es considerado un protocolo genuino: minimalista pero potente, en contraste con otros proyectos de Web3 que sí pueden ser considerados vacíos de contenido o puro marketing.</p>
+<h3 id="qu-tan-privado-es-nostr-realmente">¿Qué tan privado es Nostr realmente?</h3>
+<p>Es importante entender que Nostr ofrece pseudonimato, no anonimato por defecto. Funciona de manera similar a Bitcoin: tu identidad es una clave pública (pubkey) fija que firma todos los eventos. Aunque tienes control total sobre lo que compartes, cualquier vinculación entre esa clave y tu identidad real rompería el pseudonimato.</p>
+<p><strong>Fugas de seguridad:</strong></p>
+<p>Identidad vinculable: Tu identidad es una clave pública fija que firma todos tus eventos, generando una actividad persistente. Cualquier correlación entre tu pubkey y tu identidad real —mediante un correo electrónico, patrones de escritura o metadatos de zona horaria— destruye el pseudonimato.</p>
+<p>Visibilidad de la IP: Los operadores de relays pueden ver tu dirección IP, tus hábitos de conexión y qué perfiles o etiquetas estás consultando.</p>
+<p>Fugas por contenido: Al visualizar imágenes o medios alojados en servidores externos, estos pueden registrar tu IP mediante técnicas como el pixel tracking o las balizas web.</p>
+<p>Metadatos en fotos: Las imágenes pueden contener datos EXIF (como coordenadas GPS del lugar donde se tomó la foto o el modelo de la cámara), lo que puede comprometer seriamente tu ubicación si no se eliminan antes de subirlas.</p>
+<p>Exposición por clientes web: Pegar tu clave privada en una aplicación web (nsec en el navegador) es un vector de ataque real. Un cliente malicioso o comprometido puede robarla silenciosamente.</p>
+<p><strong>¿Qué ofrece Nostr realmente?</strong><br />
+Si antes se decía que &quot;quien controla los medios de comunicación, controla la mente&quot;, hoy, apoyándonos en lo que plantea la <em>Declaración de Independencia del Ciberespacio</em> de John Perry Barlow, es el ciberespacio el nuevo hogar de la mente: nuestro espacio, donde los gobiernos no pueden ejercer soberanía legítima, aunque pretenden manipularlo y destruirlo.</p>
+<p>Frente a esa amenaza de censura centralizada y control algorítmico, la soberanía real es la soberanía individual, que emana de la capacidad de actuar sin intermediarios que vigilen.</p>
+<p>En la —no tan futura y ya presente— Web3, Nostr materializa esta soberanía al basar la identidad en pares de claves criptográficas (pubkeys) en lugar de cuentas gestionadas por empresas o estados.</p>
+<p>Sin autoridad central: No existe un botón de &quot;borrar cuenta&quot; global que un gobierno o empresa pueda presionar.</p>
+<p>Resistencia a la censura: En las redes sociales centralizadas (Web2), el usuario es el producto y no es dueño de su contenido ni de su audiencia. En Nostr, si una plataforma o servidor te censura, simplemente te conectas a otro relay; tu identidad y tus seguidores estarán contigo. Pero solamente si el relay hizo la función de espejo de tus eventos.</p>
+<p>Integridad de datos: A diferencia de un CMS tradicional (como WordPress o Blogspot), donde un administrador podría alterar un texto o borrar tu contenido, en Nostr la firma criptográfica garantiza que el contenido sea inmutable: si un solo bit cambia, la firma se rompe y el cliente lo detecta.</p>
+<p>Al basarse en una estructura descentralizada que sigue la filosofía de &quot;servidor tonto y cliente inteligente&quot;, Nostr te convierte en el dueño de tu contenido, pues está firmado por tu clave. Si un relay borra tu blog, y sí se realizó la función de espejo del evento, simplemente republicas el contenido (eventos) en otros relays y tus seguidores te encontrarán automáticamente.<br />
+Nostr te da las herramientas para que nadie pueda silenciarte, pero alcanzar un mayor anonimato depende de ti y de las herramientas que elijas usar.</p>
+<p>#blogindex #NostrEspanol #AnonimatoDigital #Web3 #CensuraGlobal</p>
+]]></content:encoded>
+      <author>Archivero</author>
+      <enclosure url="https://image.nostr.build/d3ca4521b3f679b41bb058144ffc07c59f291cb9e48e4dcebafa12b213600413.jpg" length="0" type="image/jpeg"></enclosure>
+      <pubDate>Sun, 17 May 2026 23:00:51 -0500</pubDate>
+    </item>
+  </channel>
+</rss>
