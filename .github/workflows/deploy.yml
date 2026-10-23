@@ -3,17 +3,18 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: '0 */6 * * *'   # cada 6 horas (hora UTC)
   workflow_dispatch:
-    inputs:
-      trigger_action:
-        description: 'Trigger deployment'
-        required: true
-        default: 'deploy'
 
 permissions:
   contents: read
   pages: write
   id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -22,6 +23,28 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+
+      - name: Generate site from Nostr
+        run: go run ./src
+
+      - name: Add Google verification file and sitemap
+        run: |
+          cp google*.html output/ 2>/dev/null || true
+          BASE="https://archivaldo66.github.io/nostr-static"
+          {
+            echo '<?xml version="1.0" encoding="UTF-8"?>'
+            echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+            echo "  <url><loc>$BASE/</loc></url>"
+            for f in output/naddr*.html; do
+              echo "  <url><loc>$BASE/$(basename "$f")</loc></url>"
+            done
+            echo '</urlset>'
+          } > output/sitemap.xml
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -40,4 +63,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 
+        uses: actions/deploy-pages@v4
